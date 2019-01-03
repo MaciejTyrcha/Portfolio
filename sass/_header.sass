@@ -1,5 +1,45 @@
-aside 
-  background-color: $color-pink
-  width: 200px
+header
+  display: flex
+  position: relative
   height: 100vh
-  position: fixed
+  width: 100%
+  position: fixed 
+  z-index: 2
+  aside 
+    background-color: $color-pink
+    width: 200px
+    height: 100vh
+    .hamburger 
+      position: absolute
+      top: 50px
+      left: 50%
+      transform: translate(-50%, 0)
+      width: 60px
+      height: 50px 
+      background-color: transparent
+      position: relative
+      &:hover 
+        cursor: pointer
+      span 
+        width: 80%
+        height: 2px
+        background-color: $color-white
+        border-radius: 1px
+      .line1 
+        position: absolute
+        top: 0
+        left: 10%
+      .line2
+        position: absolute
+        top: calc(50% - (2px/2))
+        left: 10%
+      .line3 
+        position: absolute
+        bottom: 0
+        left: 10%
+  nav 
+    width: 300px
+    height: 100vh
+    background-color: $color-pink
+    opacity: 0.8
+    

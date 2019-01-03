@@ -6,21 +6,79 @@
   font-family: "Lato", sans-serif;
 }
 
-aside {
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: 2;
+}
+
+header aside {
   background-color: #ff0044;
   width: 200px;
   height: 100vh;
-  position: fixed;
+}
+
+header aside .hamburger {
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  width: 60px;
+  height: 50px;
+  background-color: transparent;
+  position: relative;
+}
+
+header aside .hamburger:hover {
+  cursor: pointer;
+}
+
+header aside .hamburger span {
+  width: 80%;
+  height: 2px;
+  background-color: #fff;
+  border-radius: 1px;
+}
+
+header aside .hamburger .line1 {
+  position: absolute;
+  top: 0;
+  left: 10%;
+}
+
+header aside .hamburger .line2 {
+  position: absolute;
+  top: calc(50% - (2px/2));
+  left: 10%;
+}
+
+header aside .hamburger .line3 {
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+}
+
+header nav {
+  width: 300px;
+  height: 100vh;
+  background-color: #ff0044;
+  opacity: 0.8;
 }
 
 main {
-  height: 200vh;
-  width: 100%;
+  min-height: 200vh;
+  width: calc(100% - 200px);
   background-color: #555;
-  padding-left: 200px;
+  margin-left: 200px;
 }
 
-.aboutMe {
+main .aboutMe {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -42,12 +100,12 @@ main {
           clip-path: polygon(0 0, 100% 0, 100% 100%, 100% calc(100% - 5vw), 0 100%);
 }
 
-.aboutMe h1 {
+main .aboutMe h1 {
   font-size: 70px;
   font-weight: 300;
 }
 
-.aboutMe h2 {
+main .aboutMe h2 {
   font-size: 30px;
   font-weight: 600;
   letter-spacing: 9px;
@@ -55,7 +113,7 @@ main {
   margin-bottom: 30px;
 }
 
-.aboutMe a {
+main .aboutMe a {
   text-decoration: none;
   font-size: 20px;
   text-transform: uppercase;
@@ -63,31 +121,36 @@ main {
   letter-spacing: 5px;
 }
 
-.aboutMe a div {
-  padding: 15px 50px;
-  -webkit-clip-path: ellipse(50% 40% at 50% 50%);
-          clip-path: ellipse(50% 40% at 50% 50%);
+main .aboutMe a div {
+  padding: 25px 50px;
+  -webkit-clip-path: ellipse(50% 45% at 50% 50%);
+          clip-path: ellipse(50% 45% at 50% 50%);
   background-color: #ff0044;
 }
 
-.aboutMe a div .button1 {
+main .aboutMe a div .button1 {
   position: absolute;
   top: 0;
   left: 61%;
-  height: 100%;
-  width: 100%;
+  height: 80%;
+  width: 2%;
   background-color: #4c0014;
-  padding: 15px 50px;
   z-index: 2;
 }
 
-.aboutMe a div .button2 {
+main .aboutMe a div .button2 {
   position: absolute;
   left: 60%;
   top: 0;
-  height: 100%;
-  width: 100%;
+  height: 70%;
+  width: 5%;
   background-color: #990028;
   z-index: 1;
+}
+
+main .techStack {
+  height: 100vh;
+  width: 100%;
+  background-color: yellow;
 }
 /*# sourceMappingURL=style.css.map */
