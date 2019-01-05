@@ -12,9 +12,9 @@ header {
   display: flex;
   position: relative;
   height: 100vh;
-  width: 100%;
+  width: 500px;
   position: fixed;
-  z-index: 2;
+  z-index: 1;
 }
 
 header aside {
@@ -69,12 +69,13 @@ header nav {
   height: 100vh;
   background-color: #ff0044;
   opacity: 0.8;
+  display: none;
 }
 
 main {
-  min-height: 200vh;
+  min-height: 150vh;
   width: calc(100% - 200px);
-  background-color: #555;
+  background-color: #333;
   margin-left: 200px;
 }
 
@@ -148,9 +149,96 @@ main .aboutMe a div .button2 {
   z-index: 1;
 }
 
-main .techStack {
-  height: 100vh;
-  width: 100%;
-  background-color: yellow;
+main .projects {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: repeat 2 1fr;
+      grid-template-columns: repeat 2 1fr;
+  -ms-grid-rows: (1fr)[2];
+      grid-template-rows: repeat(2 1fr);
+      grid-template-areas: "firstGrid secondGrid" "fourthGrid thirdGrid";
+  margin-top: 50px;
+  height: 120vh;
+}
+
+main .projects .about-project {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .projects .about-project h1 {
+  color: #ff0044;
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+
+main .projects .about-project h2 {
+  color: #fff;
+  font-size: 25px;
+  margin-bottom: 30px;
+}
+
+main .projects .about-project a {
+  text-decoration: none;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #fff;
+  letter-spacing: 5px;
+  padding: 15px 50px;
+  border: 1px solid #fff;
+  border-radius: 40px;
+  -webkit-transition: 0.3s linear;
+  transition: 0.3s linear;
+}
+
+main .projects .about-project a:hover {
+  background-color: #444;
+  border: 1px solid #888;
+}
+
+main .projects .image-project {
+  background-color: green;
+  margin-right: 40px;
+}
+
+main .projects .first-grid {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: firstGrid;
+}
+
+main .projects .second-grid {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: secondGrid;
+  background: url("../Rysunki/community-988898_1920.png");
+  background-size: cover;
+  background-position: center;
+}
+
+main .projects .third-grid {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: thirdGrid;
+}
+
+main .projects .fourth-grid {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: fourthGrid;
+  background: url("../Rysunki/woman-1594711_1920.jpg");
+  background-size: cover;
+  background-position: center;
 }
 /*# sourceMappingURL=style.css.map */
