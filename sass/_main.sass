@@ -1,7 +1,7 @@
 main 
   min-height: 150vh
   width: calc(100% - 200px)
-  background-color: $color-gray
+  background-color: $color-main-theme-dark
   margin-left: 200px
   .aboutMe
     display: flex 
@@ -10,8 +10,8 @@ main
     align-items: center
     height: 100vh
     width: 100%
-    color: $color-white
-    background-color: $color-sky-blue
+    color: $color-main-theme
+    background-color: $color-main-theme-lighter
     clip-path: polygon(0 0, 100% 0, 100% 100%, 100% calc(100% - 5vw), 0 100%)
     h1 
       font-size: $size-h1-main
@@ -22,6 +22,7 @@ main
       letter-spacing: 9px
       text-transform: uppercase
       margin-bottom: 30px
+      color: $color-gray-lighter
     a 
       text-decoration: none
       font-size: $size-button
@@ -31,14 +32,14 @@ main
       div
         padding: 25px 50px
         clip-path: ellipse(50% 45% at 50% 50%)
-        background-color: $color-pink
+        background-color: $color-main-theme
         .button1
           position: absolute
           top: 0
           left: 61%
           height: 80%
           width: 2%
-          background-color: $color-pink-darker
+          background-color: $color-main-theme-darker
           z-index: 2
         .button2
           position: absolute
@@ -46,14 +47,14 @@ main
           top: 0
           height: 70%
           width: 5%
-          background-color: $color-pink-dark
+          background-color: $color-main-theme-dark
           z-index: 1
   .projects
     display: grid
     grid-template-columns: repeat (2 1fr)
     grid-template-rows: repeat(2 1fr)
     grid-template-areas: "firstGrid secondGrid" "fourthGrid thirdGrid"
-    margin-top: 50px
+    margin: 50px 0
     height: 120vh
     .about-project 
       display: flex 
@@ -61,7 +62,7 @@ main
       justify-content: center 
       align-items: center
       h1 
-        color: $color-pink
+        color: $color-main-theme
         font-size: $size-h1-rest
         margin-bottom: 10px
       h2 
@@ -83,7 +84,7 @@ main
           border: 1px solid $color-white-darker
     .image-project
       background-color: green
-      margin-right: 40px
+      margin: 0 40px
     .first-grid 
       grid-area: firstGrid
     .second-grid 
@@ -98,6 +99,10 @@ main
       background: url('../Rysunki/woman-1594711_1920.jpg')
       background-size: cover
       background-position: center
+  .technology 
+    background-color: $color-white
+    height: 100vh
+    clip-path: polygon(100% 0%, 0% 5vw, 0% 100%, 100% 100%)
 
      
   
