@@ -68,18 +68,18 @@ header nav {
   width: 300px;
   height: 100vh;
   background-color: #01a093;
-  opacity: 0.8;
+  opacity: 0.6;
   display: none;
 }
 
 main {
   min-height: 150vh;
   width: calc(100% - 200px);
-  background-color: #016d64;
+  background-color: orange;
   margin-left: 200px;
 }
 
-main .aboutMe {
+main .mainPage {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -96,17 +96,17 @@ main .aboutMe {
   height: 100vh;
   width: 100%;
   color: #01a093;
-  background-color: #CEFFFB;
+  background-color: #E5FFFE;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 100% calc(100% - 5vw), 0 100%);
           clip-path: polygon(0 0, 100% 0, 100% 100%, 100% calc(100% - 5vw), 0 100%);
 }
 
-main .aboutMe h1 {
+main .mainPage h1 {
   font-size: 70px;
   font-weight: 300;
 }
 
-main .aboutMe h2 {
+main .mainPage h2 {
   font-size: 25px;
   letter-spacing: 9px;
   text-transform: uppercase;
@@ -114,7 +114,7 @@ main .aboutMe h2 {
   color: #777;
 }
 
-main .aboutMe a {
+main .mainPage a {
   text-decoration: none;
   font-size: 20px;
   text-transform: uppercase;
@@ -122,14 +122,14 @@ main .aboutMe a {
   letter-spacing: 5px;
 }
 
-main .aboutMe a div {
+main .mainPage a div {
   padding: 25px 50px;
   -webkit-clip-path: ellipse(50% 45% at 50% 50%);
           clip-path: ellipse(50% 45% at 50% 50%);
   background-color: #01a093;
 }
 
-main .aboutMe a div .button1 {
+main .mainPage a div .button1 {
   position: absolute;
   top: 0;
   left: 61%;
@@ -139,7 +139,7 @@ main .aboutMe a div .button1 {
   z-index: 2;
 }
 
-main .aboutMe a div .button2 {
+main .mainPage a div .button2 {
   position: absolute;
   left: 60%;
   top: 0;
@@ -159,6 +159,7 @@ main .projects {
       grid-template-areas: "firstGrid secondGrid" "fourthGrid thirdGrid";
   margin: 50px 0;
   height: 120vh;
+  background-color: red;
 }
 
 main .projects .about-project {
@@ -243,30 +244,80 @@ main .projects .fourth-grid {
 }
 
 main .technology {
-  background-color: #CEFFFB;
-  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  background-color: #E5FFFE;
+  min-height: 70vh;
   -webkit-clip-path: polygon(100% 0%, 0% 5vw, 0% 100%, 100% 100%);
           clip-path: polygon(100% 0%, 0% 5vw, 0% 100%, 100% 100%);
-  padding: 100px 20px 0 20px;
+  padding: 140px 50px 0 50px;
+  margin-bottom: 50px;
+}
+
+main .technology h1 {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  font-size: 50px;
+  color: #016d64;
 }
 
 main .technology section {
   margin: 0 auto;
-  width: 60%;
-  margin-bottom: 10px;
-}
-
-main .technology section h1 {
-  color: #01a093;
-  font-size: 50px;
-  font-weight: 300;
-  margin: 30px 0;
+  -ms-flex-preferred-size: 40%;
+      flex-basis: 40%;
+  margin-top: 100px;
 }
 
 main .technology section div {
   width: 100%;
-  height: 500px;
+  height: 400px;
   background-color: #fff;
+  border-radius: 30px;
+  -webkit-box-shadow: 10px 10px 5px #013a36;
+          box-shadow: 10px 10px 5px #013a36;
+  border: 2px solid #01a093;
+  position: relative;
+  margin-bottom: 70px;
+}
+
+main .technology section div h1 {
+  position: absolute;
+  top: -50px;
+  left: 10%;
+  color: #01a093;
+  font-size: 50px;
+  font-weight: 300;
+  background-color: #fff;
+  padding: 15px 35px;
   border-radius: 50px;
+  border: 2px solid #01a093;
+  -webkit-box-shadow: 5px 5px 5px #016d64;
+          box-shadow: 5px 5px 5px #016d64;
+}
+
+main .technology section div ul {
+  position: absolute;
+  top: 15%;
+  left: 7%;
+}
+
+main .technology section div ul li {
+  margin-bottom: 7px;
+  font-size: 22px;
+}
+
+main .aboutMe {
+  height: 70vh;
+  -webkit-clip-path: polygon(100% 0%, 0% 5vw, 0% 100%, 100% 100%);
+          clip-path: polygon(100% 0%, 0% 5vw, 0% 100%, 100% 100%);
+  background-color: red;
+}
+
+main footer {
+  height: 70vh;
+  background-color: green;
 }
 /*# sourceMappingURL=style.css.map */
