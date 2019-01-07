@@ -243,11 +243,6 @@ main .projects .fourth-grid {
 }
 
 main .technology {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   background-color: #E5FFFE;
   min-height: 70vh;
   -webkit-clip-path: polygon(100% 0%, 0% 5vw, 0% 100%, 100% 100%);
@@ -255,21 +250,78 @@ main .technology {
   padding: 140px 50px 0 50px;
 }
 
-main .technology h1 {
+main .technology .hobby {
+  min-height: 20vh;
+}
+
+main .technology .hobby h1 {
+  font-size: 50px;
+  color: #016d64;
+}
+
+main .technology .hobby section {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (1fr)[7];
+      grid-template-rows: repeat(7, 1fr);
+  -ms-grid-columns: (1fr)[7];
+      grid-template-columns: repeat(7, 1fr);
+  background-color: blue;
+  grid-gap: 20px;
+  min-height: 100vh;
+}
+
+main .technology .hobby section div {
+  background-color: black;
+}
+
+main .technology .hobby section .first-image-hobby {
+  grid-area: span 4 / span 3;
+}
+
+main .technology .hobby section .second-image-hobby {
+  grid-area: span 2 / span 4;
+}
+
+main .technology .hobby section .third-image-hobby {
+  grid-area: span 2 / span 2;
+}
+
+main .technology .hobby section .fourth-image-hobby {
+  grid-area: span 2 / span 2;
+}
+
+main .technology .hobby section .fifth-image-hobby {
+  grid-area: span 3 / span 4;
+}
+
+main .technology .hobby section .sixth-image-hobby {
+  grid-area: span 3 / span 3;
+}
+
+main .technology .technologyStack {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+main .technology .technologyStack h1 {
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
   font-size: 50px;
   color: #016d64;
 }
 
-main .technology section {
+main .technology .technologyStack section {
   margin: 0 auto;
   -ms-flex-preferred-size: 40%;
       flex-basis: 40%;
   margin-top: 100px;
 }
 
-main .technology section div {
+main .technology .technologyStack section div {
   width: 100%;
   height: 400px;
   background-color: #fff;
@@ -281,7 +333,7 @@ main .technology section div {
   margin-bottom: 70px;
 }
 
-main .technology section div h1 {
+main .technology .technologyStack section div h1 {
   position: absolute;
   top: -50px;
   left: 10%;
@@ -296,13 +348,13 @@ main .technology section div h1 {
           box-shadow: 5px 5px 5px #016d64;
 }
 
-main .technology section div ul {
+main .technology .technologyStack section div ul {
   position: absolute;
   top: 15%;
   left: 7%;
 }
 
-main .technology section div ul li {
+main .technology .technologyStack section div ul li {
   margin-bottom: 7px;
   font-size: 22px;
 }
