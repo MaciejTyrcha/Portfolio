@@ -75,7 +75,7 @@ header nav {
 main {
   min-height: 150vh;
   width: calc(100% - 200px);
-  background-color: orange;
+  background-color: #016d64;
   margin-left: 200px;
 }
 
@@ -159,7 +159,6 @@ main .projects {
       grid-template-areas: "firstGrid secondGrid" "fourthGrid thirdGrid";
   margin: 50px 0;
   height: 120vh;
-  background-color: red;
 }
 
 main .projects .about-project {
@@ -254,7 +253,6 @@ main .technology {
   -webkit-clip-path: polygon(100% 0%, 0% 5vw, 0% 100%, 100% 100%);
           clip-path: polygon(100% 0%, 0% 5vw, 0% 100%, 100% 100%);
   padding: 140px 50px 0 50px;
-  margin-bottom: 50px;
 }
 
 main .technology h1 {
@@ -309,15 +307,8 @@ main .technology section div ul li {
   font-size: 22px;
 }
 
-main .aboutMe {
-  height: 70vh;
-  -webkit-clip-path: polygon(100% 0%, 0% 5vw, 0% 100%, 100% 100%);
-          clip-path: polygon(100% 0%, 0% 5vw, 0% 100%, 100% 100%);
-  background-color: red;
-}
-
-main footer {
-  height: 70vh;
-  background-color: green;
+footer {
+  height: 50vh;
+  background-color: #013a36;
 }
 /*# sourceMappingURL=style.css.map */

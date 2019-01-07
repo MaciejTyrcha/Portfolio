@@ -1,7 +1,7 @@
 main 
   min-height: 150vh
   width: calc(100% - 200px)
-  background-color: orange
+  background-color: $color-main-theme-dark
   margin-left: 200px
   .mainPage
     display: flex 
@@ -55,7 +55,6 @@ main
     grid-template-areas: "firstGrid secondGrid" "fourthGrid thirdGrid"
     margin: 50px 0
     height: 120vh
-    background-color: red
     .about-project 
       display: flex 
       flex-direction: column 
@@ -106,7 +105,6 @@ main
     min-height: 70vh
     clip-path: polygon(100% 0%, 0% 5vw, 0% 100%, 100% 100%)
     padding: 140px 50px 0 50px
-    margin-bottom: 50px
     h1 
       flex-basis: 100%
       font-size: $size-h1-rest
@@ -143,13 +141,7 @@ main
           li 
             margin-bottom: 7px
             font-size: $size-li
-  .aboutMe 
-    height: 70vh
-    clip-path: polygon(100% 0%, 0% 5vw, 0% 100%, 100% 100%)
-    background-color: red
-  footer 
-    height: 70vh
-    background-color: green
+
 
      
   
