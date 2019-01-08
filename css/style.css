@@ -257,7 +257,7 @@ main .aboutMe .myPhoto div {
 
 main .hobby {
   min-height: 20vh;
-  background-color: #016d64;
+  background-color: #E5FFFE;
   -webkit-clip-path: polygon(100% 0%, 0% 5vw, 0% 100%, 100% 100%);
           clip-path: polygon(100% 0%, 0% 5vw, 0% 100%, 100% 100%);
   padding: 170px 50px;
@@ -266,9 +266,11 @@ main .hobby {
 
 main .hobby h1 {
   font-size: 50px;
-  color: #E5FFFE;
+  color: #016d64;
   font-weight: 300;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
+  border-bottom: 2px solid #016d64;
+  padding-bottom: 20px;
 }
 
 main .hobby section {
@@ -372,7 +374,7 @@ main .projects {
   padding: 150px 50px;
   height: 120vh;
   margin-bottom: -100px;
-  background-color: #E5FFFE;
+  background-color: #013a36;
   -webkit-clip-path: polygon(100% 0%, 0% 5vw, 0% 100%, 100% 100%);
           clip-path: polygon(100% 0%, 0% 5vw, 0% 100%, 100% 100%);
 }
@@ -394,7 +396,7 @@ main .projects .about-project {
 }
 
 main .projects .about-project h1 {
-  color: #016d64;
+  color: #01a093;
   font-size: 50px;
   margin-bottom: 10px;
   font-weight: 300;
@@ -420,7 +422,8 @@ main .projects .about-project a {
 }
 
 main .projects .about-project a:hover {
-  background-color: #013a36;
+  background-color: #E5FFFE;
+  color: #013a36;
 }
 
 main .projects .image-project {
@@ -459,16 +462,18 @@ main .projects .fourth-grid {
 
 main .technologyStack {
   min-height: 60vh;
-  padding: 150px 50px;
-  background-color: #016d64;
+  padding: 150px 50px 0 50px;
+  background-color: #E5FFFE;
   -webkit-clip-path: polygon(100% 0%, 0% 5vw, 0% 100%, 100% 100%);
           clip-path: polygon(100% 0%, 0% 5vw, 0% 100%, 100% 100%);
 }
 
 main .technologyStack h1 {
   font-size: 50px;
-  color: #E5FFFE;
+  color: #01a093;
   font-weight: 300;
+  border-bottom: 2px solid #01a093;
+  padding-bottom: 20px;
 }
 
 main .technologyStack section {
@@ -480,8 +485,8 @@ main .technologyStack section {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-top: 80px;
-  background-color: blue;
+  margin-top: 40px;
+  min-height: 80vh;
 }
 
 main .technologyStack section div {
@@ -498,20 +503,40 @@ main .technologyStack section div {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-preferred-size: 20%;
-      flex-basis: 20%;
-  height: 200px;
-  background-color: red;
+  -ms-flex-preferred-size: 280px;
+      flex-basis: 280px;
+  height: 280px;
   margin: 20px;
+  background-color: #92F6F3;
+  -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+          clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 }
 
 main .technologyStack section div .fab, main .technologyStack section div .fas {
+  font-size: 140px;
+  -webkit-transition: 0.1s linear;
+  transition: 0.1s linear;
+}
+
+main .technologyStack section div .fab:hover, main .technologyStack section div .fas:hover {
   font-size: 150px;
 }
 
 main .technologyStack section div p {
   font-size: 25px;
   margin-top: 5px;
+  font-weight: 700;
+  color: #013a36;
+}
+
+main .technologyStack section div img {
+  height: 50%;
+  -webkit-transition: 0.1s linear;
+  transition: 0.1s linear;
+}
+
+main .technologyStack section div img:hover {
+  height: 54%;
 }
 
 footer {

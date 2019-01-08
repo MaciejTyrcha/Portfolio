@@ -109,15 +109,17 @@ main
         height: 100%
   .hobby 
     min-height: 20vh
-    background-color: $color-main-theme-dark
+    background-color: $color-main-theme-lighter
     clip-path: polygon(100% 0%, 0% 5vw, 0% 100%, 100% 100%)
     padding: 170px 50px
     margin-bottom: -100px
     h1 
       font-size: $size-h1-rest
-      color: $color-main-theme-lighter
+      color: $color-main-theme-dark
       font-weight: 300
-      margin-bottom: 30px
+      margin-bottom: 50px
+      border-bottom: 2px solid $color-main-theme-dark
+      padding-bottom: 20px
     section 
       display: grid
       grid-template-rows: repeat(7, 1fr)
@@ -179,7 +181,7 @@ main
     padding: 150px 50px
     height: 120vh
     margin-bottom: -100px
-    background-color: $color-main-theme-lighter
+    background-color: $color-main-theme-darker
     clip-path: polygon(100% 0%, 0% 5vw, 0% 100%, 100% 100%)
     .about-project 
       display: flex 
@@ -187,7 +189,7 @@ main
       justify-content: center 
       align-items: center
       h1 
-        color: $color-main-theme-dark
+        color: $color-main-theme
         font-size: $size-h1-rest
         margin-bottom: 10px
         font-weight: 300
@@ -206,7 +208,8 @@ main
         border-radius: 40px
         transition: 0.3s linear
         &:hover 
-          background-color: $color-main-theme-darker
+          background-color: $color-main-theme-lighter
+          color: $color-main-theme-darker
     .image-project
       background-color: black
     .first-grid 
@@ -225,33 +228,46 @@ main
       background-position: center 
   .technologyStack
     min-height: 60vh
-    padding: 150px 50px
-    background-color: $color-main-theme-dark
+    padding: 150px 50px 0 50px
+    background-color: $color-main-theme-lighter
     clip-path: polygon(100% 0%, 0% 5vw, 0% 100%, 100% 100%)
     h1
       font-size: $size-h1-rest
-      color: $color-main-theme-lighter
+      color: $color-main-theme
       font-weight: 300
+      border-bottom: 2px solid $color-main-theme
+      padding-bottom: 20px
     section 
       display: flex 
       flex-wrap: wrap
       justify-content: space-between
-      margin-top: 80px
-      background-color: blue
+      margin-top: 40px
+      min-height: 80vh
       div 
         display: flex
         flex-direction: column
         justify-content: center
         align-items: center
-        flex-basis: 20%
-        height: 200px 
-        background-color: red
+        flex-basis: 280px
+        height: 280px 
         margin: 20px
+        background-color: $color-main-theme-light
+        clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)
         .fab, .fas
           font-size: $size-technology-icons
+          transition: 0.1s linear
+          &:hover 
+            font-size: $size-technology-icons-hover
         p 
           font-size: $size-h2-rest
           margin-top: 5px
+          font-weight: 700
+          color: $color-main-theme-darker
+        img 
+          height: 50%
+          transition: 0.1s linear
+          &:hover 
+            height: 54%
      
   
     
