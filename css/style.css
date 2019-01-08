@@ -485,8 +485,9 @@ main .technologyStack section {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-top: 40px;
-  min-height: 80vh;
+  margin: 40px auto;
+  min-height: 60vh;
+  width: 70%;
 }
 
 main .technologyStack section div {
@@ -503,44 +504,48 @@ main .technologyStack section div {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-preferred-size: 280px;
-      flex-basis: 280px;
-  height: 280px;
+  -ms-flex-preferred-size: 200px;
+      flex-basis: 200px;
+  height: 200px;
   margin: 20px;
-  background-color: #92F6F3;
+  background-color: #01a093;
   -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
           clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 }
 
 main .technologyStack section div .fab, main .technologyStack section div .fas {
-  font-size: 140px;
+  font-size: 90px;
   -webkit-transition: 0.1s linear;
   transition: 0.1s linear;
 }
 
 main .technologyStack section div .fab:hover, main .technologyStack section div .fas:hover {
-  font-size: 150px;
+  font-size: 100px;
 }
 
 main .technologyStack section div p {
   font-size: 25px;
   margin-top: 5px;
   font-weight: 700;
-  color: #013a36;
+  color: #E5FFFE;
 }
 
 main .technologyStack section div img {
-  height: 50%;
+  height: 42%;
   -webkit-transition: 0.1s linear;
   transition: 0.1s linear;
 }
 
 main .technologyStack section div img:hover {
-  height: 54%;
+  height: 47%;
 }
 
 footer {
-  height: 50vh;
+  width: calc(100% - 200px);
+  height: 70vh;
   background-color: #013a36;
+  margin-left: 200px;
+  color: white;
+  padding: 20px 50px;
 }
 /*# sourceMappingURL=style.css.map */
