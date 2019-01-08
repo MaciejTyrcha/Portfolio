@@ -1,7 +1,6 @@
-main 
-  min-height: 150vh
+main
   width: calc(100% - 200px)
-  background-color: $color-main-theme-dark
+  background-color: $color-main-theme-darker
   margin-left: 200px
   .mainPage
     display: flex 
@@ -48,24 +47,152 @@ main
           width: 5%
           background-color: $color-main-theme-dark
           z-index: 1
+  .aboutMe 
+    display: flex
+    justify-content: space-between
+    background-color: $color-main-theme-darker
+    padding: 80px 50px
+    min-height: 20vh
+    width: 100%
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 100% calc(100% - 5vw), 0 100%)
+    .introduction
+      display: flex 
+      flex-basis: 50%
+      min-height: 60vh
+      flex-direction: column
+      h1 
+        font-size: $size-h1-rest
+        color: $color-main-theme-lighter
+        font-weight: 300
+        margin-bottom: 15px
+      h2 
+        font-size: $size-h2-rest
+        letter-spacing: 9px
+        text-transform: uppercase
+        color: $color-gray-lighter
+        margin-bottom: 10px
+      p 
+        font-size: $size-p
+        letter-spacing: 2px
+        line-height: 150%
+        color: $color-white
+      .icons 
+        display: flex
+        justify-content: center
+        align-items: center
+        height: 150px
+        margin-top: 40px
+        a
+          display: flex
+          justify-content: center
+          align-items: center
+          width: 80px
+          height: 80px 
+          margin: 0 7%
+          text-decoration: none
+          color: $color-main-theme-darker
+          background-color: $color-main-theme-lighter
+          font-size: $size-contact-about-me
+          clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)
+          transition: 0.2s linear
+          &:hover 
+            transform: rotate(360deg)
+    .myPhoto 
+      flex-basis: 50%
+      min-height: 60vh
+      div 
+        background: url('../Rysunki/me.jpg')
+        background-size: contain
+        background-repeat: no-repeat
+        background-position: center
+        width: 100%
+        height: 100%
+  .hobby 
+    min-height: 20vh
+    background-color: $color-main-theme-dark
+    clip-path: polygon(100% 0%, 0% 5vw, 0% 100%, 100% 100%)
+    padding: 170px 50px
+    margin-bottom: -100px
+    h1 
+      font-size: $size-h1-rest
+      color: $color-main-theme-lighter
+      font-weight: 300
+      margin-bottom: 30px
+    section 
+      display: grid
+      grid-template-rows: repeat(7, 1fr)
+      grid-template-columns: repeat(7, 1fr)
+      grid-gap: 20px
+      min-height: 100vh
+      div 
+        background-color: black
+        overflow: hidden
+      .hobbyImage
+        height: 100%
+        width: 100%
+        transition: 0.4s ease-in-out
+        &:hover 
+          transform: scale(1.05)
+          opacity: 0.5
+      .first-image-hobby 
+        grid-area: span 4 / span 3
+        div 
+          background: url('../Rysunki/salsaDance.jpg')
+          background-size: cover
+          background-position: center
+      .second-image-hobby 
+        grid-area: span 2 / span 4
+        div 
+          background: url('../Rysunki/programming.jpg')
+          background-size: cover
+          background-position: center
+      .third-image-hobby 
+        grid-area: span 2 / span 2 
+        div 
+          background: url('../Rysunki/pokojowyPatrol.jpg')
+          background-size: cover
+          background-position: center
+      .fourth-image-hobby 
+        grid-area: span 2 / span 2
+        div 
+          background: url('../Rysunki/winterSports.jpg')
+          background-size: cover
+          background-position: center
+      .fifth-image-hobby 
+        grid-area: span 3 / span 4 
+        div 
+          background: url('../Rysunki/guitar.jpg')
+          background-size: cover
+          background-position: center
+      .sixth-image-hobby 
+        grid-area: span 3 / span 3
+        div 
+          background: url('../Rysunki/movie.jpg')
+          background-size: cover
+          background-position: center
   .projects
     display: grid
-    grid-template-columns: repeat (2 1fr)
-    grid-template-rows: repeat(2 1fr)
+    grid-template-columns: repeat (2, 1fr)
+    grid-template-rows: repeat(2, 1fr)
     grid-template-areas: "firstGrid secondGrid" "fourthGrid thirdGrid"
-    margin: 50px 0
+    grid-gap: 20px
+    padding: 150px 50px
     height: 120vh
+    margin-bottom: -100px
+    background-color: $color-main-theme-lighter
+    clip-path: polygon(100% 0%, 0% 5vw, 0% 100%, 100% 100%)
     .about-project 
       display: flex 
       flex-direction: column 
       justify-content: center 
       align-items: center
       h1 
-        color: $color-main-theme
+        color: $color-main-theme-dark
         font-size: $size-h1-rest
         margin-bottom: 10px
+        font-weight: 300
       h2 
-        color: $color-white
+        color: $color-gray-lighter
         font-size: $size-h2-rest
         margin-bottom: 30px
       a 
@@ -75,15 +202,13 @@ main
         color: $color-white
         letter-spacing: 5px
         padding: 15px 50px
-        border: 1px solid $color-white
+        background-color: $color-main-theme
         border-radius: 40px
         transition: 0.3s linear
         &:hover 
-          background-color: $color-gray-lighter
-          border: 1px solid $color-white-darker
+          background-color: $color-main-theme-darker
     .image-project
-      background-color: green
-      margin: 0 40px
+      background-color: black
     .first-grid 
       grid-area: firstGrid
     .second-grid 
@@ -97,111 +222,36 @@ main
       grid-area: fourthGrid
       background: url('../Rysunki/woman-1594711_1920.jpg')
       background-size: cover
-      background-position: center
-  .technology 
-    background-color: $color-main-theme-lighter
-    min-height: 70vh
+      background-position: center 
+  .technologyStack
+    min-height: 60vh
+    padding: 150px 50px
+    background-color: $color-main-theme-dark
     clip-path: polygon(100% 0%, 0% 5vw, 0% 100%, 100% 100%)
-    padding: 140px 50px 0 50px
-    .hobby 
-      min-height: 20vh
-      h1 
-        font-size: $size-h1-rest
-        color: $color-main-theme-dark
-      section 
-        display: grid
-        grid-template-rows: repeat(7, 1fr)
-        grid-template-columns: repeat(7, 1fr)
-        grid-gap: 20px
-        min-height: 100vh
-        margin: 20px 0
-        div 
-          background-color: black
-          overflow: hidden
-        .hobbyImage
-          height: 100%
-          width: 100%
-          transition: 0.4s ease-in-out
-          &:hover 
-            transform: scale(1.05)
-            opacity: 0.5
-        .first-image-hobby 
-          grid-area: span 4 / span 3
-          div 
-            background: url('../Rysunki/salsaDance.jpg')
-            background-size: cover
-            background-position: center
-        .second-image-hobby 
-          grid-area: span 2 / span 4
-          div 
-            background: url('../Rysunki/programming.jpg')
-            background-size: cover
-            background-position: center
-        .third-image-hobby 
-          grid-area: span 2 / span 2 
-          div 
-            background: url('../Rysunki/pokojowyPatrol.jpg')
-            background-size: cover
-            background-position: center
-        .fourth-image-hobby 
-          grid-area: span 2 / span 2
-          div 
-            background: url('../Rysunki/winterSports.jpg')
-            background-size: cover
-            background-position: center
-        .fifth-image-hobby 
-          grid-area: span 3 / span 4 
-          div 
-            background: url('../Rysunki/guitar.jpg')
-            background-size: cover
-            background-position: center
-        .sixth-image-hobby 
-          grid-area: span 3 / span 3
-          div 
-            background: url('../Rysunki/movie.jpg')
-            background-size: cover
-            background-position: center
-    .technologyStack
-      display: flex
+    h1
+      font-size: $size-h1-rest
+      color: $color-main-theme-lighter
+      font-weight: 300
+    section 
+      display: flex 
       flex-wrap: wrap
-      h1 
-        flex-basis: 100%
-        font-size: $size-h1-rest
-        color: $color-main-theme-dark
-      section 
-        margin: 0 auto 
-        flex-basis: 40%
-        margin-top: 80px
-        div 
-          width: 100%
-          height: 400px 
-          background-color: $color-white
-          border-radius: 30px
-          box-shadow: 10px 10px 5px $color-main-theme-darker
-          border: 2px solid $color-main-theme
-          position: relative
-          margin-bottom: 70px
-          h1 
-            position: absolute
-            top: -50px
-            left: 10%
-            color: $color-main-theme
-            font-size: $size-h1-rest
-            font-weight: 300
-            background-color: $color-white
-            padding: 15px 35px
-            border-radius: 50px
-            border: 2px solid $color-main-theme
-            box-shadow: 5px 5px 5px $color-main-theme-dark
-          ul 
-            position: absolute 
-            top: 15%
-            left: 7%
-            li 
-              margin-bottom: 7px
-              font-size: $size-li
-
-
+      justify-content: space-between
+      margin-top: 80px
+      background-color: blue
+      div 
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        flex-basis: 20%
+        height: 200px 
+        background-color: red
+        margin: 20px
+        .fab, .fas
+          font-size: $size-technology-icons
+        p 
+          font-size: $size-h2-rest
+          margin-top: 5px
      
   
     
