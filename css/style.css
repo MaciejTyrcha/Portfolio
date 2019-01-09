@@ -131,7 +131,7 @@ header nav ul li .hover:hover::after {
 }
 
 main {
-  width: calc(100% - 300px);
+  width: calc(100% - 304px);
   background-color: #013a36;
   margin-left: 300px;
 }
@@ -152,14 +152,37 @@ main .mainPage {
           align-items: center;
   height: 100vh;
   width: 100%;
-  color: #01a093;
-  background-color: #E5FFFE;
+  background: url("../Rysunki/texture.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  border-left: 1px solid #016d64;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 100% calc(100% - 5vw), 0 100%);
           clip-path: polygon(0 0, 100% 0, 100% 100%, 100% calc(100% - 5vw), 0 100%);
 }
 
+main .mainPage section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 40%;
+  height: 30%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
 main .mainPage h1 {
   font-size: 70px;
+  color: #01a093;
   font-weight: 300;
 }
 
@@ -586,10 +609,168 @@ main .technologyStack section div img {
 
 footer {
   width: calc(100% - 300px);
-  height: 70vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 70vh;
   background-color: #013a36;
   margin-left: 300px;
   color: white;
-  padding: 20px 50px;
+  padding: 50px 50px 0 50px;
+}
+
+footer .wrapper {
+  width: 100%;
+  min-height: 60vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1px solid #92F6F3;
+}
+
+footer .wrapper section {
+  width: 70%;
+}
+
+footer .wrapper section h1 {
+  font-size: 50px;
+  color: #E5FFFE;
+  text-transform: uppercase;
+  font-weight: 300;
+  margin-bottom: 15px;
+}
+
+footer .wrapper section h2 {
+  font-size: 25px;
+  font-style: italic;
+  letter-spacing: 5px;
+  color: #999;
+  margin-bottom: 10px;
+  font-weight: 400;
+}
+
+footer .wrapper section h2 span {
+  display: block;
+}
+
+footer .wrapper section h2 a {
+  text-decoration: none;
+  color: #E5FFFE;
+  font-style: normal;
+  letter-spacing: 1px;
+}
+
+footer .wrapper section div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 25vh;
+}
+
+footer .wrapper section div a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 80px;
+  height: 80px;
+  margin: 0 7%;
+  text-decoration: none;
+  color: #013a36;
+  background-color: #E5FFFE;
+  font-size: 50px;
+  -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+          clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  -webkit-transition: 0.2s linear;
+  transition: 0.2s linear;
+}
+
+footer .wrapper section div a:hover {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+footer .wrapper form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 40%;
+}
+
+footer .wrapper form input {
+  margin-bottom: 20px;
+  padding: 10px 5px;
+  font-size: 30px;
+  background-color: #E5FFFE;
+  border: none;
+}
+
+footer .wrapper form #textarea {
+  padding: 10px 5px;
+  font-size: 30px;
+  background-color: #E5FFFE;
+  border: none;
+}
+
+footer .wrapper button {
+  text-decoration: none;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #fff;
+  letter-spacing: 5px;
+  padding: 15px 50px;
+  margin: 30px 0;
+  background-color: #01a093;
+  border-radius: 40px;
+  border: none;
+  -webkit-transition: 0.3s linear;
+  transition: 0.3s linear;
+  cursor: pointer;
+}
+
+footer .wrapper button:hover {
+  background-color: #E5FFFE;
+  color: #013a36;
+}
+
+footer .copyRights {
+  min-height: 4vh;
+  padding-top: 0.5vh;
+  width: 100%;
 }
 /*# sourceMappingURL=style.css.map */

@@ -1,7 +1,96 @@
 footer 
   width: calc(100% - 300px)
-  height: 70vh
+  display: flex 
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  min-height: 70vh
   background-color: $color-main-theme-darker
   margin-left: 300px
   color: white
-  padding: 20px 50px
+  padding: 50px 50px 0 50px
+  .wrapper
+    width: 100%
+    min-height: 60vh 
+    display: flex 
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    border-bottom: 1px solid $color-main-theme-light
+    section 
+      width: 70%
+      h1
+        font-size: $size-h1-rest
+        color: $color-main-theme-lighter
+        text-transform: uppercase
+        font-weight: 300
+        margin-bottom: 15px
+      h2 
+        font-size: $size-h2-rest
+        font-style: italic
+        letter-spacing: 5px
+        color: $color-gray-lighter
+        margin-bottom: 10px
+        font-weight: 400
+        span 
+          display: block
+        a 
+          text-decoration: none
+          color: $color-main-theme-lighter
+          font-style: normal
+          letter-spacing: 1px
+      div 
+        display: flex
+        justify-content: center
+        align-items: center
+        height: 25vh
+        a
+          display: flex
+          justify-content: center
+          align-items: center
+          width: 80px
+          height: 80px 
+          margin: 0 7%
+          text-decoration: none
+          color: $color-main-theme-darker
+          background-color: $color-main-theme-lighter
+          font-size: $size-contact-about-me
+          clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)
+          transition: 0.2s linear
+          &:hover 
+            transform: rotate(360deg)
+    form 
+      display: flex
+      flex-direction: column
+      width: 40%
+      input 
+        margin-bottom: 20px
+        padding: 10px 5px
+        font-size: 30px
+        background-color: $color-main-theme-lighter
+        border: none
+      #textarea 
+        padding: 10px 5px
+        font-size: 30px
+        background-color: $color-main-theme-lighter
+        border: none
+    button 
+      text-decoration: none
+      font-size: $size-button
+      text-transform: uppercase
+      color: $color-white
+      letter-spacing: 5px
+      padding: 15px 50px
+      margin: 30px 0
+      background-color: $color-main-theme
+      border-radius: 40px
+      border: none
+      transition: 0.3s linear
+      cursor: pointer
+      &:hover 
+        background-color: $color-main-theme-lighter
+        color: $color-main-theme-darker
+  .copyRights 
+    min-height: 4vh
+    padding-top: 0.5vh
+    width: 100%
