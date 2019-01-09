@@ -97,6 +97,7 @@ header nav ul li {
   margin-bottom: 25px;
   text-align: right;
   border-bottom: 4px solid #016d64;
+  position: relative;
 }
 
 header nav ul li a {
@@ -104,6 +105,29 @@ header nav ul li a {
   color: #E5FFFE;
   font-size: 20px;
   text-transform: uppercase;
+}
+
+header nav ul li a:hover {
+  font-weight: 600;
+  color: #fff;
+}
+
+header nav ul li .hover::after {
+  content: '';
+  position: absolute;
+  display: block;
+  bottom: -4px;
+  width: 0;
+  height: 4px;
+  background-color: #013a36;
+  -webkit-transition: 0.2s linear;
+  transition: 0.2s linear;
+}
+
+header nav ul li .hover:hover::after {
+  width: 100%;
+  -webkit-transition: 0.2s linear;
+  transition: 0.2s linear;
 }
 
 main {
