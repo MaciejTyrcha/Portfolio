@@ -16,14 +16,15 @@ header {
           flex-direction: column;
   position: relative;
   height: 100vh;
-  width: 300px;
+  width: 250px;
   position: fixed;
   z-index: 1;
   background-color: #01a093;
+  border-right: 1px solid #016d64;
 }
 
 header aside {
-  width: 300px;
+  width: 250px;
   height: 15vh;
 }
 
@@ -83,7 +84,7 @@ header nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 300px;
+  width: 250px;
   height: 100vh;
 }
 
@@ -131,9 +132,9 @@ header nav ul li .hover:hover::after {
 }
 
 main {
-  width: calc(100% - 304px);
+  width: calc(100% - $size-nav);
   background-color: #013a36;
-  margin-left: 300px;
+  margin-left: 250px;
 }
 
 main .mainPage {
@@ -156,7 +157,6 @@ main .mainPage {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  border-left: 1px solid #016d64;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 100% calc(100% - 5vw), 0 100%);
           clip-path: polygon(0 0, 100% 0, 100% 100%, 100% calc(100% - 5vw), 0 100%);
 }
@@ -241,21 +241,20 @@ main .aboutMe {
   padding: 80px 50px;
   min-height: 20vh;
   width: 100%;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 100% calc(100% - 5vw), 0 100%);
-          clip-path: polygon(0 0, 100% 0, 100% 100%, 100% calc(100% - 5vw), 0 100%);
 }
 
 main .aboutMe .introduction {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-preferred-size: 50%;
-      flex-basis: 50%;
+  -ms-flex-preferred-size: 48%;
+      flex-basis: 48%;
   min-height: 60vh;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  background-color: blue;
 }
 
 main .aboutMe .introduction h1 {
@@ -323,9 +322,10 @@ main .aboutMe .introduction .icons a:hover {
 }
 
 main .aboutMe .myPhoto {
-  -ms-flex-preferred-size: 50%;
-      flex-basis: 50%;
+  -ms-flex-preferred-size: 48%;
+      flex-basis: 48%;
   min-height: 60vh;
+  background-color: red;
 }
 
 main .aboutMe .myPhoto div {
@@ -335,6 +335,13 @@ main .aboutMe .myPhoto div {
   background-position: center;
   width: 100%;
   height: 100%;
+  -webkit-transition: 0.3s linear;
+  transition: 0.3s linear;
+}
+
+main .aboutMe .myPhoto div:hover {
+  -webkit-filter: grayscale(1) contrast(1.2);
+          filter: grayscale(1) contrast(1.2);
 }
 
 main .hobby {
@@ -608,7 +615,7 @@ main .technologyStack section div img {
 }
 
 footer {
-  width: calc(100% - 300px);
+  width: calc(100% - $size-nav);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -624,7 +631,7 @@ footer {
           align-items: center;
   min-height: 70vh;
   background-color: #013a36;
-  margin-left: 300px;
+  margin-left: 250px;
   color: white;
   padding: 50px 50px 0 50px;
 }

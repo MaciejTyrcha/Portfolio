@@ -3,12 +3,13 @@ header
   flex-direction: column
   position: relative
   height: 100vh
-  width: 300px
+  width: $size-nav
   position: fixed 
   z-index: 1
   background-color: $color-main-theme
+  border-right: 1px solid $color-main-theme-dark
   aside 
-    width: 300px
+    width: $size-nav
     height: 15vh
     .hamburger 
       position: absolute
@@ -44,7 +45,7 @@ header
     flex-direction: column
     justify-content: center
     align-items: center
-    width: 300px
+    width: $size-nav
     height: 100vh
     ul 
       list-style: none
