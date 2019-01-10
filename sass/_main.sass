@@ -26,10 +26,13 @@ main
       width: 40%
       height: 30%
       background-color: rgba(0,0,0,0.8)
+      padding: 0 20px
       @media (max-width: 1100px)
-        width: 60%
+        width: 65%
       @media (max-width: 800px)
         width: 100%
+      @media (max-width: 350px)
+        height: 25%
     h1 
       font-size: $size-h1-main
       color: $color-main-theme
@@ -38,6 +41,8 @@ main
         font-size: $size-h1-main-1500
       @media (max-width: 1300px)
         font-size: $size-h1-main-1300
+      @media (max-width: 350px)
+        font-size: $size-h1-main-350
     h2 
       font-size: $size-h2-main
       letter-spacing: 9px
@@ -48,6 +53,8 @@ main
         font-size: $size-h2-main-1500
       @media (max-width: 1300px)
         font-size: $size-h2-main-1300
+      @media (max-width: 350px)
+        font-size: $size-h2-main-350
     a 
       text-decoration: none
       font-size: $size-button
