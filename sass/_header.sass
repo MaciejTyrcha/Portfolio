@@ -1,32 +1,40 @@
 header
   display: flex
   flex-direction: column
-  position: relative
   height: 100vh
   width: $size-nav
   position: fixed 
   z-index: 1
   background-color: $color-main-theme
   border-right: 1px solid $color-main-theme-dark
+  @media (max-width: 800px)
+    display: block
+    height: $size-nav-800
+    width: 100%
+    border-right: none 
+    border-bottom: 1px solid $color-main-theme-dark
   aside 
-    width: $size-nav
-    height: 15vh
-    .hamburger 
-      position: absolute
-      top: 50px
-      left: 50%
-      transform: translate(-50%, 0)
+    width: 100%
+    height: $size-nav-800
+    position: relative
+    @media (max-width: 800px)
+      padding: 0 20px
+    .hamburger
+      top: 50%
+      left: 100%
+      transform: translate(-100%, -50%)
       width: 60px
       height: 50px 
-      background-color: transparent
       position: relative
       display: none
+      @media (max-width: 800px)
+        display: block
       &:hover 
         cursor: pointer
       span 
         width: 80%
         height: 2px
-        background-color: $color-white
+        background-color: $color-main-theme-lighter
         border-radius: 1px
       .line1 
         position: absolute
@@ -47,6 +55,16 @@ header
     align-items: center
     width: $size-nav
     height: 100vh
+    @media (max-width: 800px)
+      background-color: $color-main-theme
+      width: 50%
+      height: 40vh
+      margin-left: 50%
+      border: 1px solid $color-main-theme-dark
+      display: none
+    @media (max-width: 600px)
+      margin: 0 
+      width: 100%
     ul 
       list-style: none
       width: 80%

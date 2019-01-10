@@ -2,6 +2,10 @@ main
   width: calc(100% - $size-nav)
   background-color: $color-main-theme-darker
   margin-left: $size-nav
+  @media (max-width: 800px)
+    margin: 0 
+    padding: $size-nav-800 0 0 0
+    width: 100%
   .mainPage
     display: flex 
     flex-direction: column
@@ -22,27 +26,43 @@ main
       width: 40%
       height: 30%
       background-color: rgba(0,0,0,0.8)
+      @media (max-width: 1100px)
+        width: 60%
+      @media (max-width: 800px)
+        width: 100%
     h1 
       font-size: $size-h1-main
       color: $color-main-theme
       font-weight: 300
+      @media (max-width: 1500px)
+        font-size: $size-h1-main-1500
+      @media (max-width: 1300px)
+        font-size: $size-h1-main-1300
     h2 
       font-size: $size-h2-main
       letter-spacing: 9px
       text-transform: uppercase
       margin-bottom: 30px
       color: $color-gray-lighter
+      @media (max-width: 1500px)
+        font-size: $size-h2-main-1500
+      @media (max-width: 1300px)
+        font-size: $size-h2-main-1300
     a 
       text-decoration: none
       font-size: $size-button
       text-transform: uppercase
       color: $color-white
       letter-spacing: 5px
+      @media (max-width: 1300px)
+        font-size: $size-button-1300
       div
         padding: 25px 50px
         clip-path: ellipse(50% 45% at 50% 50%)
         background-color: $color-main-theme
         position: relative
+        @media (max-width: 1500px)
+          padding: 20px 40px
         .button1
           position: absolute
           top: 0
@@ -64,12 +84,10 @@ main
     justify-content: space-between
     background-color: $color-main-theme-darker
     padding: 80px 50px
-    min-height: 20vh
     width: 100%
     .introduction
       display: flex 
       flex-basis: 48%
-      min-height: 60vh
       flex-direction: column
       background-color: blue
       h1 
@@ -111,7 +129,6 @@ main
             transform: rotate(360deg)
     .myPhoto 
       flex-basis: 48%
-      min-height: 60vh
       background-color: red
       div 
         background: url('../Rysunki/me.jpg')
@@ -260,6 +277,7 @@ main
       margin: 40px auto 0 auto
       min-height: 60vh
       width: 70%
+      background-color: red
       div 
         display: flex
         flex-direction: column
@@ -268,6 +286,7 @@ main
         flex-basis: 200px
         height: 200px 
         margin: 20px
+        background-color: blue
         .fab, .fas
           font-size: $size-technology-icons
         p 

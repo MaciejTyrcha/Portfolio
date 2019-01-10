@@ -14,7 +14,6 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  position: relative;
   height: 100vh;
   width: 250px;
   position: fixed;
@@ -23,22 +22,43 @@ header {
   border-right: 1px solid #016d64;
 }
 
+@media (max-width: 800px) {
+  header {
+    display: block;
+    height: 10vh;
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #016d64;
+  }
+}
+
 header aside {
-  width: 250px;
-  height: 15vh;
+  width: 100%;
+  height: 10vh;
+  position: relative;
+}
+
+@media (max-width: 800px) {
+  header aside {
+    padding: 0 20px;
+  }
 }
 
 header aside .hamburger {
-  position: absolute;
-  top: 50px;
-  left: 50%;
-  -webkit-transform: translate(-50%, 0);
-          transform: translate(-50%, 0);
+  top: 50%;
+  left: 100%;
+  -webkit-transform: translate(-100%, -50%);
+          transform: translate(-100%, -50%);
   width: 60px;
   height: 50px;
-  background-color: transparent;
   position: relative;
   display: none;
+}
+
+@media (max-width: 800px) {
+  header aside .hamburger {
+    display: block;
+  }
 }
 
 header aside .hamburger:hover {
@@ -48,7 +68,7 @@ header aside .hamburger:hover {
 header aside .hamburger span {
   width: 80%;
   height: 2px;
-  background-color: #fff;
+  background-color: #E5FFFE;
   border-radius: 1px;
 }
 
@@ -86,6 +106,24 @@ header nav {
           align-items: center;
   width: 250px;
   height: 100vh;
+}
+
+@media (max-width: 800px) {
+  header nav {
+    background-color: #01a093;
+    width: 50%;
+    height: 40vh;
+    margin-left: 50%;
+    border: 1px solid #016d64;
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  header nav {
+    margin: 0;
+    width: 100%;
+  }
 }
 
 header nav ul {
@@ -137,6 +175,14 @@ main {
   margin-left: 250px;
 }
 
+@media (max-width: 800px) {
+  main {
+    margin: 0;
+    padding: 10vh 0 0 0;
+    width: 100%;
+  }
+}
+
 main .mainPage {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -180,10 +226,34 @@ main .mainPage section {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
+@media (max-width: 1100px) {
+  main .mainPage section {
+    width: 60%;
+  }
+}
+
+@media (max-width: 800px) {
+  main .mainPage section {
+    width: 100%;
+  }
+}
+
 main .mainPage h1 {
   font-size: 70px;
   color: #01a093;
   font-weight: 300;
+}
+
+@media (max-width: 1500px) {
+  main .mainPage h1 {
+    font-size: 60px;
+  }
+}
+
+@media (max-width: 1300px) {
+  main .mainPage h1 {
+    font-size: 50px;
+  }
 }
 
 main .mainPage h2 {
@@ -194,6 +264,18 @@ main .mainPage h2 {
   color: #999;
 }
 
+@media (max-width: 1500px) {
+  main .mainPage h2 {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 1300px) {
+  main .mainPage h2 {
+    font-size: 16px;
+  }
+}
+
 main .mainPage a {
   text-decoration: none;
   font-size: 20px;
@@ -202,12 +284,24 @@ main .mainPage a {
   letter-spacing: 5px;
 }
 
+@media (max-width: 1300px) {
+  main .mainPage a {
+    font-size: 14px;
+  }
+}
+
 main .mainPage a div {
   padding: 25px 50px;
   -webkit-clip-path: ellipse(50% 45% at 50% 50%);
           clip-path: ellipse(50% 45% at 50% 50%);
   background-color: #01a093;
   position: relative;
+}
+
+@media (max-width: 1500px) {
+  main .mainPage a div {
+    padding: 20px 40px;
+  }
 }
 
 main .mainPage a div .button1 {
@@ -239,7 +333,6 @@ main .aboutMe {
           justify-content: space-between;
   background-color: #013a36;
   padding: 80px 50px;
-  min-height: 20vh;
   width: 100%;
 }
 
@@ -249,7 +342,6 @@ main .aboutMe .introduction {
   display: flex;
   -ms-flex-preferred-size: 48%;
       flex-basis: 48%;
-  min-height: 60vh;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -324,7 +416,6 @@ main .aboutMe .introduction .icons a:hover {
 main .aboutMe .myPhoto {
   -ms-flex-preferred-size: 48%;
       flex-basis: 48%;
-  min-height: 60vh;
   background-color: red;
 }
 
@@ -577,6 +668,7 @@ main .technologyStack section {
   margin: 40px auto 0 auto;
   min-height: 60vh;
   width: 70%;
+  background-color: red;
 }
 
 main .technologyStack section div {
@@ -597,6 +689,7 @@ main .technologyStack section div {
       flex-basis: 200px;
   height: 200px;
   margin: 20px;
+  background-color: blue;
 }
 
 main .technologyStack section div .fab, main .technologyStack section div .fas {
@@ -634,6 +727,13 @@ footer {
   margin-left: 250px;
   color: white;
   padding: 50px 50px 0 50px;
+}
+
+@media (max-width: 800px) {
+  footer {
+    margin: 0;
+    width: 100%;
+  }
 }
 
 footer .wrapper {
