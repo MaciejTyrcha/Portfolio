@@ -88,57 +88,60 @@ main
           width: 20%
           background-color: $color-main-theme-dark
           z-index: 1
+
+
+
   .aboutMe 
-    display: flex
-    justify-content: space-between
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    grid-template-rows: repeat(4, 1fr)
     background-color: $color-main-theme-darker
     padding: 80px 50px
     width: 100%
+    min-height: 80vh
+    // background-color: yellow
     .introduction
       display: flex 
-      flex-basis: 48%
       flex-direction: column
-      background-color: blue
+      padding: 0 10px
+      grid-area: span 3 / span 1
+      // background-color: blue
       h1 
         font-size: $size-h1-rest
         color: $color-main-theme-lighter
         font-weight: 300
         margin-bottom: 15px
+        @media (max-width: 1500px)
+          font-size: $size-h1-rest-1500
+        @media (max-width: 1300px)
+          margin-bottom: 10px
+          font-size: $size-h1-rest-1300
+      
       h2 
         font-size: $size-h2-rest
         letter-spacing: 9px
         text-transform: uppercase
         color: $color-gray-lighter
         margin-bottom: 10px
+        @media (max-width: 1500px)
+          font-size: $size-h2-rest-1500
+        @media (max-width: 1300px)
+          margin-bottom: 10px
+          font-size: $size-h2-rest-1300
       p 
         font-size: $size-p
         letter-spacing: 2px
         line-height: 150%
         color: $color-white
-      .icons 
-        display: flex
-        justify-content: center
-        align-items: center
-        height: 150px
-        margin-top: 40px
-        a
-          display: flex
-          justify-content: center
-          align-items: center
-          width: 80px
-          height: 80px 
-          margin: 0 7%
-          text-decoration: none
-          color: $color-main-theme-darker
-          background-color: $color-main-theme-lighter
-          font-size: $size-contact-about-me
-          clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)
-          transition: 0.2s linear
-          &:hover 
-            transform: rotate(360deg)
-    .myPhoto 
-      flex-basis: 48%
-      background-color: red
+        @media (max-width: 1500px)
+          font-size: $size-p-1500
+        @media (max-width: 1300px)
+          font-size: $size-p-1300
+    .myPhoto
+      grid-area: span 4 / span 1
+      background-color: green
+      @media (max-width: 1300px)
+        grid-area: span 3 / span 1
       div 
         background: url('../Rysunki/me.jpg')
         background-size: contain
@@ -149,6 +152,38 @@ main
         transition: 0.3s linear
         &:hover 
           filter: grayscale(1) contrast(1.2)
+        @media (max-width: 1500px)
+          background-size: cover
+        @media (max-width: 1300px)
+          background-size: contain
+        @media (max-width: 1300px)
+          background-size: cover
+    .icons 
+      grid-area: span 1 / span 1
+      display: flex
+      justify-content: center
+      align-items: center
+      // background-color: red
+      @media (max-width: 1300px)
+        grid-area: span 1 / span 2
+        margin-top: 20px
+      a
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 80px
+        height: 80px 
+        margin: 0 7%
+        text-decoration: none
+        color: $color-main-theme-darker
+        background-color: $color-main-theme-lighter
+        font-size: $size-contact-about-me
+        clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)
+        transition: 0.2s linear
+        &:hover 
+          transform: rotate(360deg)
+
+          
   .hobby 
     min-height: 20vh
     background-color: $color-main-theme-lighter
@@ -216,7 +251,7 @@ main
           background-position: center
   .projects
     display: grid
-    grid-template-columns: repeat (2, 1fr)
+    grid-template-columns: repeat(2, 1fr)
     grid-template-rows: repeat(2, 1fr)
     grid-template-areas: "firstGrid secondGrid" "fourthGrid thirdGrid"
     grid-gap: 20px
