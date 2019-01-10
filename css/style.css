@@ -61,6 +61,20 @@ header aside .hamburger {
   }
 }
 
+@media (max-height: 700px) {
+  header aside .hamburger {
+    width: 55px;
+    height: 45px;
+  }
+}
+
+@media (max-height: 650px) {
+  header aside .hamburger {
+    width: 50px;
+    height: 40px;
+  }
+}
+
 header aside .hamburger:hover {
   cursor: pointer;
 }
@@ -242,6 +256,12 @@ main .mainPage section {
 @media (max-width: 350px) {
   main .mainPage section {
     height: 25%;
+  }
+}
+
+@media (max-height: 600px) {
+  main .mainPage section {
+    height: 40%;
   }
 }
 
