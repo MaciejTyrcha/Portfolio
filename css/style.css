@@ -754,6 +754,32 @@ main .hobby {
   margin-bottom: -100px;
 }
 
+@media (max-width: 1500px) {
+  main .hobby {
+    padding: 140px 50px;
+  }
+}
+
+@media (max-width: 1300px) {
+  main .hobby {
+    padding: 120px 50px 160px 50px;
+  }
+}
+
+@media (max-width: 600px) {
+  main .hobby {
+    padding: 80px 20px 100px 20px;
+    margin-bottom: -50px;
+  }
+}
+
+@media (max-width: 510px) {
+  main .hobby {
+    padding: 50px 0 80px 0;
+    margin-bottom: -40px;
+  }
+}
+
 main .hobby h1 {
   font-size: 50px;
   color: #016d64;
@@ -761,6 +787,53 @@ main .hobby h1 {
   margin-bottom: 50px;
   border-bottom: 2px solid #01a093;
   padding-bottom: 20px;
+}
+
+@media (max-width: 1500px) {
+  main .hobby h1 {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 1300px) {
+  main .hobby h1 {
+    font-size: 35px;
+    padding-bottom: 15px;
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 1050px) {
+  main .hobby h1 {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 900px) {
+  main .hobby h1 {
+    font-size: 35px;
+  }
+}
+
+@media (max-width: 800px) {
+  main .hobby h1 {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  main .hobby h1 {
+    font-size: 35px;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 510px) {
+  main .hobby h1 {
+    font-size: 30px;
+    margin: 0 20px 30px 20px;
+  }
 }
 
 main .hobby section {
@@ -772,6 +845,27 @@ main .hobby section {
       grid-template-columns: repeat(7, 1fr);
   grid-gap: 20px;
   min-height: 100vh;
+}
+
+@media (max-width: 1100px) {
+  main .hobby section {
+    -ms-grid-rows: (1fr)[8];
+        grid-template-rows: repeat(8, 1fr);
+    -ms-grid-columns: (1fr)[5];
+        grid-template-columns: repeat(5, 1fr);
+    grid-gap: 10px;
+  }
+}
+
+@media (max-width: 500px) {
+  main .hobby section {
+    -ms-grid-rows: (1fr)[12];
+        grid-template-rows: repeat(12, 1fr);
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    grid-gap: 0;
+    min-height: 200vh;
+  }
 }
 
 main .hobby section div {
@@ -796,6 +890,18 @@ main .hobby section .first-image-hobby {
   grid-area: span 4 / span 3;
 }
 
+@media (max-width: 1100px) {
+  main .hobby section .first-image-hobby {
+    grid-area: span 4 / span 2;
+  }
+}
+
+@media (max-width: 500px) {
+  main .hobby section .first-image-hobby {
+    grid-area: span 2 / span 1;
+  }
+}
+
 main .hobby section .first-image-hobby div {
   background: url("../Rysunki/salsaDance.jpg");
   background-size: cover;
@@ -804,6 +910,18 @@ main .hobby section .first-image-hobby div {
 
 main .hobby section .second-image-hobby {
   grid-area: span 2 / span 4;
+}
+
+@media (max-width: 1100px) {
+  main .hobby section .second-image-hobby {
+    grid-area: span 2 / span 3;
+  }
+}
+
+@media (max-width: 500px) {
+  main .hobby section .second-image-hobby {
+    grid-area: span 2 / span 1;
+  }
 }
 
 main .hobby section .second-image-hobby div {
@@ -816,6 +934,18 @@ main .hobby section .third-image-hobby {
   grid-area: span 2 / span 2;
 }
 
+@media (max-width: 1100px) {
+  main .hobby section .third-image-hobby {
+    grid-area: span 2 / span 3;
+  }
+}
+
+@media (max-width: 500px) {
+  main .hobby section .third-image-hobby {
+    grid-area: span 2 / span 1;
+  }
+}
+
 main .hobby section .third-image-hobby div {
   background: url("../Rysunki/pokojowyPatrol.jpg");
   background-size: cover;
@@ -824,6 +954,18 @@ main .hobby section .third-image-hobby div {
 
 main .hobby section .fourth-image-hobby {
   grid-area: span 2 / span 2;
+}
+
+@media (max-width: 1100px) {
+  main .hobby section .fourth-image-hobby {
+    grid-area: span 2 / span 3;
+  }
+}
+
+@media (max-width: 500px) {
+  main .hobby section .fourth-image-hobby {
+    grid-area: span 2 / span 1;
+  }
 }
 
 main .hobby section .fourth-image-hobby div {
@@ -836,6 +978,18 @@ main .hobby section .fifth-image-hobby {
   grid-area: span 3 / span 4;
 }
 
+@media (max-width: 1100px) {
+  main .hobby section .fifth-image-hobby {
+    grid-area: span 4 / span 2;
+  }
+}
+
+@media (max-width: 500px) {
+  main .hobby section .fifth-image-hobby {
+    grid-area: span 2 / span 1;
+  }
+}
+
 main .hobby section .fifth-image-hobby div {
   background: url("../Rysunki/guitar.jpg");
   background-size: cover;
@@ -844,6 +998,18 @@ main .hobby section .fifth-image-hobby div {
 
 main .hobby section .sixth-image-hobby {
   grid-area: span 3 / span 3;
+}
+
+@media (max-width: 1100px) {
+  main .hobby section .sixth-image-hobby {
+    grid-area: span 2 / span 3;
+  }
+}
+
+@media (max-width: 500px) {
+  main .hobby section .sixth-image-hobby {
+    grid-area: span 2 / span 1;
+  }
 }
 
 main .hobby section .sixth-image-hobby div {
@@ -892,10 +1058,94 @@ main .projects .about-project h1 {
   font-weight: 300;
 }
 
+@media (max-width: 1500px) {
+  main .projects .about-project h1 {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 1300px) {
+  main .projects .about-project h1 {
+    font-size: 35px;
+  }
+}
+
+@media (max-width: 1050px) {
+  main .projects .about-project h1 {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 900px) {
+  main .projects .about-project h1 {
+    font-size: 35px;
+  }
+}
+
+@media (max-width: 800px) {
+  main .projects .about-project h1 {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  main .projects .about-project h1 {
+    font-size: 35px;
+  }
+}
+
+@media (max-width: 510px) {
+  main .projects .about-project h1 {
+    font-size: 30px;
+  }
+}
+
 main .projects .about-project h2 {
   color: #999;
   font-size: 25px;
   margin-bottom: 30px;
+}
+
+@media (max-width: 1500px) {
+  main .projects .about-project h2 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 1300px) {
+  main .projects .about-project h2 {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 1050px) {
+  main .projects .about-project h2 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 900px) {
+  main .projects .about-project h2 {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 800px) {
+  main .projects .about-project h2 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  main .projects .about-project h2 {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 510px) {
+  main .projects .about-project h2 {
+    font-size: 14px;
+  }
 }
 
 main .projects .about-project a {
@@ -964,6 +1214,48 @@ main .technologyStack h1 {
   font-weight: 300;
   border-bottom: 2px solid #01a093;
   padding-bottom: 20px;
+}
+
+@media (max-width: 1500px) {
+  main .technologyStack h1 {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 1300px) {
+  main .technologyStack h1 {
+    font-size: 35px;
+  }
+}
+
+@media (max-width: 1050px) {
+  main .technologyStack h1 {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 900px) {
+  main .technologyStack h1 {
+    font-size: 35px;
+  }
+}
+
+@media (max-width: 800px) {
+  main .technologyStack h1 {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  main .technologyStack h1 {
+    font-size: 35px;
+  }
+}
+
+@media (max-width: 510px) {
+  main .technologyStack h1 {
+    font-size: 30px;
+  }
 }
 
 main .technologyStack section {
@@ -1077,6 +1369,48 @@ footer .wrapper section h1 {
   margin-bottom: 15px;
 }
 
+@media (max-width: 1500px) {
+  footer .wrapper section h1 {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 1300px) {
+  footer .wrapper section h1 {
+    font-size: 35px;
+  }
+}
+
+@media (max-width: 1050px) {
+  footer .wrapper section h1 {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 900px) {
+  footer .wrapper section h1 {
+    font-size: 35px;
+  }
+}
+
+@media (max-width: 800px) {
+  footer .wrapper section h1 {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  footer .wrapper section h1 {
+    font-size: 35px;
+  }
+}
+
+@media (max-width: 510px) {
+  footer .wrapper section h1 {
+    font-size: 30px;
+  }
+}
+
 footer .wrapper section h2 {
   font-size: 25px;
   font-style: italic;
@@ -1084,6 +1418,48 @@ footer .wrapper section h2 {
   color: #999;
   margin-bottom: 10px;
   font-weight: 400;
+}
+
+@media (max-width: 1500px) {
+  footer .wrapper section h2 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 1300px) {
+  footer .wrapper section h2 {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 1050px) {
+  footer .wrapper section h2 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 900px) {
+  footer .wrapper section h2 {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 800px) {
+  footer .wrapper section h2 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  footer .wrapper section h2 {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 510px) {
+  footer .wrapper section h2 {
+    font-size: 14px;
+  }
 }
 
 footer .wrapper section h2 span {
