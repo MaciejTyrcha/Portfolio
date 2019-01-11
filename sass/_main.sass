@@ -90,7 +90,6 @@ main
           z-index: 1
 
 
-
   .aboutMe 
     display: grid
     grid-template-columns: repeat(2, 1fr)
@@ -99,13 +98,29 @@ main
     padding: 80px 50px
     width: 100%
     min-height: 80vh
-    // background-color: yellow
+    @media (max-width: 1300px)
+      padding: 50px
+    @media (max-width: 1050px)
+      display: flex
+      flex-direction: column
+    @media (max-width: 600px)
+      padding: 50px 20px
+    @media (max-width: 510px)
+      padding: 30px 20px
+
     .introduction
       display: flex 
       flex-direction: column
       padding: 0 10px
       grid-area: span 3 / span 1
-      // background-color: blue
+      @media (max-width: 1050px)
+        margin-bottom: 50px
+      @media (max-width: 900px)
+        margin-bottom: 30px
+      @media (max-width: 800px)
+        margin-bottom: 50px
+      @media (max-width: 600px)
+        margin-bottom: 30px
       h1 
         font-size: $size-h1-rest
         color: $color-main-theme-lighter
@@ -114,8 +129,22 @@ main
         @media (max-width: 1500px)
           font-size: $size-h1-rest-1500
         @media (max-width: 1300px)
-          margin-bottom: 10px
           font-size: $size-h1-rest-1300
+          margin-bottom: 10px
+        @media (max-width: 1050px)
+          font-size: $size-h1-rest-1500
+          margin-bottom: 15px
+        @media (max-width: 900px)
+          font-size: $size-h1-rest-1300
+          margin-bottom: 10px
+        @media (max-width: 800px)
+          font-size: $size-h1-rest-1500
+          margin-bottom: 15px
+        @media (max-width: 600px)
+          font-size: $size-h1-rest-1300
+          margin-bottom: 10px
+        @media (max-width: 510px)
+          font-size: $size-h1-rest-510
       
       h2 
         font-size: $size-h2-rest
@@ -126,8 +155,18 @@ main
         @media (max-width: 1500px)
           font-size: $size-h2-rest-1500
         @media (max-width: 1300px)
-          margin-bottom: 10px
           font-size: $size-h2-rest-1300
+        @media (max-width: 1050px)
+          font-size: $size-h2-rest-1500
+        @media (max-width: 900px)
+          font-size: $size-h2-rest-1300
+        @media (max-width: 800px)
+          font-size: $size-h2-rest-1500
+        @media (max-width: 600px)
+          font-size: $size-h2-rest-1300
+        @media (max-width: 510px)
+          font-size: $size-h2-rest-510
+
       p 
         font-size: $size-p
         letter-spacing: 2px
@@ -137,11 +176,33 @@ main
           font-size: $size-p-1500
         @media (max-width: 1300px)
           font-size: $size-p-1300
+        @media (max-width: 1050px)
+          font-size: $size-p-1500
+        @media (max-width: 900px)
+          font-size: $size-p-1300
+        @media (max-width: 800px)
+          font-size: $size-p-1500
+        @media (max-width: 600px)
+          font-size: $size-p-1300
     .myPhoto
       grid-area: span 4 / span 1
-      background-color: green
       @media (max-width: 1300px)
         grid-area: span 3 / span 1
+      @media (max-width: 1050px)
+        width: 60%
+        flex-basis: 400px
+        align-self: center
+      @media (max-width: 900px)
+        flex-basis: 300px  
+      @media (max-width: 800px)
+        flex-basis: 400px  
+      @media (max-width: 600px)
+        flex-basis: 300px
+      @media (max-width: 450px)
+        width: 80%
+      @media (max-width: 400px)
+        width: 100%
+   
       div 
         background: url('../Rysunki/me.jpg')
         background-size: contain
@@ -154,19 +215,23 @@ main
           filter: grayscale(1) contrast(1.2)
         @media (max-width: 1500px)
           background-size: cover
-        @media (max-width: 1300px)
-          background-size: contain
-        @media (max-width: 1300px)
-          background-size: cover
+  
     .icons 
       grid-area: span 1 / span 1
       display: flex
       justify-content: center
       align-items: center
-      // background-color: red
       @media (max-width: 1300px)
         grid-area: span 1 / span 2
         margin-top: 20px
+      @media (max-width: 1050px)
+        margin-top: 50px
+      @media (max-width: 900px)
+        margin-top: 30px
+      @media (max-width: 800px)
+        margin-top: 50px
+      @media (max-width: 600px)
+        margin-top: 30px
       a
         display: flex
         justify-content: center
@@ -182,6 +247,10 @@ main
         transition: 0.2s linear
         &:hover 
           transform: rotate(360deg)
+        @media (max-width: 400px)
+          width: 60px
+          height: 60px
+          font-size: $size-contact-about-me-400
 
           
   .hobby 

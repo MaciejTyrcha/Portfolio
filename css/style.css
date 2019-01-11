@@ -376,6 +376,36 @@ main .aboutMe {
   min-height: 80vh;
 }
 
+@media (max-width: 1300px) {
+  main .aboutMe {
+    padding: 50px;
+  }
+}
+
+@media (max-width: 1050px) {
+  main .aboutMe {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media (max-width: 600px) {
+  main .aboutMe {
+    padding: 50px 20px;
+  }
+}
+
+@media (max-width: 510px) {
+  main .aboutMe {
+    padding: 30px 20px;
+  }
+}
+
 main .aboutMe .introduction {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -386,6 +416,30 @@ main .aboutMe .introduction {
           flex-direction: column;
   padding: 0 10px;
   grid-area: span 3 / span 1;
+}
+
+@media (max-width: 1050px) {
+  main .aboutMe .introduction {
+    margin-bottom: 50px;
+  }
+}
+
+@media (max-width: 900px) {
+  main .aboutMe .introduction {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 800px) {
+  main .aboutMe .introduction {
+    margin-bottom: 50px;
+  }
+}
+
+@media (max-width: 600px) {
+  main .aboutMe .introduction {
+    margin-bottom: 30px;
+  }
 }
 
 main .aboutMe .introduction h1 {
@@ -403,8 +457,42 @@ main .aboutMe .introduction h1 {
 
 @media (max-width: 1300px) {
   main .aboutMe .introduction h1 {
-    margin-bottom: 10px;
     font-size: 35px;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 1050px) {
+  main .aboutMe .introduction h1 {
+    font-size: 40px;
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 900px) {
+  main .aboutMe .introduction h1 {
+    font-size: 35px;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 800px) {
+  main .aboutMe .introduction h1 {
+    font-size: 40px;
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 600px) {
+  main .aboutMe .introduction h1 {
+    font-size: 35px;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 510px) {
+  main .aboutMe .introduction h1 {
+    font-size: 30px;
   }
 }
 
@@ -424,8 +512,37 @@ main .aboutMe .introduction h2 {
 
 @media (max-width: 1300px) {
   main .aboutMe .introduction h2 {
-    margin-bottom: 10px;
     font-size: 16px;
+  }
+}
+
+@media (max-width: 1050px) {
+  main .aboutMe .introduction h2 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 900px) {
+  main .aboutMe .introduction h2 {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 800px) {
+  main .aboutMe .introduction h2 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  main .aboutMe .introduction h2 {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 510px) {
+  main .aboutMe .introduction h2 {
+    font-size: 14px;
   }
 }
 
@@ -448,14 +565,81 @@ main .aboutMe .introduction p {
   }
 }
 
+@media (max-width: 1050px) {
+  main .aboutMe .introduction p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 900px) {
+  main .aboutMe .introduction p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 800px) {
+  main .aboutMe .introduction p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  main .aboutMe .introduction p {
+    font-size: 14px;
+  }
+}
+
 main .aboutMe .myPhoto {
   grid-area: span 4 / span 1;
-  background-color: green;
 }
 
 @media (max-width: 1300px) {
   main .aboutMe .myPhoto {
     grid-area: span 3 / span 1;
+  }
+}
+
+@media (max-width: 1050px) {
+  main .aboutMe .myPhoto {
+    width: 60%;
+    -ms-flex-preferred-size: 400px;
+        flex-basis: 400px;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+}
+
+@media (max-width: 900px) {
+  main .aboutMe .myPhoto {
+    -ms-flex-preferred-size: 300px;
+        flex-basis: 300px;
+  }
+}
+
+@media (max-width: 800px) {
+  main .aboutMe .myPhoto {
+    -ms-flex-preferred-size: 400px;
+        flex-basis: 400px;
+  }
+}
+
+@media (max-width: 600px) {
+  main .aboutMe .myPhoto {
+    -ms-flex-preferred-size: 300px;
+        flex-basis: 300px;
+  }
+}
+
+@media (max-width: 450px) {
+  main .aboutMe .myPhoto {
+    width: 80%;
+  }
+}
+
+@media (max-width: 400px) {
+  main .aboutMe .myPhoto {
+    width: 100%;
   }
 }
 
@@ -481,18 +665,6 @@ main .aboutMe .myPhoto div:hover {
   }
 }
 
-@media (max-width: 1300px) {
-  main .aboutMe .myPhoto div {
-    background-size: contain;
-  }
-}
-
-@media (max-width: 1300px) {
-  main .aboutMe .myPhoto div {
-    background-size: cover;
-  }
-}
-
 main .aboutMe .icons {
   grid-area: span 1 / span 1;
   display: -webkit-box;
@@ -510,6 +682,30 @@ main .aboutMe .icons {
   main .aboutMe .icons {
     grid-area: span 1 / span 2;
     margin-top: 20px;
+  }
+}
+
+@media (max-width: 1050px) {
+  main .aboutMe .icons {
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 900px) {
+  main .aboutMe .icons {
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 800px) {
+  main .aboutMe .icons {
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 600px) {
+  main .aboutMe .icons {
+    margin-top: 30px;
   }
 }
 
@@ -539,6 +735,14 @@ main .aboutMe .icons a {
 main .aboutMe .icons a:hover {
   -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
+}
+
+@media (max-width: 400px) {
+  main .aboutMe .icons a {
+    width: 60px;
+    height: 60px;
+    font-size: 40px;
+  }
 }
 
 main .hobby {
