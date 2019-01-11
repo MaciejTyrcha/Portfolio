@@ -383,7 +383,7 @@ main
           background-position: center
 
 
-
+  
   .projects
     display: grid
     grid-template-columns: repeat(2, 1fr)
@@ -391,10 +391,19 @@ main
     grid-template-areas: "firstGrid secondGrid" "fourthGrid thirdGrid"
     grid-gap: 20px
     padding: 150px 50px
-    height: 120vh
+    min-height: 120vh
     margin-bottom: -100px
     background-color: $color-main-theme-darker
     clip-path: polygon(100% 0%, 0% 5vw, 0% 100%, 100% 100%)
+    @media (max-width: 1050px)
+      display: flex 
+      flex-direction: column
+      padding: 130px 50px
+    @media (max-width: 600px)
+      padding: 120px 20px
+    @media (max-width: 510px)
+      padding: 100px 0
+      margin-bottom: -60px
     .about-project 
       display: flex 
       flex-direction: column 
@@ -411,6 +420,7 @@ main
           font-size: $size-h1-rest-1300
         @media (max-width: 1050px)
           font-size: $size-h1-rest-1500
+          margin-bottom: 5px
         @media (max-width: 900px)
           font-size: $size-h1-rest-1300
         @media (max-width: 800px)
@@ -429,6 +439,7 @@ main
           font-size: $size-h2-rest-1300
         @media (max-width: 1050px)
           font-size: $size-h2-rest-1500
+          margin-bottom: 20px
         @media (max-width: 900px)
           font-size: $size-h2-rest-1300
         @media (max-width: 800px)
@@ -450,22 +461,46 @@ main
         &:hover 
           background-color: $color-main-theme-lighter
           color: $color-main-theme-darker
+        @media (max-width: 1300px)
+          font-size: $size-button-1300
+          padding: 15px 40px
     .image-project
       background-color: black
+      @media (max-width: 1050px)
+        align-self: center
+        height: 500px
+        width: 100%
+        margin-bottom: 20px
     .first-grid 
       grid-area: firstGrid
+      @media (max-width: 1050px)
+        order: 2
+        margin-bottom: 50px
     .second-grid 
       grid-area: secondGrid 
-      background: url('../Rysunki/community-988898_1920.png')
+      background: url('../Rysunki/Portfolio1.png')
       background-size: cover
       background-position: center
+      @media (max-width: 1050px)
+        order: 1
+      @media (max-width: 510px)
+        background-position: 65% 50%
+      @media (max-width: 450px)
+        background-position: 60% 50%
     .third-grid 
       grid-area: thirdGrid
+      @media (max-width: 1050px)
+        order: 4
     .fourth-grid 
       grid-area: fourthGrid
       background: url('../Rysunki/woman-1594711_1920.jpg')
       background-size: cover
       background-position: center 
+      @media (max-width: 1050px)
+        order: 3
+
+
+
   .technologyStack
     min-height: 60vh
     padding: 150px 50px 0 50px

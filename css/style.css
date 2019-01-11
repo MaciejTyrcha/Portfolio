@@ -1028,11 +1028,37 @@ main .projects {
       grid-template-areas: "firstGrid secondGrid" "fourthGrid thirdGrid";
   grid-gap: 20px;
   padding: 150px 50px;
-  height: 120vh;
+  min-height: 120vh;
   margin-bottom: -100px;
   background-color: #013a36;
   -webkit-clip-path: polygon(100% 0%, 0% 5vw, 0% 100%, 100% 100%);
           clip-path: polygon(100% 0%, 0% 5vw, 0% 100%, 100% 100%);
+}
+
+@media (max-width: 1050px) {
+  main .projects {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 130px 50px;
+  }
+}
+
+@media (max-width: 600px) {
+  main .projects {
+    padding: 120px 20px;
+  }
+}
+
+@media (max-width: 510px) {
+  main .projects {
+    padding: 100px 0;
+    margin-bottom: -60px;
+  }
 }
 
 main .projects .about-project {
@@ -1073,6 +1099,7 @@ main .projects .about-project h1 {
 @media (max-width: 1050px) {
   main .projects .about-project h1 {
     font-size: 40px;
+    margin-bottom: 5px;
   }
 }
 
@@ -1121,6 +1148,7 @@ main .projects .about-project h2 {
 @media (max-width: 1050px) {
   main .projects .about-project h2 {
     font-size: 20px;
+    margin-bottom: 20px;
   }
 }
 
@@ -1166,8 +1194,26 @@ main .projects .about-project a:hover {
   color: #013a36;
 }
 
+@media (max-width: 1300px) {
+  main .projects .about-project a {
+    font-size: 14px;
+    padding: 15px 40px;
+  }
+}
+
 main .projects .image-project {
   background-color: black;
+}
+
+@media (max-width: 1050px) {
+  main .projects .image-project {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    height: 500px;
+    width: 100%;
+    margin-bottom: 20px;
+  }
 }
 
 main .projects .first-grid {
@@ -1176,19 +1222,56 @@ main .projects .first-grid {
   grid-area: firstGrid;
 }
 
+@media (max-width: 1050px) {
+  main .projects .first-grid {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    margin-bottom: 50px;
+  }
+}
+
 main .projects .second-grid {
   -ms-grid-row: 1;
   -ms-grid-column: 2;
   grid-area: secondGrid;
-  background: url("../Rysunki/community-988898_1920.png");
+  background: url("../Rysunki/Portfolio1.png");
   background-size: cover;
   background-position: center;
+}
+
+@media (max-width: 1050px) {
+  main .projects .second-grid {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+}
+
+@media (max-width: 510px) {
+  main .projects .second-grid {
+    background-position: 65% 50%;
+  }
+}
+
+@media (max-width: 450px) {
+  main .projects .second-grid {
+    background-position: 60% 50%;
+  }
 }
 
 main .projects .third-grid {
   -ms-grid-row: 2;
   -ms-grid-column: 2;
   grid-area: thirdGrid;
+}
+
+@media (max-width: 1050px) {
+  main .projects .third-grid {
+    -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 4;
+            order: 4;
+  }
 }
 
 main .projects .fourth-grid {
@@ -1198,6 +1281,14 @@ main .projects .fourth-grid {
   background: url("../Rysunki/woman-1594711_1920.jpg");
   background-size: cover;
   background-position: center;
+}
+
+@media (max-width: 1050px) {
+  main .projects .fourth-grid {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+  }
 }
 
 main .technologyStack {
