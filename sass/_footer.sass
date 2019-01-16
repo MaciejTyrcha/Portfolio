@@ -12,6 +12,8 @@ footer
   @media (max-width: 800px)
     margin: 0
     width: 100%
+  @media (max-width: 600px)
+    padding: 20px 20px 0 20px 
   .wrapper
     width: 100%
     min-height: 60vh 
@@ -22,6 +24,10 @@ footer
     border-bottom: 1px solid $color-main-theme-light
     section 
       width: 70%
+      @media (max-width: 1400px)
+        width: 90%
+      @media (max-width: 900px)
+        width: 100%
       h1
         font-size: $size-h1-rest
         color: $color-main-theme-lighter
@@ -40,6 +46,7 @@ footer
           font-size: $size-h1-rest-1500
         @media (max-width: 600px)
           font-size: $size-h1-rest-1300
+          margin-bottom: 5px
         @media (max-width: 510px)
           font-size: $size-h1-rest-510
       h2 
@@ -63,6 +70,8 @@ footer
           font-size: $size-h2-rest-1300
         @media (max-width: 510px)
           font-size: $size-h2-rest-510
+        @media (max-width: 500px)
+          margin-bottom: 20px
         span 
           display: block
         a 
@@ -74,7 +83,17 @@ footer
         display: flex
         justify-content: center
         align-items: center
-        height: 25vh
+        min-height: 25vh
+        @media (max-width: 1300px)
+          min-height: 20vh
+        @media (max-width: 1000px)
+          min-height: 15vh
+        @media (max-width: 500px)
+          flex-wrap: wrap
+          justify-content: space-around
+          padding: 0 50px
+        @media (max-width: 400px)
+          padding: 0 30px
         a
           display: flex
           justify-content: center
@@ -90,21 +109,68 @@ footer
           transition: 0.2s linear
           &:hover 
             transform: rotate(360deg)
+          @media (max-width: 1000px)
+            width: 60px
+            height: 60px
+            font-size: $size-contact-about-me-400
+          @media (max-width: 900px)
+            font-size: $size-contact-about-me-900
+          @media (max-width: 800px)
+            width: 80px
+            height: 80px 
+            font-size: $size-contact-about-me
+          @media (max-width: 700px)
+            width: 70px
+            height: 70px 
+            font-size: $size-contact-about-me-700
+          @media (max-width: 600px)
+            width: 60px
+            height: 60px 
+            font-size: $size-contact-about-me-400
+          @media (max-width: 500px)
+            width: 70px
+            height: 70px 
+            font-size: $size-contact-about-me-700
+            margin-bottom: 20px
+          
     form 
       display: flex
       flex-direction: column
       width: 40%
+      @media (max-width: 1500px)
+        width: 50%
+      @media (max-width: 1400px)
+        width: 60%
+      @media (max-width: 600px)
+        width: 80%
+      @media (max-width: 500px)
+        width: 100%
       input 
         margin-bottom: 20px
         padding: 10px 5px
-        font-size: 30px
+        font-size: $size-form
         background-color: $color-main-theme-lighter
         border: none
+        @media (max-width: 1500px)
+          font-size: $size-form-1500
+        @media (max-width: 1300px)
+          font-size: $size-form-1300
+        @media (max-width: 900px)
+          margin-bottom: 15px
+        @media (max-width: 600px)
+          font-size: $size-form-600
+
       #textarea 
         padding: 10px 5px
-        font-size: 30px
+        font-size: $size-form
         background-color: $color-main-theme-lighter
         border: none
+        @media (max-width: 1500px)
+          font-size: $size-form-1500
+        @media (max-width: 1300px)
+          font-size: $size-form-1300
+        @media (max-width: 600px)
+          font-size: $size-form-600
     button 
       text-decoration: none
       font-size: $size-button
@@ -121,6 +187,12 @@ footer
       &:hover 
         background-color: $color-main-theme-lighter
         color: $color-main-theme-darker
+      @media (max-width: 1300px)
+        font-size: $size-button-1300
+        padding: 15px 40px
+      @media (max-width: 1100px)
+        margin: 20px 0
+      
   .copyRights 
     min-height: 4vh
     padding-top: 0.5vh
