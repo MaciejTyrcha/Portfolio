@@ -383,119 +383,148 @@ main
 
   
   .projects
-    display: grid
-    grid-template-columns: repeat(2, 1fr)
-    grid-template-rows: repeat(2, 1fr)
-    grid-template-areas: "firstGrid secondGrid" "fourthGrid thirdGrid"
-    grid-gap: 20px
     padding: 150px 50px
-    min-height: 120vh
     margin-bottom: -100px
     background-color: $color-main-theme-darker
     clip-path: polygon(100% 0%, 0% 5vw, 0% 100%, 100% 100%)
     @media (max-width: 1050px)
-      display: flex 
-      flex-direction: column
       padding: 130px 50px
     @media (max-width: 600px)
-      padding: 120px 20px
+      padding: 80px 20px 120px
     @media (max-width: 510px)
-      padding: 100px 0
+      padding: 50px 0 120px
       margin-bottom: -60px
-    .about-project 
-      display: flex 
-      flex-direction: column 
-      justify-content: center 
-      align-items: center
-      h1 
-        color: $color-main-theme
-        font-size: $size-h1-rest
-        margin-bottom: 10px
-        font-weight: 300
-        @media (max-width: 1500px)
-          font-size: $size-h1-rest-1500
-        @media (max-width: 1300px)
-          font-size: $size-h1-rest-1300
-        @media (max-width: 1050px)
-          font-size: $size-h1-rest-1500
-          margin-bottom: 5px
-        @media (max-width: 900px)
-          font-size: $size-h1-rest-1300
-        @media (max-width: 800px)
-          font-size: $size-h1-rest-1500
-        @media (max-width: 600px)
-          font-size: $size-h1-rest-1300
-        @media (max-width: 510px)
-          font-size: $size-h1-rest-510
-      h2 
-        color: $color-gray-lighter
-        font-size: $size-h2-rest
+    h1 
+      font-size: $size-h1-rest
+      color: $color-main-theme-lighter
+      font-weight: 300
+      margin-bottom: 50px
+      border-bottom: 2px solid $color-main-theme-lighter
+      padding-bottom: 20px
+      @media (max-width: 1500px)
+        font-size: $size-h1-rest-1500
+      @media (max-width: 1300px)
+        font-size: $size-h1-rest-1300
+        padding-bottom: 15px
+        margin-bottom: 40px
+      @media (max-width: 1050px)
+        font-size: $size-h1-rest-1500
+      @media (max-width: 900px)
+        font-size: $size-h1-rest-1300
+      @media (max-width: 800px)
+        font-size: $size-h1-rest-1500
+      @media (max-width: 600px)
+        font-size: $size-h1-rest-1300
+        padding-bottom: 10px
         margin-bottom: 30px
-        @media (max-width: 1500px)
-          font-size: $size-h2-rest-1500
-        @media (max-width: 1300px)
-          font-size: $size-h2-rest-1300
-        @media (max-width: 1050px)
-          font-size: $size-h2-rest-1500
-          margin-bottom: 20px
-        @media (max-width: 900px)
-          font-size: $size-h2-rest-1300
-        @media (max-width: 800px)
-          font-size: $size-h2-rest-1500
-        @media (max-width: 600px)
-          font-size: $size-h2-rest-1300
-        @media (max-width: 510px)
-          font-size: $size-h2-rest-510
-      a 
-        text-decoration: none
-        font-size: $size-button
-        text-transform: uppercase
-        color: $color-white
-        letter-spacing: 5px
-        padding: 15px 50px
-        background-color: $color-main-theme
-        border-radius: 40px
-        transition: 0.3s linear
-        &:hover 
-          background-color: $color-main-theme-lighter
-          color: $color-main-theme-darker
-        @media (max-width: 1300px)
-          font-size: $size-button-1300
-          padding: 15px 40px
-    .image-project
-      background-color: black
-      @media (max-width: 1050px)
-        align-self: center
-        height: 500px
-        width: 100%
-        margin-bottom: 20px
-    .first-grid 
-      grid-area: firstGrid
-      @media (max-width: 1050px)
-        order: 2
-        margin-bottom: 50px
-    .second-grid 
-      grid-area: secondGrid 
-      background: url('../Rysunki/Portfolio1.png')
-      background-size: cover
-      background-position: center
-      @media (max-width: 1050px)
-        order: 1
       @media (max-width: 510px)
-        background-position: 65% 50%
-      @media (max-width: 450px)
-        background-position: 60% 50%
-    .third-grid 
-      grid-area: thirdGrid
+        font-size: $size-h1-rest-510
+        margin: 0 20px 30px 20px
+    section
+      display: grid
+      grid-template-columns: repeat(2, 1fr)
+      grid-template-rows: repeat(2, 1fr)
+      grid-template-areas: "firstGrid secondGrid" "fourthGrid thirdGrid"
+      grid-gap: 20px
+      min-height: 120vh
       @media (max-width: 1050px)
-        order: 4
-    .fourth-grid 
-      grid-area: fourthGrid
-      background: url('../Rysunki/Mandala1.png')
-      background-size: cover
-      background-position: top center
-      @media (max-width: 1050px)
-        order: 3
+        display: flex 
+        flex-direction: column
+      .about-project 
+        display: flex 
+        flex-direction: column 
+        justify-content: center 
+        align-items: center
+        h2 
+          color: $color-main-theme
+          font-size: $size-h1-rest
+          margin-bottom: 10px
+          font-weight: 300
+          @media (max-width: 1500px)
+            font-size: $size-h1-rest-1500
+          @media (max-width: 1300px)
+            font-size: $size-h1-rest-1300
+          @media (max-width: 1050px)
+            font-size: $size-h1-rest-1500
+            margin-bottom: 5px
+          @media (max-width: 900px)
+            font-size: $size-h1-rest-1300
+          @media (max-width: 800px)
+            font-size: $size-h1-rest-1500
+          @media (max-width: 600px)
+            font-size: $size-h1-rest-1300
+          @media (max-width: 510px)
+            font-size: $size-h1-rest-510
+        h3 
+          color: $color-gray-lighter
+          font-size: $size-h2-rest
+          margin-bottom: 30px
+          @media (max-width: 1500px)
+            font-size: $size-h2-rest-1500
+          @media (max-width: 1300px)
+            font-size: $size-h2-rest-1300
+          @media (max-width: 1050px)
+            font-size: $size-h2-rest-1500
+            margin-bottom: 20px
+          @media (max-width: 900px)
+            font-size: $size-h2-rest-1300
+          @media (max-width: 800px)
+            font-size: $size-h2-rest-1500
+          @media (max-width: 600px)
+            font-size: $size-h2-rest-1300
+          @media (max-width: 510px)
+            font-size: $size-h2-rest-510
+        a 
+          text-decoration: none
+          font-size: $size-button
+          text-transform: uppercase
+          color: $color-white
+          letter-spacing: 5px
+          padding: 15px 50px
+          background-color: $color-main-theme
+          border-radius: 40px
+          transition: 0.3s linear
+          &:hover 
+            background-color: $color-main-theme-lighter
+            color: $color-main-theme-darker
+          @media (max-width: 1300px)
+            font-size: $size-button-1300
+            padding: 15px 40px
+      .image-project
+        background-color: black
+        @media (max-width: 1050px)
+          align-self: center
+          height: 500px
+          width: 100%
+          margin-bottom: 20px
+      .first-grid 
+        grid-area: firstGrid
+        @media (max-width: 1050px)
+          order: 2
+          margin-bottom: 50px
+      .second-grid 
+        grid-area: secondGrid 
+        background: url('../Rysunki/Portfolio1.png')
+        background-size: cover
+        background-position: center
+        @media (max-width: 1050px)
+          order: 1
+        @media (max-width: 510px)
+          background-position: 65% 50%
+        @media (max-width: 450px)
+          background-position: 60% 50%
+      .third-grid 
+        grid-area: thirdGrid
+        @media (max-width: 1050px)
+          order: 4
+      .fourth-grid 
+        grid-area: fourthGrid
+        background: url('../Rysunki/Mandala1.png')
+        background-size: cover
+        background-position: bottom center
+        @media (max-width: 1050px)
+          order: 3
+          background-position: top center
 
 
 

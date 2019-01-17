@@ -1033,16 +1033,7 @@ main .hobby section .sixth-image-hobby div {
 }
 
 main .projects {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[2];
-      grid-template-columns: repeat(2, 1fr);
-  -ms-grid-rows: (1fr)[2];
-      grid-template-rows: repeat(2, 1fr);
-      grid-template-areas: "firstGrid secondGrid" "fourthGrid thirdGrid";
-  grid-gap: 20px;
   padding: 150px 50px;
-  min-height: 120vh;
   margin-bottom: -100px;
   background-color: #013a36;
   -webkit-clip-path: polygon(100% 0%, 0% 5vw, 0% 100%, 100% 100%);
@@ -1051,6 +1042,93 @@ main .projects {
 
 @media (max-width: 1050px) {
   main .projects {
+    padding: 130px 50px;
+  }
+}
+
+@media (max-width: 600px) {
+  main .projects {
+    padding: 80px 20px 120px;
+  }
+}
+
+@media (max-width: 510px) {
+  main .projects {
+    padding: 50px 0 120px;
+    margin-bottom: -60px;
+  }
+}
+
+main .projects h1 {
+  font-size: 50px;
+  color: #E5FFFE;
+  font-weight: 300;
+  margin-bottom: 50px;
+  border-bottom: 2px solid #E5FFFE;
+  padding-bottom: 20px;
+}
+
+@media (max-width: 1500px) {
+  main .projects h1 {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 1300px) {
+  main .projects h1 {
+    font-size: 35px;
+    padding-bottom: 15px;
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 1050px) {
+  main .projects h1 {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 900px) {
+  main .projects h1 {
+    font-size: 35px;
+  }
+}
+
+@media (max-width: 800px) {
+  main .projects h1 {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  main .projects h1 {
+    font-size: 35px;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 510px) {
+  main .projects h1 {
+    font-size: 30px;
+    margin: 0 20px 30px 20px;
+  }
+}
+
+main .projects section {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -ms-grid-rows: (1fr)[2];
+      grid-template-rows: repeat(2, 1fr);
+      grid-template-areas: "firstGrid secondGrid" "fourthGrid thirdGrid";
+  grid-gap: 20px;
+  min-height: 120vh;
+}
+
+@media (max-width: 1050px) {
+  main .projects section {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1058,24 +1136,10 @@ main .projects {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    padding: 130px 50px;
   }
 }
 
-@media (max-width: 600px) {
-  main .projects {
-    padding: 120px 20px;
-  }
-}
-
-@media (max-width: 510px) {
-  main .projects {
-    padding: 100px 0;
-    margin-bottom: -60px;
-  }
-}
-
-main .projects .about-project {
+main .projects section .about-project {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1091,7 +1155,7 @@ main .projects .about-project {
           align-items: center;
 }
 
-main .projects .about-project h1 {
+main .projects section .about-project h2 {
   color: #01a093;
   font-size: 50px;
   margin-bottom: 10px;
@@ -1099,98 +1163,98 @@ main .projects .about-project h1 {
 }
 
 @media (max-width: 1500px) {
-  main .projects .about-project h1 {
+  main .projects section .about-project h2 {
     font-size: 40px;
   }
 }
 
 @media (max-width: 1300px) {
-  main .projects .about-project h1 {
+  main .projects section .about-project h2 {
     font-size: 35px;
   }
 }
 
 @media (max-width: 1050px) {
-  main .projects .about-project h1 {
+  main .projects section .about-project h2 {
     font-size: 40px;
     margin-bottom: 5px;
   }
 }
 
 @media (max-width: 900px) {
-  main .projects .about-project h1 {
+  main .projects section .about-project h2 {
     font-size: 35px;
   }
 }
 
 @media (max-width: 800px) {
-  main .projects .about-project h1 {
+  main .projects section .about-project h2 {
     font-size: 40px;
   }
 }
 
 @media (max-width: 600px) {
-  main .projects .about-project h1 {
+  main .projects section .about-project h2 {
     font-size: 35px;
   }
 }
 
 @media (max-width: 510px) {
-  main .projects .about-project h1 {
+  main .projects section .about-project h2 {
     font-size: 30px;
   }
 }
 
-main .projects .about-project h2 {
+main .projects section .about-project h3 {
   color: #999;
   font-size: 25px;
   margin-bottom: 30px;
 }
 
 @media (max-width: 1500px) {
-  main .projects .about-project h2 {
+  main .projects section .about-project h3 {
     font-size: 20px;
   }
 }
 
 @media (max-width: 1300px) {
-  main .projects .about-project h2 {
+  main .projects section .about-project h3 {
     font-size: 16px;
   }
 }
 
 @media (max-width: 1050px) {
-  main .projects .about-project h2 {
+  main .projects section .about-project h3 {
     font-size: 20px;
     margin-bottom: 20px;
   }
 }
 
 @media (max-width: 900px) {
-  main .projects .about-project h2 {
+  main .projects section .about-project h3 {
     font-size: 16px;
   }
 }
 
 @media (max-width: 800px) {
-  main .projects .about-project h2 {
+  main .projects section .about-project h3 {
     font-size: 20px;
   }
 }
 
 @media (max-width: 600px) {
-  main .projects .about-project h2 {
+  main .projects section .about-project h3 {
     font-size: 16px;
   }
 }
 
 @media (max-width: 510px) {
-  main .projects .about-project h2 {
+  main .projects section .about-project h3 {
     font-size: 14px;
   }
 }
 
-main .projects .about-project a {
+main .projects section .about-project a {
   text-decoration: none;
   font-size: 20px;
   text-transform: uppercase;
@@ -1203,24 +1267,24 @@ main .projects .about-project a {
   transition: 0.3s linear;
 }
 
-main .projects .about-project a:hover {
+main .projects section .about-project a:hover {
   background-color: #E5FFFE;
   color: #013a36;
 }
 
 @media (max-width: 1300px) {
-  main .projects .about-project a {
+  main .projects section .about-project a {
     font-size: 14px;
     padding: 15px 40px;
   }
 }
 
-main .projects .image-project {
+main .projects section .image-project {
   background-color: black;
 }
 
 @media (max-width: 1050px) {
-  main .projects .image-project {
+  main .projects section .image-project {
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
@@ -1230,14 +1294,14 @@ main .projects .image-project {
   }
 }
 
-main .projects .first-grid {
+main .projects section .first-grid {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: firstGrid;
 }
 
 @media (max-width: 1050px) {
-  main .projects .first-grid {
+  main .projects section .first-grid {
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
@@ -1245,7 +1309,7 @@ main .projects .first-grid {
   }
 }
 
-main .projects .second-grid {
+main .projects section .second-grid {
   -ms-grid-row: 1;
   -ms-grid-column: 2;
   grid-area: secondGrid;
@@ -1255,7 +1319,7 @@ main .projects .second-grid {
 }
 
 @media (max-width: 1050px) {
-  main .projects .second-grid {
+  main .projects section .second-grid {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
@@ -1263,45 +1327,46 @@ main .projects .second-grid {
 }
 
 @media (max-width: 510px) {
-  main .projects .second-grid {
+  main .projects section .second-grid {
     background-position: 65% 50%;
   }
 }
 
 @media (max-width: 450px) {
-  main .projects .second-grid {
+  main .projects section .second-grid {
     background-position: 60% 50%;
   }
 }
 
-main .projects .third-grid {
+main .projects section .third-grid {
   -ms-grid-row: 2;
   -ms-grid-column: 2;
   grid-area: thirdGrid;
 }
 
 @media (max-width: 1050px) {
-  main .projects .third-grid {
+  main .projects section .third-grid {
     -webkit-box-ordinal-group: 5;
         -ms-flex-order: 4;
             order: 4;
   }
 }
 
-main .projects .fourth-grid {
+main .projects section .fourth-grid {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: fourthGrid;
   background: url("../Rysunki/Mandala1.png");
   background-size: cover;
-  background-position: top center;
+  background-position: bottom center;
 }
 
 @media (max-width: 1050px) {
-  main .projects .fourth-grid {
+  main .projects section .fourth-grid {
     -webkit-box-ordinal-group: 4;
         -ms-flex-order: 3;
             order: 3;
+    background-position: top center;
   }
 }
 
