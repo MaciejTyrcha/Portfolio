@@ -611,20 +611,6 @@ main .aboutMe .myPhoto {
   }
 }
 
-@media (max-width: 900px) {
-  main .aboutMe .myPhoto {
-    -ms-flex-preferred-size: 300px;
-        flex-basis: 300px;
-  }
-}
-
-@media (max-width: 800px) {
-  main .aboutMe .myPhoto {
-    -ms-flex-preferred-size: 400px;
-        flex-basis: 400px;
-  }
-}
-
 @media (max-width: 600px) {
   main .aboutMe .myPhoto {
     -ms-flex-preferred-size: 300px;
