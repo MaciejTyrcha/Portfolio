@@ -22,7 +22,7 @@ header {
   border-right: 1px solid #016d64;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
   header {
     display: block;
     height: 70px;
@@ -38,7 +38,7 @@ header aside {
   position: relative;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
   header aside {
     padding: 0 20px;
   }
@@ -55,7 +55,7 @@ header aside .hamburger {
   display: none;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
   header aside .hamburger {
     display: block;
   }
@@ -122,7 +122,7 @@ header nav {
   height: 100vh;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
   header nav {
     background-color: #01a093;
     width: 50%;
@@ -189,7 +189,7 @@ main {
   margin-left: 250px;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
   main {
     margin: 0;
     padding: 70px 0 0 0;
@@ -237,6 +237,7 @@ main .mainPage section {
           align-items: center;
   width: 40%;
   height: 30%;
+  min-height: 200px;
   background-color: rgba(0, 0, 0, 0.8);
   padding: 0 20px;
 }
@@ -247,7 +248,7 @@ main .mainPage section {
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
   main .mainPage section {
     width: 100%;
   }
@@ -871,6 +872,7 @@ main .hobby section {
 main .hobby section div {
   background-color: black;
   overflow: hidden;
+  min-height: 300px;
 }
 
 main .hobby section .hobbyImage {
@@ -1539,7 +1541,7 @@ footer {
   padding: 50px 50px 0 50px;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
   footer {
     margin: 0;
     width: 100%;
