@@ -24,7 +24,9 @@ header {
 
 @media (max-width: 900px) {
   header {
-    display: block;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
     height: 70px;
     width: 100%;
     border-right: none;
@@ -33,24 +35,26 @@ header {
 }
 
 header aside {
-  width: 100%;
-  height: 70px;
-  position: relative;
+  width: 50px;
+  height: 100%;
+  display: none;
 }
 
 @media (max-width: 900px) {
   header aside {
-    padding: 0 20px;
+    display: block;
+    width: 60px;
+    margin-right: 15px;
   }
 }
 
 header aside .hamburger {
   top: 50%;
-  left: 100%;
-  -webkit-transform: translate(-100%, -50%);
-          transform: translate(-100%, -50%);
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   width: 60px;
-  height: 50px;
+  height: 60%;
   position: relative;
   display: none;
 }
@@ -58,20 +62,6 @@ header aside .hamburger {
 @media (max-width: 900px) {
   header aside .hamburger {
     display: block;
-  }
-}
-
-@media (max-height: 700px) {
-  header aside .hamburger {
-    width: 55px;
-    height: 45px;
-  }
-}
-
-@media (max-height: 650px) {
-  header aside .hamburger {
-    width: 50px;
-    height: 40px;
   }
 }
 
@@ -124,19 +114,33 @@ header nav {
 
 @media (max-width: 900px) {
   header nav {
-    background-color: #01a093;
+    background-color: rgba(1, 160, 147, 0.9);
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     width: 50%;
-    height: 40vh;
-    margin-left: 50%;
+    position: absolute;
+    height: 290px;
+    margin-top: 70px;
     border: 1px solid #016d64;
-    display: none;
   }
 }
 
 @media (max-width: 600px) {
   header nav {
-    margin: 0;
     width: 100%;
+  }
+}
+
+@media (max-height: 450px) {
+  header nav {
+    height: 250px;
+  }
+}
+
+@media (max-height: 350px) {
+  header nav {
+    height: 100vh;
   }
 }
 
@@ -153,6 +157,22 @@ header nav ul li {
   position: relative;
 }
 
+header nav ul li:nth-child(4) {
+  margin-bottom: 0;
+}
+
+@media (max-width: 900px) {
+  header nav ul li {
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-height: 450px) {
+  header nav ul li {
+    padding: 15px 0 5px;
+  }
+}
+
 header nav ul li a {
   text-decoration: none;
   color: #E5FFFE;
@@ -163,6 +183,12 @@ header nav ul li a {
 header nav ul li a:hover {
   font-weight: 600;
   color: #fff;
+}
+
+@media (max-height: 450px) {
+  header nav ul li a {
+    font-size: 18px;
+  }
 }
 
 header nav ul li .hover::after {
