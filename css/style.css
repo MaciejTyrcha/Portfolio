@@ -844,7 +844,7 @@ main .hobby section {
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 700px) {
   main .hobby section {
     -ms-grid-rows: (1fr)[12];
         grid-template-rows: repeat(12, 1fr);
@@ -884,7 +884,7 @@ main .hobby section .first-image-hobby {
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 700px) {
   main .hobby section .first-image-hobby {
     grid-area: span 2 / span 1;
   }
@@ -906,7 +906,7 @@ main .hobby section .second-image-hobby {
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 700px) {
   main .hobby section .second-image-hobby {
     grid-area: span 2 / span 1;
   }
@@ -928,7 +928,7 @@ main .hobby section .third-image-hobby {
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 700px) {
   main .hobby section .third-image-hobby {
     grid-area: span 2 / span 1;
   }
@@ -950,7 +950,7 @@ main .hobby section .fourth-image-hobby {
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 700px) {
   main .hobby section .fourth-image-hobby {
     grid-area: span 2 / span 1;
   }
@@ -972,7 +972,7 @@ main .hobby section .fifth-image-hobby {
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 700px) {
   main .hobby section .fifth-image-hobby {
     grid-area: span 2 / span 1;
   }
@@ -994,7 +994,7 @@ main .hobby section .sixth-image-hobby {
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 700px) {
   main .hobby section .sixth-image-hobby {
     grid-area: span 2 / span 1;
   }
