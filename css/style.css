@@ -1292,7 +1292,7 @@ main .projects .fourth-grid {
 }
 
 main .technologyStack {
-  min-height: 60vh;
+  min-height: 30vh;
   padding: 150px 50px 0 50px;
   background-color: #E5FFFE;
   -webkit-clip-path: polygon(100% 0%, 0% 5vw, 0% 100%, 100% 100%);
@@ -1377,7 +1377,7 @@ main .technologyStack section {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin: 40px auto 0 auto;
-  min-height: 60vh;
+  min-height: 40vh;
   width: 70%;
 }
 
