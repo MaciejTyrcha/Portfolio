@@ -57,6 +57,7 @@ header aside .hamburger {
   height: 60%;
   position: relative;
   display: none;
+  cursor: pointer;
 }
 
 @media (max-width: 900px) {
@@ -65,33 +66,56 @@ header aside .hamburger {
   }
 }
 
-header aside .hamburger:hover {
-  cursor: pointer;
-}
-
 header aside .hamburger span {
+  display: block;
   width: 80%;
   height: 2px;
   background-color: #E5FFFE;
-  border-radius: 1px;
+  -webkit-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
 }
 
-header aside .hamburger .line1 {
+header aside .hamburger span:nth-child(1) {
   position: absolute;
   top: 0;
   left: 10%;
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
 }
 
-header aside .hamburger .line2 {
+header aside .hamburger span:nth-child(2) {
   position: absolute;
   top: calc(50% - (2px/2));
   left: 10%;
+  -webkit-transform-origin: center;
+          transform-origin: center;
 }
 
-header aside .hamburger .line3 {
+header aside .hamburger span:nth-child(3) {
   position: absolute;
   bottom: 0;
   left: 10%;
+  -webkit-transform-origin: 100% 100%;
+          transform-origin: 100% 100%;
+}
+
+header aside .hamburger span.openHamburger:nth-child(1) {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  top: 3px;
+  left: 20%;
+}
+
+header aside .hamburger span.openHamburger:nth-child(2) {
+  width: 0;
+  opacity: 0;
+}
+
+header aside .hamburger span.openHamburger:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  bottom: 36px;
+  left: 0;
 }
 
 header nav {
@@ -123,6 +147,12 @@ header nav {
     height: 290px;
     margin-top: 70px;
     border: 1px solid #016d64;
+    display: none;
+  }
+  header nav.active {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 
