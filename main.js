@@ -104,14 +104,16 @@ const showH1 =() => {
 }
 
 const showHomeSection = () => {
+  const divHomeSection = document.querySelector(".mainPage section");
+  divHomeSection.classList.add("active");
 
 }
 
 const showContent = () => {
   showH1();
-  showHomeSection();
 }
   
 
 
 window.addEventListener("scroll", showContent);
+window.addEventListener("load", showHomeSection);
