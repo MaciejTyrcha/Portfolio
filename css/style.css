@@ -830,8 +830,8 @@ main .hobby h1 {
   padding-bottom: 20px;
   -webkit-transform: translateX(-100vw);
           transform: translateX(-100vw);
-  -webkit-transition: 1.5s ease-in-out;
-  transition: 1.5s ease-in-out;
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
 }
 
 @media (max-width: 1500px) {
@@ -1113,6 +1113,10 @@ main .projects h1 {
   color: #E5FFFE;
   font-weight: 300;
   padding-bottom: 20px;
+  -webkit-transform: translateX(-100vw);
+          transform: translateX(-100vw);
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
 }
 
 @media (max-width: 1500px) {
@@ -1158,6 +1162,11 @@ main .projects h1 {
     font-size: 30px;
     margin: 0 20px;
   }
+}
+
+main .projects h1.active {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
 }
 
 main .projects section {
@@ -1460,6 +1469,10 @@ main .technologyStack h1 {
   color: #01a093;
   font-weight: 300;
   padding-bottom: 20px;
+  -webkit-transform: translateX(-100vw);
+          transform: translateX(-100vw);
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
 }
 
 @media (max-width: 1500px) {
@@ -1502,6 +1515,11 @@ main .technologyStack h1 {
   main .technologyStack h1 {
     font-size: 30px;
   }
+}
+
+main .technologyStack h1.active {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
 }
 
 main .technologyStack section {

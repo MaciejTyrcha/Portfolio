@@ -83,8 +83,26 @@ const showH1 = () => {
   const hobbyH1FromTop = hobbyH1.offsetTop;
   const hobbyH1Height = hobbyH1.clientHeight;
 
+  //Projects h1 
+  const projectsH1 = document.querySelector(".projects h1");
+  const projectsH1FromTop = projectsH1.offsetTop + 100;
+  const projectsH1Height = projectsH1.clientHeight;
+
+  //Technologystack h1 
+  const technologyH1 = document.querySelector(".technologyStack h1");
+  const technologyH1FromTop = technologyH1.offsetTop;
+  const technologyH1Height = technologyH1.clientHeight;
+
   if (scrollValue > hobbyH1FromTop + hobbyH1Height - windowHeight) {
     hobbyH1.classList.add("active");
+  }
+
+  if (scrollValue > projectsH1FromTop + projectsH1Height - windowHeight) {
+    projectsH1.classList.add("active");
+  }
+
+  if (scrollValue > technologyH1FromTop + technologyH1Height - windowHeight) {
+    technologyH1.classList.add("active");
   }
 }
 
