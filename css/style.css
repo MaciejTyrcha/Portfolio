@@ -827,9 +827,11 @@ main .hobby h1 {
   font-size: 50px;
   color: #016d64;
   font-weight: 300;
-  margin-bottom: 50px;
-  border-bottom: 2px solid #01a093;
   padding-bottom: 20px;
+  -webkit-transform: translateX(-100vw);
+          transform: translateX(-100vw);
+  -webkit-transition: 1.5s ease-in-out;
+  transition: 1.5s ease-in-out;
 }
 
 @media (max-width: 1500px) {
@@ -842,7 +844,6 @@ main .hobby h1 {
   main .hobby h1 {
     font-size: 35px;
     padding-bottom: 15px;
-    margin-bottom: 40px;
   }
 }
 
@@ -868,15 +869,19 @@ main .hobby h1 {
   main .hobby h1 {
     font-size: 35px;
     padding-bottom: 10px;
-    margin-bottom: 30px;
   }
 }
 
 @media (max-width: 510px) {
   main .hobby h1 {
     font-size: 30px;
-    margin: 0 20px 30px 20px;
+    margin: 0 20px;
   }
+}
+
+main .hobby h1.active {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
 }
 
 main .hobby section {
@@ -888,6 +893,14 @@ main .hobby section {
       grid-template-columns: repeat(7, 1fr);
   grid-gap: 20px;
   min-height: 100vh;
+  padding-top: 50px;
+  border-top: 2px solid #01a093;
+}
+
+@media (max-width: 1300px) {
+  main .hobby section {
+    padding-top: 40px;
+  }
 }
 
 @media (max-width: 1100px) {
@@ -908,6 +921,12 @@ main .hobby section {
         grid-template-columns: 1fr;
     grid-gap: 0;
     min-height: 200vh;
+  }
+}
+
+@media (max-width: 600px) {
+  main .hobby section {
+    padding-top: 30px;
   }
 }
 
@@ -1093,8 +1112,6 @@ main .projects h1 {
   font-size: 50px;
   color: #E5FFFE;
   font-weight: 300;
-  margin-bottom: 50px;
-  border-bottom: 2px solid #E5FFFE;
   padding-bottom: 20px;
 }
 
@@ -1108,7 +1125,6 @@ main .projects h1 {
   main .projects h1 {
     font-size: 35px;
     padding-bottom: 15px;
-    margin-bottom: 40px;
   }
 }
 
@@ -1134,14 +1150,13 @@ main .projects h1 {
   main .projects h1 {
     font-size: 35px;
     padding-bottom: 10px;
-    margin-bottom: 30px;
   }
 }
 
 @media (max-width: 510px) {
   main .projects h1 {
     font-size: 30px;
-    margin: 0 20px 30px 20px;
+    margin: 0 20px;
   }
 }
 
@@ -1155,6 +1170,14 @@ main .projects section {
       grid-template-areas: "firstGrid secondGrid" "fourthGrid thirdGrid";
   grid-gap: 20px;
   min-height: 120vh;
+  padding-top: 50px;
+  border-top: 2px solid #E5FFFE;
+}
+
+@media (max-width: 1300px) {
+  main .projects section {
+    padding-top: 40px;
+  }
 }
 
 @media (max-width: 1050px) {
@@ -1166,6 +1189,12 @@ main .projects section {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+}
+
+@media (max-width: 600px) {
+  main .projects section {
+    padding-top: 30px;
   }
 }
 
@@ -1430,7 +1459,6 @@ main .technologyStack h1 {
   font-size: 50px;
   color: #01a093;
   font-weight: 300;
-  border-bottom: 2px solid #01a093;
   padding-bottom: 20px;
 }
 
@@ -1485,15 +1513,22 @@ main .technologyStack section {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: 40px auto 0 auto;
+  margin: 0 auto;
   min-height: 40vh;
-  width: 70%;
+  width: 100%;
+  padding: 50px 10vw;
+  border-top: 2px solid #01a093;
 }
 
-@media (max-width: 1500px) {
+@media (max-width: 1400px) {
   main .technologyStack section {
-    margin: 20px auto 0 auto;
-    width: 80%;
+    padding: 50px 5vw;
+  }
+}
+
+@media (max-width: 1300px) {
+  main .technologyStack section {
+    padding: 40px 0;
   }
 }
 
@@ -1504,10 +1539,15 @@ main .technologyStack section {
   }
 }
 
-@media (max-width: 550px) {
+@media (max-width: 700px) {
   main .technologyStack section {
-    margin: 20px auto 0 auto;
-    width: 100%;
+    padding: 30px 5vw;
+  }
+}
+
+@media (max-width: 400px) {
+  main .technologyStack section {
+    padding: 30px 0;
   }
 }
 
@@ -1545,7 +1585,7 @@ main .technologyStack section div {
   }
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1120px) {
   main .technologyStack section div {
     -ms-flex-preferred-size: 150px;
         flex-basis: 150px;
@@ -1553,15 +1593,23 @@ main .technologyStack section div {
   }
 }
 
-@media (max-width: 950px) {
+@media (max-width: 1000px) {
   main .technologyStack section div {
-    -ms-flex-preferred-size: 180px;
-        flex-basis: 180px;
-    height: 180px;
+    -ms-flex-preferred-size: 140px;
+        flex-basis: 140px;
+    height: 140px;
   }
 }
 
-@media (max-width: 850px) {
+@media (max-width: 950px) {
+  main .technologyStack section div {
+    -ms-flex-preferred-size: 120px;
+        flex-basis: 120px;
+    height: 120px;
+  }
+}
+
+@media (max-width: 900px) {
   main .technologyStack section div {
     -ms-flex-preferred-size: 150px;
         flex-basis: 150px;
@@ -1571,9 +1619,17 @@ main .technologyStack section div {
 
 @media (max-width: 800px) {
   main .technologyStack section div {
-    -ms-flex-preferred-size: 180px;
-        flex-basis: 180px;
-    height: 180px;
+    -ms-flex-preferred-size: 140px;
+        flex-basis: 140px;
+    height: 140px;
+  }
+}
+
+@media (max-width: 700px) {
+  main .technologyStack section div {
+    -ms-flex-preferred-size: 160px;
+        flex-basis: 160px;
+    height: 160px;
   }
 }
 

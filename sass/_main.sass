@@ -250,6 +250,7 @@ main
           font-size: $size-contact-about-me-400
 
           
+          
   .hobby 
     min-height: 20vh
     background-color: $color-main-theme-lighter
@@ -270,15 +271,14 @@ main
       font-size: $size-h1-rest
       color: $color-main-theme-dark
       font-weight: 300
-      margin-bottom: 50px
-      border-bottom: 2px solid $color-main-theme
       padding-bottom: 20px
+      transform: translateX(-100vw)
+      transition: 1.5s ease-in-out
       @media (max-width: 1500px)
         font-size: $size-h1-rest-1500
       @media (max-width: 1300px)
         font-size: $size-h1-rest-1300
         padding-bottom: 15px
-        margin-bottom: 40px
       @media (max-width: 1050px)
         font-size: $size-h1-rest-1500
       @media (max-width: 900px)
@@ -288,16 +288,21 @@ main
       @media (max-width: 600px)
         font-size: $size-h1-rest-1300
         padding-bottom: 10px
-        margin-bottom: 30px
       @media (max-width: 510px)
         font-size: $size-h1-rest-510
-        margin: 0 20px 30px 20px
+        margin: 0 20px
+      &.active
+        transform: translateX(0)
     section 
       display: grid
       grid-template-rows: repeat(7, 1fr)
       grid-template-columns: repeat(7, 1fr)
       grid-gap: 20px
       min-height: 100vh
+      padding-top: 50px
+      border-top: 2px solid $color-main-theme
+      @media (max-width: 1300px) 
+        padding-top: 40px
       @media (max-width: 1100px)
         grid-template-rows: repeat(8, 1fr)
         grid-template-columns: repeat(5, 1fr)
@@ -307,6 +312,8 @@ main
         grid-template-columns: 1fr
         grid-gap: 0
         min-height: 200vh
+      @media (max-width: 600px) 
+        padding-top: 30px
 
       div 
         background-color: black
@@ -398,15 +405,12 @@ main
       font-size: $size-h1-rest
       color: $color-main-theme-lighter
       font-weight: 300
-      margin-bottom: 50px
-      border-bottom: 2px solid $color-main-theme-lighter
       padding-bottom: 20px
       @media (max-width: 1500px)
         font-size: $size-h1-rest-1500
       @media (max-width: 1300px)
         font-size: $size-h1-rest-1300
         padding-bottom: 15px
-        margin-bottom: 40px
       @media (max-width: 1050px)
         font-size: $size-h1-rest-1500
       @media (max-width: 900px)
@@ -416,10 +420,9 @@ main
       @media (max-width: 600px)
         font-size: $size-h1-rest-1300
         padding-bottom: 10px
-        margin-bottom: 30px
       @media (max-width: 510px)
         font-size: $size-h1-rest-510
-        margin: 0 20px 30px 20px
+        margin: 0 20px
     section
       display: grid
       grid-template-columns: repeat(2, 1fr)
@@ -427,9 +430,15 @@ main
       grid-template-areas: "firstGrid secondGrid" "fourthGrid thirdGrid"
       grid-gap: 20px
       min-height: 120vh
+      padding-top: 50px
+      border-top: 2px solid $color-main-theme-lighter
+      @media (max-width: 1300px) 
+        padding-top: 40px
       @media (max-width: 1050px)
         display: flex 
         flex-direction: column
+      @media (max-width: 600px)
+        padding-top: 30px
       .about-project 
         display: flex 
         flex-direction: column 
@@ -543,7 +552,6 @@ main
       font-size: $size-h1-rest
       color: $color-main-theme
       font-weight: 300
-      border-bottom: 2px solid $color-main-theme
       padding-bottom: 20px
       @media (max-width: 1500px)
         font-size: $size-h1-rest-1500
@@ -563,17 +571,22 @@ main
       display: flex 
       flex-wrap: wrap
       justify-content: space-between
-      margin: 40px auto 0 auto
+      margin: 0 auto 
       min-height: 40vh
-      width: 70%
-      @media (max-width: 1500px)
-        margin: 20px auto 0 auto
-        width: 80%
+      width: 100%
+      padding: 50px 10vw
+      border-top: 2px solid $color-main-theme
+      @media (max-width: 1400px)
+        padding: 50px 5vw
+      @media (max-width: 1300px)
+        padding: 40px 0
       @media (max-width: 950px)
         justify-content: space-around
-      @media (max-width: 550px)
-        margin: 20px auto 0 auto
-        width: 100%
+      @media (max-width: 700px)
+        padding: 30px 5vw
+      @media (max-width: 400px)
+        padding: 30px 0
+      
       div 
         display: flex
         flex-direction: column
@@ -587,18 +600,24 @@ main
         @media (max-width: 1600px)
           flex-basis: 180px
           height: 180px
-        @media (max-width: 1100px)
+        @media (max-width: 1120px)
           flex-basis: 150px
           height: 150px
+        @media (max-width: 1000px)
+          flex-basis: 140px
+          height: 140px
         @media (max-width: 950px)
-          flex-basis: 180px
-          height: 180px
-        @media (max-width: 850px)
+          flex-basis: 120px
+          height: 120px
+        @media (max-width: 900px)
           flex-basis: 150px
           height: 150px
         @media (max-width: 800px)
-          flex-basis: 180px
-          height: 180px
+          flex-basis: 140px
+          height: 140px
+        @media (max-width: 700px)
+          flex-basis: 160px
+          height: 160px
         @media (max-width: 450px)
           flex-basis: 150px
           height: 150px

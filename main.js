@@ -11,7 +11,6 @@ const openCloseNav = () => {
 hamburgerMenu.addEventListener("click", openCloseNav);
 
 //Nav scrollowanie do konkretnych sekcji
-
 const windowWidth = $(window).width();
 
 $(".navHome").on("click", function (event) {
@@ -72,3 +71,21 @@ $(".mainPage div").on("click", function (event) {
     }, 1000);
   }
 });
+
+//Pojawiające się h1
+
+const showH1 = () => {
+  const scrollValue = window.scrollY;
+  const windowHeight = window.innerHeight;
+
+  //Hobby h1
+  const hobbyH1 = document.querySelector(".hobby h1");
+  const hobbyH1FromTop = hobbyH1.offsetTop;
+  const hobbyH1Height = hobbyH1.clientHeight;
+
+  if (scrollValue > hobbyH1FromTop + hobbyH1Height - windowHeight) {
+    hobbyH1.classList.add("active");
+  }
+}
+
+window.addEventListener("scroll", showH1);
