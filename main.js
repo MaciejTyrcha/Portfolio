@@ -7,7 +7,6 @@ const openCloseNav = () => {
   navSection.classList.toggle("active");
   spanHamburger.forEach((span) => span.classList.toggle("openHamburger"));
 }
-
 hamburgerMenu.addEventListener("click", openCloseNav);
 
 //Nav scrollowanie do konkretnych sekcji
@@ -59,7 +58,7 @@ $(".navContact").on("click", function (event) {
   }
 });
 
-$(".mainPage div").on("click", function (event) {
+$(".mainPage .wrapper div").on("click", function (event) {
   event.preventDefault();
   if (windowWidth >= 900) {
     $("body, html").animate({
@@ -73,8 +72,7 @@ $(".mainPage div").on("click", function (event) {
 });
 
 //Pojawiające się h1
-
-const showH1 = () => {
+const showH1 =() => {
   const scrollValue = window.scrollY;
   const windowHeight = window.innerHeight;
 
@@ -93,17 +91,27 @@ const showH1 = () => {
   const technologyH1FromTop = technologyH1.offsetTop;
   const technologyH1Height = technologyH1.clientHeight;
 
+  //h1
   if (scrollValue > hobbyH1FromTop + hobbyH1Height - windowHeight) {
     hobbyH1.classList.add("active");
   }
-
   if (scrollValue > projectsH1FromTop + projectsH1Height - windowHeight) {
     projectsH1.classList.add("active");
   }
-
   if (scrollValue > technologyH1FromTop + technologyH1Height - windowHeight) {
     technologyH1.classList.add("active");
   }
 }
 
-window.addEventListener("scroll", showH1);
+const showHomeSection = () => {
+
+}
+
+const showContent = () => {
+  showH1();
+  showHomeSection();
+}
+  
+
+
+window.addEventListener("scroll", showContent);

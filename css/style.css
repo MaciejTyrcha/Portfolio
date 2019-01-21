@@ -277,7 +277,47 @@ main .mainPage {
           clip-path: polygon(0 0, 100% 0, 100% 100%, 100% calc(100% - 5vw), 0 100%);
 }
 
-main .mainPage section {
+main .mainPage .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 40%;
+  height: 30%;
+  min-height: 200px;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+@media (max-width: 1100px) {
+  main .mainPage .wrapper {
+    width: 65%;
+  }
+}
+
+@media (max-width: 900px) {
+  main .mainPage .wrapper {
+    width: 100%;
+  }
+}
+
+@media (max-width: 350px) {
+  main .mainPage .wrapper {
+    height: 25%;
+  }
+}
+
+@media (max-height: 600px) {
+  main .mainPage .wrapper {
+    height: 40%;
+  }
+}
+
+main .mainPage .wrapper section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -291,62 +331,34 @@ main .mainPage section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 40%;
-  height: 30%;
-  min-height: 200px;
-  background-color: rgba(0, 0, 0, 0.8);
   padding: 0 20px;
 }
 
-@media (max-width: 1100px) {
-  main .mainPage section {
-    width: 65%;
-  }
-}
-
-@media (max-width: 900px) {
-  main .mainPage section {
-    width: 100%;
-  }
-}
-
-@media (max-width: 350px) {
-  main .mainPage section {
-    height: 25%;
-  }
-}
-
-@media (max-height: 600px) {
-  main .mainPage section {
-    height: 40%;
-  }
-}
-
-main .mainPage h1 {
+main .mainPage .wrapper section h1 {
   font-size: 70px;
   color: #01a093;
   font-weight: 300;
 }
 
 @media (max-width: 1500px) {
-  main .mainPage h1 {
+  main .mainPage .wrapper section h1 {
     font-size: 60px;
   }
 }
 
 @media (max-width: 1300px) {
-  main .mainPage h1 {
+  main .mainPage .wrapper section h1 {
     font-size: 50px;
   }
 }
 
 @media (max-width: 350px) {
-  main .mainPage h1 {
+  main .mainPage .wrapper section h1 {
     font-size: 45px;
   }
 }
 
-main .mainPage h2 {
+main .mainPage .wrapper section h2 {
   font-size: 25px;
   letter-spacing: 9px;
   text-transform: uppercase;
@@ -355,24 +367,24 @@ main .mainPage h2 {
 }
 
 @media (max-width: 1500px) {
-  main .mainPage h2 {
+  main .mainPage .wrapper section h2 {
     font-size: 18px;
   }
 }
 
 @media (max-width: 1300px) {
-  main .mainPage h2 {
+  main .mainPage .wrapper section h2 {
     font-size: 16px;
   }
 }
 
 @media (max-width: 350px) {
-  main .mainPage h2 {
+  main .mainPage .wrapper section h2 {
     font-size: 14px;
   }
 }
 
-main .mainPage a {
+main .mainPage .wrapper section a {
   text-decoration: none;
   font-size: 20px;
   text-transform: uppercase;
@@ -381,12 +393,12 @@ main .mainPage a {
 }
 
 @media (max-width: 1300px) {
-  main .mainPage a {
+  main .mainPage .wrapper section a {
     font-size: 14px;
   }
 }
 
-main .mainPage a div {
+main .mainPage .wrapper section a div {
   padding: 25px 50px;
   -webkit-clip-path: ellipse(50% 45% at 50% 50%);
           clip-path: ellipse(50% 45% at 50% 50%);
@@ -395,12 +407,12 @@ main .mainPage a div {
 }
 
 @media (max-width: 1500px) {
-  main .mainPage a div {
+  main .mainPage .wrapper section a div {
     padding: 20px 40px;
   }
 }
 
-main .mainPage a div .button1 {
+main .mainPage .wrapper section a div .button1 {
   position: absolute;
   top: 0;
   left: 90%;
@@ -410,7 +422,7 @@ main .mainPage a div .button1 {
   z-index: 2;
 }
 
-main .mainPage a div .button2 {
+main .mainPage .wrapper section a div .button2 {
   position: absolute;
   left: 82%;
   top: 0;
