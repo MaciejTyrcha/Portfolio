@@ -1287,6 +1287,11 @@ main .projects h1 {
   transition: 1s ease-in-out;
 }
 
+main .projects h1.active {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
 @media (max-width: 1500px) {
   main .projects h1 {
     font-size: 40px;
@@ -1330,11 +1335,6 @@ main .projects h1 {
     font-size: 30px;
     margin: 0 20px;
   }
-}
-
-main .projects h1.active {
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
 }
 
 main .projects section {
@@ -1996,6 +1996,15 @@ footer .wrapper section h1 {
   text-transform: uppercase;
   font-weight: 300;
   margin-bottom: 15px;
+  -webkit-transform: translateX(-100vw);
+          transform: translateX(-100vw);
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+}
+
+footer .wrapper section h1.active {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
 }
 
 @media (max-width: 1500px) {
@@ -2048,6 +2057,19 @@ footer .wrapper section h2 {
   color: #999;
   margin-bottom: 10px;
   font-weight: 400;
+  -webkit-transform: translateY(40px);
+          transform: translateY(40px);
+  opacity: 0;
+  -webkit-transition: opacity 0.5s linear, -webkit-transform 0.8s ease-in-out;
+  transition: opacity 0.5s linear, -webkit-transform 0.8s ease-in-out;
+  transition: transform 0.8s ease-in-out, opacity 0.5s linear;
+  transition: transform 0.8s ease-in-out, opacity 0.5s linear, -webkit-transform 0.8s ease-in-out;
+}
+
+footer .wrapper section h2.active {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
 }
 
 @media (max-width: 1500px) {
@@ -2109,7 +2131,7 @@ footer .wrapper section h2 a {
   letter-spacing: 1px;
 }
 
-footer .wrapper section div {
+footer .wrapper section .footerIcons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2119,23 +2141,36 @@ footer .wrapper section div {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  min-height: 150px;
+  min-height: 200px;
+  -webkit-transform: translateY(40px);
+          transform: translateY(40px);
+  opacity: 0;
+  -webkit-transition: opacity 0.5s linear, -webkit-transform 0.8s ease-in-out;
+  transition: opacity 0.5s linear, -webkit-transform 0.8s ease-in-out;
+  transition: transform 0.8s ease-in-out, opacity 0.5s linear;
+  transition: transform 0.8s ease-in-out, opacity 0.5s linear, -webkit-transform 0.8s ease-in-out;
+}
+
+footer .wrapper section .footerIcons.active {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
 }
 
 @media (max-width: 1300px) {
-  footer .wrapper section div {
+  footer .wrapper section .footerIcons {
     min-height: 130px;
   }
 }
 
 @media (max-width: 1000px) {
-  footer .wrapper section div {
+  footer .wrapper section .footerIcons {
     min-height: 120px;
   }
 }
 
 @media (max-width: 500px) {
-  footer .wrapper section div {
+  footer .wrapper section .footerIcons {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     -ms-flex-pack: distribute;
@@ -2145,12 +2180,12 @@ footer .wrapper section div {
 }
 
 @media (max-width: 400px) {
-  footer .wrapper section div {
+  footer .wrapper section .footerIcons {
     padding: 0 30px;
   }
 }
 
-footer .wrapper section div a {
+footer .wrapper section .footerIcons a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2173,13 +2208,13 @@ footer .wrapper section div a {
   transition: 0.2s linear;
 }
 
-footer .wrapper section div a:hover {
+footer .wrapper section .footerIcons a:hover {
   -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
 }
 
 @media (max-width: 1000px) {
-  footer .wrapper section div a {
+  footer .wrapper section .footerIcons a {
     width: 60px;
     height: 60px;
     font-size: 40px;
@@ -2187,13 +2222,13 @@ footer .wrapper section div a:hover {
 }
 
 @media (max-width: 900px) {
-  footer .wrapper section div a {
+  footer .wrapper section .footerIcons a {
     font-size: 30px;
   }
 }
 
 @media (max-width: 800px) {
-  footer .wrapper section div a {
+  footer .wrapper section .footerIcons a {
     width: 80px;
     height: 80px;
     font-size: 50px;
@@ -2201,7 +2236,7 @@ footer .wrapper section div a:hover {
 }
 
 @media (max-width: 700px) {
-  footer .wrapper section div a {
+  footer .wrapper section .footerIcons a {
     width: 70px;
     height: 70px;
     font-size: 40px;
@@ -2209,7 +2244,7 @@ footer .wrapper section div a:hover {
 }
 
 @media (max-width: 600px) {
-  footer .wrapper section div a {
+  footer .wrapper section .footerIcons a {
     width: 60px;
     height: 60px;
     font-size: 40px;
@@ -2217,7 +2252,7 @@ footer .wrapper section div a:hover {
 }
 
 @media (max-width: 500px) {
-  footer .wrapper section div a {
+  footer .wrapper section .footerIcons a {
     width: 70px;
     height: 70px;
     font-size: 40px;
@@ -2234,6 +2269,19 @@ footer .wrapper form {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 40%;
+  -webkit-transform: translateY(40px);
+          transform: translateY(40px);
+  opacity: 0;
+  -webkit-transition: opacity 0.5s linear, -webkit-transform 0.8s ease-in-out;
+  transition: opacity 0.5s linear, -webkit-transform 0.8s ease-in-out;
+  transition: transform 0.8s ease-in-out, opacity 0.5s linear;
+  transition: transform 0.8s ease-in-out, opacity 0.5s linear, -webkit-transform 0.8s ease-in-out;
+}
+
+footer .wrapper form.active {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
 }
 
 @media (max-width: 1500px) {

@@ -253,11 +253,69 @@ const showPortfolioSection =() => {
   }
 }
 
+const showTechnologyStackSection =() => {
+  // const scrollValue = window.scrollY;
+  // const windowHeight = window.innerHeight;
+
+  // //firstGrid
+  // const portfolioFirst = document.querySelector(".projects .first-grid");
+  // const portfolioFirstFromTop = portfolioFirst.offsetTop;
+  // const portfolioFirstHeight = portfolioFirst.clientHeight;
+
+  // if (scrollValue > portfolioFourthFromTop + portfolioFourthHeight - 1.2 * windowHeight) {
+  //   portfolioFourth.classList.add("active");
+  // }
+}
+
+const showFooterSection = () => {
+  const scrollValue = window.scrollY;
+  const windowHeight = window.innerHeight;
+
+  //h1
+  const footerH1 = document.querySelector("footer h1");
+  const footerH1FromTop = footerH1.offsetTop;
+  const footerH1Height = footerH1.clientHeight;
+
+  //h2
+  const footerH2 = document.querySelector("footer h2");
+  const footerH2FromTop = footerH2.offsetTop;
+  const footerH2Height = footerH2.clientHeight;
+
+  //FooterIcons
+  const footerIcons = document.querySelector("footer .footerIcons");
+  const footerIconsFromTop = footerIcons.offsetTop;
+  const footerIconsHeight = footerIcons.clientHeight;
+
+  //FooterForm
+  const footerForm = document.querySelector("footer form");
+  const footerFormFromTop = footerForm.offsetTop;
+  const footerFormHeight = footerForm.clientHeight;
+
+  if (scrollValue > footerH1FromTop + footerH1Height - windowHeight) {
+    footerH1.classList.add("active");
+  }
+
+  if (scrollValue > footerH2FromTop + footerH2Height - windowHeight) {
+    footerH2.classList.add("active");
+  }
+
+  if (scrollValue > footerIconsFromTop + footerIconsHeight - windowHeight) {
+    footerIcons.classList.add("active");
+  }
+
+  if (scrollValue > footerFormFromTop + footerFormHeight - 1.2 * windowHeight) {
+    footerForm.classList.add("active");
+  }
+}
+
+
 const showContent = () => {
   showH1();
   showABoutMeSection();
   showHobbySection();
   showPortfolioSection();
+  showTechnologyStackSection();
+  showFooterSection();
 }
   
 window.addEventListener("scroll", showContent);

@@ -486,6 +486,8 @@ main
       padding-bottom: 20px
       transform: translateX(-100vw)
       transition: 1s ease-in-out
+      &.active
+        transform: translateX(0)
       @media (max-width: 1500px)
         font-size: $size-h1-rest-1500
       @media (max-width: 1300px)
@@ -503,8 +505,7 @@ main
       @media (max-width: 510px)
         font-size: $size-h1-rest-510
         margin: 0 20px
-      &.active
-        transform: translateX(0)
+        
     section
       display: grid
       grid-template-columns: repeat(2, 1fr)
