@@ -103,17 +103,72 @@ const showH1 =() => {
   }
 }
 
-const showHomeSection = () => {
-  const divHomeSection = document.querySelector(".mainPage section");
-  divHomeSection.classList.add("active");
+//Animacja oMnie 
+const showABoutMeSection = () => {
+  const scrollValue = window.scrollY;
+  const windowHeight = window.innerHeight;
+  
+  //h1
+  const aboutMeH1 = document.querySelector(".aboutMe h1");
+  const aboutMeH1FromTop = aboutMeH1.offsetTop;
+  const aboutMeH1Height = aboutMeH1.clientHeight;
+
+  //h2
+  const aboutMeH2 = document.querySelector(".aboutMe h2");
+  const aboutMeH2FromTop = aboutMeH2.offsetTop;
+  const aboutMeH2Height = aboutMeH2.clientHeight;
+
+  //p
+  const aboutMeP = document.querySelector(".aboutMe p");
+  const aboutMePFromTop = aboutMeP.offsetTop;
+  const aboutMePHeight = aboutMeP.clientHeight;
+
+  //photo 
+  const aboutMePhoto = document.querySelector(".aboutMe .myPhoto");
+  const aboutMePhotoFromTop = aboutMePhoto.offsetTop;
+  const aboutMePhotoHeight = aboutMePhoto.clientHeight;
+
+  //icons
+  const aboutMeIcons = document.querySelector(".icons");
+  const aboutMeIconsFromTop = aboutMeIcons.offsetTop;
+  const aboutMeIconsHeight = aboutMeIcons.clientHeight;
+
+
+  if (scrollValue > aboutMeH1FromTop + aboutMeH1Height - windowHeight) {
+    aboutMeH1.classList.add("active");
+  }
+  if (scrollValue > aboutMeH2FromTop + aboutMeH2Height - windowHeight) {
+    aboutMeH2.classList.add("active");
+  }
+  if (scrollValue > aboutMePFromTop + aboutMePHeight - windowHeight) {
+    aboutMeP.classList.add("active");
+  }
+  if (scrollValue > aboutMePhotoFromTop + aboutMePhotoHeight - 1.2 * windowHeight) {
+    aboutMePhoto.classList.add("active");
+  }
+  if (scrollValue > aboutMeIconsFromTop + aboutMeIconsHeight - windowHeight) {
+    aboutMeIcons.classList.add("active");
+  }
+}
+
+//Animacja hobby
+
+const showHobbySection =() => {
 
 }
 
 const showContent = () => {
   showH1();
+  showABoutMeSection();
+  showHobbySection();
 }
   
-
-
 window.addEventListener("scroll", showContent);
+
+//Animacja homePage
+const showHomeSection = () => {
+  const divHomeSection = document.querySelector(".mainPage section");
+  divHomeSection.classList.add("active");
+}
+
 window.addEventListener("load", showHomeSection);
