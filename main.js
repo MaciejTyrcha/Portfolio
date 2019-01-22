@@ -152,9 +152,63 @@ const showABoutMeSection = () => {
 }
 
 //Animacja hobby
-
 const showHobbySection =() => {
+  const scrollValue = window.scrollY;
+  const windowHeight = window.innerHeight;
+  
+  //1
+  const hobbyImageOne = document.querySelector(".hobby .first-image-hobby");
+  const hobbyImageOneFromTop = hobbyImageOne.offsetTop;
+  const hobbyImageOneHeight = hobbyImageOne.clientHeight;
 
+  //2 
+  const hobbyImageTwo = document.querySelector(".hobby .second-image-hobby");
+  const hobbyImageTwoFromTop = hobbyImageTwo.offsetTop;
+  const hobbyImageTwoHeight = hobbyImageTwo.clientHeight;
+
+  //3 
+  const hobbyImageThree = document.querySelector(".hobby .third-image-hobby");
+  const hobbyImageThreeFromTop = hobbyImageThree.offsetTop;
+  const hobbyImageThreeHeight = hobbyImageThree.clientHeight;
+
+  //4 
+  const hobbyImageFour = document.querySelector(".hobby .fourth-image-hobby");
+  const hobbyImageFourFromTop = hobbyImageFour.offsetTop;
+  const hobbyImageFourHeight = hobbyImageFour.clientHeight;
+
+  //5 
+  const hobbyImageFive = document.querySelector(".hobby .fifth-image-hobby");
+  const hobbyImageFiveFromTop = hobbyImageFive.offsetTop;
+  const hobbyImageFiveHeight = hobbyImageFive.clientHeight;
+
+  //6 
+  const hobbyImageSix = document.querySelector(".hobby .sixth-image-hobby");
+  const hobbyImageSixFromTop = hobbyImageSix.offsetTop;
+  const hobbyImageSixHeight = hobbyImageSix.clientHeight;
+
+  if (scrollValue > hobbyImageOneFromTop + hobbyImageOneHeight - 1.54* windowHeight) {
+    hobbyImageOne.classList.add("active");
+  }
+
+  if (scrollValue > hobbyImageTwoFromTop + hobbyImageTwoHeight - 1.2* windowHeight) {
+    hobbyImageTwo.classList.add("active");
+  }
+
+  if (scrollValue > hobbyImageThreeFromTop + hobbyImageThreeHeight - 1.2* windowHeight) {
+    hobbyImageThree.classList.add("active");
+  }
+
+  if (scrollValue > hobbyImageFourFromTop + hobbyImageFourHeight - 1.2* windowHeight) {
+    hobbyImageFour.classList.add("active");
+  }
+
+  if (scrollValue > hobbyImageFiveFromTop + hobbyImageFiveHeight - 1.2* windowHeight) {
+    hobbyImageFive.classList.add("active");
+  }
+
+  if (scrollValue > hobbyImageSixFromTop + hobbyImageSixHeight - 1.2* windowHeight) {
+    hobbyImageSix.classList.add("active");
+  }
 }
 
 const showContent = () => {
