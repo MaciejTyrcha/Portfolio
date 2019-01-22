@@ -924,6 +924,11 @@ main .hobby h1 {
   transition: 1s ease-in-out;
 }
 
+main .hobby h1.active {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
 @media (max-width: 1500px) {
   main .hobby h1 {
     font-size: 40px;
@@ -967,11 +972,6 @@ main .hobby h1 {
     font-size: 30px;
     margin: 0 20px;
   }
-}
-
-main .hobby h1.active {
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
 }
 
 main .hobby section {
@@ -1534,6 +1534,19 @@ main .projects section .first-grid {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: firstGrid;
+  -webkit-transform: translateY(40px);
+          transform: translateY(40px);
+  opacity: 0;
+  -webkit-transition: opacity 0.5s linear, -webkit-transform 0.8s ease-in-out;
+  transition: opacity 0.5s linear, -webkit-transform 0.8s ease-in-out;
+  transition: transform 0.8s ease-in-out, opacity 0.5s linear;
+  transition: transform 0.8s ease-in-out, opacity 0.5s linear, -webkit-transform 0.8s ease-in-out;
+}
+
+main .projects section .first-grid.active {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
 }
 
 @media (max-width: 1050px) {
@@ -1552,6 +1565,19 @@ main .projects section .second-grid {
   background: url("../Rysunki/Portfolio1.png");
   background-size: cover;
   background-position: center;
+  -webkit-transform: translateY(40px);
+          transform: translateY(40px);
+  opacity: 0;
+  -webkit-transition: opacity 0.5s linear, -webkit-transform 0.8s ease-in-out;
+  transition: opacity 0.5s linear, -webkit-transform 0.8s ease-in-out;
+  transition: transform 0.8s ease-in-out, opacity 0.5s linear;
+  transition: transform 0.8s ease-in-out, opacity 0.5s linear, -webkit-transform 0.8s ease-in-out;
+}
+
+main .projects section .second-grid.active {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
 }
 
 @media (max-width: 1050px) {
@@ -1578,6 +1604,19 @@ main .projects section .third-grid {
   -ms-grid-row: 2;
   -ms-grid-column: 2;
   grid-area: thirdGrid;
+  -webkit-transform: translateY(40px);
+          transform: translateY(40px);
+  opacity: 0;
+  -webkit-transition: opacity 0.5s linear, -webkit-transform 0.8s ease-in-out;
+  transition: opacity 0.5s linear, -webkit-transform 0.8s ease-in-out;
+  transition: transform 0.8s ease-in-out, opacity 0.5s linear;
+  transition: transform 0.8s ease-in-out, opacity 0.5s linear, -webkit-transform 0.8s ease-in-out;
+}
+
+main .projects section .third-grid.active {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
 }
 
 @media (max-width: 1050px) {
@@ -1595,6 +1634,19 @@ main .projects section .fourth-grid {
   background: url("../Rysunki/Mandala1.png");
   background-size: cover;
   background-position: bottom center;
+  -webkit-transform: translateY(40px);
+          transform: translateY(40px);
+  opacity: 0;
+  -webkit-transition: opacity 0.5s linear, -webkit-transform 0.8s ease-in-out;
+  transition: opacity 0.5s linear, -webkit-transform 0.8s ease-in-out;
+  transition: transform 0.8s ease-in-out, opacity 0.5s linear;
+  transition: transform 0.8s ease-in-out, opacity 0.5s linear, -webkit-transform 0.8s ease-in-out;
+}
+
+main .projects section .fourth-grid.active {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
 }
 
 @media (max-width: 1050px) {

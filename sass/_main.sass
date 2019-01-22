@@ -314,6 +314,8 @@ main
       padding-bottom: 20px
       transform: translateX(-100vw)
       transition: 1s ease-in-out
+      &.active
+        transform: translateX(0)
       @media (max-width: 1500px)
         font-size: $size-h1-rest-1500
       @media (max-width: 1300px)
@@ -331,8 +333,7 @@ main
       @media (max-width: 510px)
         font-size: $size-h1-rest-510
         margin: 0 20px
-      &.active
-        transform: translateX(0)
+     
         
     section 
       display: grid
@@ -589,6 +590,12 @@ main
           margin-bottom: 20px
       .first-grid 
         grid-area: firstGrid
+        transform: translateY(40px)
+        opacity: 0
+        transition: transform 0.8s ease-in-out, opacity 0.5s linear
+        &.active
+          transform: translateY(0)
+          opacity: 1
         @media (max-width: 1050px)
           order: 2
           margin-bottom: 50px
@@ -597,6 +604,12 @@ main
         background: url('../Rysunki/Portfolio1.png')
         background-size: cover
         background-position: center
+        transform: translateY(40px)
+        opacity: 0
+        transition: transform 0.8s ease-in-out, opacity 0.5s linear
+        &.active
+          transform: translateY(0)
+          opacity: 1
         @media (max-width: 1050px)
           order: 1
         @media (max-width: 510px)
@@ -605,6 +618,12 @@ main
           background-position: 60% 50%
       .third-grid 
         grid-area: thirdGrid
+        transform: translateY(40px)
+        opacity: 0
+        transition: transform 0.8s ease-in-out, opacity 0.5s linear
+        &.active
+          transform: translateY(0)
+          opacity: 1
         @media (max-width: 1050px)
           order: 4
       .fourth-grid 
@@ -612,6 +631,12 @@ main
         background: url('../Rysunki/Mandala1.png')
         background-size: cover
         background-position: bottom center
+        transform: translateY(40px)
+        opacity: 0
+        transition: transform 0.8s ease-in-out, opacity 0.5s linear
+        &.active
+          transform: translateY(0)
+          opacity: 1
         @media (max-width: 1050px)
           order: 3
           background-position: top center

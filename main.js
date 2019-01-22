@@ -211,10 +211,53 @@ const showHobbySection =() => {
   }
 }
 
+//Animacja portfolio
+const showPortfolioSection =() => {
+  const scrollValue = window.scrollY;
+  const windowHeight = window.innerHeight;
+
+  //firstGrid
+  const portfolioFirst = document.querySelector(".projects .first-grid");
+  const portfolioFirstFromTop = portfolioFirst.offsetTop;
+  const portfolioFirstHeight = portfolioFirst.clientHeight;
+
+  //secondGrid
+  const portfolioSecond = document.querySelector(".projects .second-grid");
+  const portfolioSecondFromTop = portfolioSecond.offsetTop;
+  const portfolioSecondHeight = portfolioSecond.clientHeight;
+
+  //thirdGrid
+  const portfolioThird = document.querySelector(".projects .third-grid");
+  const portfolioThirdFromTop = portfolioThird.offsetTop;
+  const portfolioThirdHeight = portfolioThird.clientHeight;
+
+  //fourthGrid
+  const portfolioFourth = document.querySelector(".projects .fourth-grid");
+  const portfolioFourthFromTop = portfolioFourth.offsetTop;
+  const portfolioFourthHeight = portfolioFourth.clientHeight;
+
+  if (scrollValue > portfolioFirstFromTop + portfolioFirstHeight - 1.2 * windowHeight) {
+    portfolioFirst.classList.add("active");
+  }
+
+  if (scrollValue > portfolioSecondFromTop + portfolioSecondHeight - 1.2 * windowHeight) {
+    portfolioSecond.classList.add("active");
+  }
+
+  if (scrollValue > portfolioThirdFromTop + portfolioThirdHeight - 1.2 * windowHeight) {
+    portfolioThird.classList.add("active");
+  }
+
+  if (scrollValue > portfolioFourthFromTop + portfolioFourthHeight - 1.2 * windowHeight) {
+    portfolioFourth.classList.add("active");
+  }
+}
+
 const showContent = () => {
   showH1();
   showABoutMeSection();
   showHobbySection();
+  showPortfolioSection();
 }
   
 window.addEventListener("scroll", showContent);
