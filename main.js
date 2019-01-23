@@ -176,15 +176,24 @@ const showFooterSection = () => {
 
   const footerH1 = document.querySelector("footer h1");
   const footerH2 = document.querySelector("footer h2");
-  const footerIcons = document.querySelector("footer .footerIcons");
   const footerForm = document.querySelector("footer form");
+  const footerButton = document.querySelector("footer button");
 
-  const footerElements = [footerH1, footerH2, footerIcons, footerForm];
+  const footerIcons = document.querySelectorAll("footer .footerIcons div");
+
+  const footerElements = [footerH1, footerH2, footerForm, footerButton];
 
   for (let i=0; i<footerElements.length; i++) {
     let footerElement = footerElements[i];
     if (scrollValue > footerElement.offsetTop + footerElement.clientHeight - windowHeight) {
       footerElement.classList.add('active');
+    }
+  }
+
+  for (let i=0; i<footerIcons.length; i++) {
+    let footerIcon = footerIcons[i];
+    if ( scrollValue > footerIcon.offsetTop + footerIcon.clientHeight - windowHeight) {
+      footerIcon.classList.add('active');
     }
   }
 }

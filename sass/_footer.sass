@@ -94,12 +94,6 @@ footer
         justify-content: center
         align-items: center
         min-height: 200px
-        transform: translateY(40px)
-        opacity: 0
-        transition: transform 0.8s ease-in-out, opacity 0.5s linear
-        &.active
-          transform: translateY(0)
-          opacity: 1
         @media (max-width: 1300px)
           min-height: 130px
         @media (max-width: 1000px)
@@ -110,44 +104,54 @@ footer
           padding: 0 50px
         @media (max-width: 400px)
           padding: 0 30px
-        a
+        div 
           display: flex
           justify-content: center
           align-items: center
-          width: 80px
-          height: 80px 
           margin: 0 7%
-          text-decoration: none
-          color: $color-main-theme-darker
-          background-color: $color-main-theme-lighter
-          font-size: $size-contact-about-me
-          clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)
-          transition: 0.2s linear
-          &:hover 
-            transform: rotate(360deg)
-          @media (max-width: 1000px)
-            width: 60px
-            height: 60px
-            font-size: $size-contact-about-me-400
-          @media (max-width: 900px)
-            font-size: $size-contact-about-me-900
-          @media (max-width: 800px)
+          transform: translateY(40px)
+          opacity: 0
+          transition: transform 0.8s ease-in-out, opacity 0.5s linear
+          &.active
+            transform: translateY(0)
+            opacity: 1
+          a
+            display: flex
+            justify-content: center
+            align-items: center
             width: 80px
             height: 80px 
+            text-decoration: none
+            color: $color-main-theme-darker
+            background-color: $color-main-theme-lighter
             font-size: $size-contact-about-me
-          @media (max-width: 700px)
-            width: 70px
-            height: 70px 
-            font-size: $size-contact-about-me-700
-          @media (max-width: 600px)
-            width: 60px
-            height: 60px 
-            font-size: $size-contact-about-me-400
-          @media (max-width: 500px)
-            width: 70px
-            height: 70px 
-            font-size: $size-contact-about-me-700
-            margin-bottom: 20px
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)
+            transition: 0.2s linear
+            &:hover 
+              transform: rotate(360deg)
+            @media (max-width: 1000px)
+              width: 60px
+              height: 60px
+              font-size: $size-contact-about-me-400
+            @media (max-width: 900px)
+              font-size: $size-contact-about-me-900
+            @media (max-width: 800px)
+              width: 80px
+              height: 80px 
+              font-size: $size-contact-about-me
+            @media (max-width: 700px)
+              width: 70px
+              height: 70px 
+              font-size: $size-contact-about-me-700
+            @media (max-width: 600px)
+              width: 60px
+              height: 60px 
+              font-size: $size-contact-about-me-400
+            @media (max-width: 500px)
+              width: 70px
+              height: 70px 
+              font-size: $size-contact-about-me-700
+              margin-bottom: 20px
     form 
       display: flex
       flex-direction: column

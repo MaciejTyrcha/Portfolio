@@ -2155,19 +2155,6 @@ footer .wrapper section .footerIcons {
       -ms-flex-align: center;
           align-items: center;
   min-height: 200px;
-  -webkit-transform: translateY(40px);
-          transform: translateY(40px);
-  opacity: 0;
-  -webkit-transition: opacity 0.5s linear, -webkit-transform 0.8s ease-in-out;
-  transition: opacity 0.5s linear, -webkit-transform 0.8s ease-in-out;
-  transition: transform 0.8s ease-in-out, opacity 0.5s linear;
-  transition: transform 0.8s ease-in-out, opacity 0.5s linear, -webkit-transform 0.8s ease-in-out;
-}
-
-footer .wrapper section .footerIcons.active {
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
-  opacity: 1;
 }
 
 @media (max-width: 1300px) {
@@ -2198,7 +2185,33 @@ footer .wrapper section .footerIcons.active {
   }
 }
 
-footer .wrapper section .footerIcons a {
+footer .wrapper section .footerIcons div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 7%;
+  -webkit-transform: translateY(40px);
+          transform: translateY(40px);
+  opacity: 0;
+  -webkit-transition: opacity 0.5s linear, -webkit-transform 0.8s ease-in-out;
+  transition: opacity 0.5s linear, -webkit-transform 0.8s ease-in-out;
+  transition: transform 0.8s ease-in-out, opacity 0.5s linear;
+  transition: transform 0.8s ease-in-out, opacity 0.5s linear, -webkit-transform 0.8s ease-in-out;
+}
+
+footer .wrapper section .footerIcons div.active {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
+}
+
+footer .wrapper section .footerIcons div a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2210,7 +2223,6 @@ footer .wrapper section .footerIcons a {
           align-items: center;
   width: 80px;
   height: 80px;
-  margin: 0 7%;
   text-decoration: none;
   color: #013a36;
   background-color: #E5FFFE;
@@ -2221,13 +2233,13 @@ footer .wrapper section .footerIcons a {
   transition: 0.2s linear;
 }
 
-footer .wrapper section .footerIcons a:hover {
+footer .wrapper section .footerIcons div a:hover {
   -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
 }
 
 @media (max-width: 1000px) {
-  footer .wrapper section .footerIcons a {
+  footer .wrapper section .footerIcons div a {
     width: 60px;
     height: 60px;
     font-size: 40px;
@@ -2235,13 +2247,13 @@ footer .wrapper section .footerIcons a:hover {
 }
 
 @media (max-width: 900px) {
-  footer .wrapper section .footerIcons a {
+  footer .wrapper section .footerIcons div a {
     font-size: 30px;
   }
 }
 
 @media (max-width: 800px) {
-  footer .wrapper section .footerIcons a {
+  footer .wrapper section .footerIcons div a {
     width: 80px;
     height: 80px;
     font-size: 50px;
@@ -2249,7 +2261,7 @@ footer .wrapper section .footerIcons a:hover {
 }
 
 @media (max-width: 700px) {
-  footer .wrapper section .footerIcons a {
+  footer .wrapper section .footerIcons div a {
     width: 70px;
     height: 70px;
     font-size: 40px;
@@ -2257,7 +2269,7 @@ footer .wrapper section .footerIcons a:hover {
 }
 
 @media (max-width: 600px) {
-  footer .wrapper section .footerIcons a {
+  footer .wrapper section .footerIcons div a {
     width: 60px;
     height: 60px;
     font-size: 40px;
@@ -2265,7 +2277,7 @@ footer .wrapper section .footerIcons a:hover {
 }
 
 @media (max-width: 500px) {
-  footer .wrapper section .footerIcons a {
+  footer .wrapper section .footerIcons div a {
     width: 70px;
     height: 70px;
     font-size: 40px;
