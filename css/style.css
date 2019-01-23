@@ -1695,6 +1695,11 @@ main #technologyStack h1 {
   transition: 1s ease-in-out;
 }
 
+main #technologyStack h1.active {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
 @media (max-width: 1500px) {
   main #technologyStack h1 {
     font-size: 40px;
@@ -1735,11 +1740,6 @@ main #technologyStack h1 {
   main #technologyStack h1 {
     font-size: 30px;
   }
-}
-
-main #technologyStack h1.active {
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
 }
 
 main #technologyStack section {
@@ -1807,6 +1807,19 @@ main #technologyStack section div {
       flex-basis: 200px;
   height: 200px;
   margin: 20px;
+  -webkit-transform: translateY(40px);
+          transform: translateY(40px);
+  opacity: 0;
+  -webkit-transition: opacity 0.5s linear, -webkit-transform 0.8s ease-in-out;
+  transition: opacity 0.5s linear, -webkit-transform 0.8s ease-in-out;
+  transition: transform 0.8s ease-in-out, opacity 0.5s linear;
+  transition: transform 0.8s ease-in-out, opacity 0.5s linear, -webkit-transform 0.8s ease-in-out;
+}
+
+main #technologyStack section div.active {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
 }
 
 @media (max-width: 1750px) {

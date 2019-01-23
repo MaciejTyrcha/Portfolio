@@ -76,30 +76,17 @@ const showH1 =() => {
   const scrollValue = window.scrollY;
   const windowHeight = window.innerHeight;
 
-  //Hobby h1
   const hobbyH1 = document.querySelector("#hobby h1");
-  const hobbyH1FromTop = hobbyH1.offsetTop;
-  const hobbyH1Height = hobbyH1.clientHeight;
-
-  //Projects h1 
   const projectsH1 = document.querySelector("#projects h1");
-  const projectsH1FromTop = projectsH1.offsetTop + 100;
-  const projectsH1Height = projectsH1.clientHeight;
-
-  //Technologystack h1 
   const technologyH1 = document.querySelector("#technologyStack h1");
-  const technologyH1FromTop = technologyH1.offsetTop;
-  const technologyH1Height = technologyH1.clientHeight;
 
-  //h1
-  if (scrollValue > hobbyH1FromTop + hobbyH1Height - windowHeight) {
-    hobbyH1.classList.add("active");
-  }
-  if (scrollValue > projectsH1FromTop + projectsH1Height - windowHeight) {
-    projectsH1.classList.add("active");
-  }
-  if (scrollValue > technologyH1FromTop + technologyH1Height - windowHeight) {
-    technologyH1.classList.add("active");
+  const showH1Elements = [hobbyH1, projectsH1, technologyH1];
+
+  for (let i =0; i< showH1Elements.length; i++) {
+    showH1Element = showH1Elements[i];
+    if(scrollValue > showH1Element.offsetTop + showH1Element.clientHeight - windowHeight) {
+      showH1Element.classList.add('active');
+    }
   }
 }
 
@@ -108,46 +95,19 @@ const showABoutMeSection = () => {
   const scrollValue = window.scrollY;
   const windowHeight = window.innerHeight;
   
-  //h1
   const aboutMeH1 = document.querySelector("#aboutMe h1");
-  const aboutMeH1FromTop = aboutMeH1.offsetTop;
-  const aboutMeH1Height = aboutMeH1.clientHeight;
-
-  //h2
   const aboutMeH2 = document.querySelector("#aboutMe h2");
-  const aboutMeH2FromTop = aboutMeH2.offsetTop;
-  const aboutMeH2Height = aboutMeH2.clientHeight;
-
-  //p
   const aboutMeP = document.querySelector("#aboutMe p");
-  const aboutMePFromTop = aboutMeP.offsetTop;
-  const aboutMePHeight = aboutMeP.clientHeight;
-
-  //photo 
   const aboutMePhoto = document.querySelector("#aboutMe .myPhoto");
-  const aboutMePhotoFromTop = aboutMePhoto.offsetTop;
-  const aboutMePhotoHeight = aboutMePhoto.clientHeight;
-
-  //icons
   const aboutMeIcons = document.querySelector(".icons");
-  const aboutMeIconsFromTop = aboutMeIcons.offsetTop;
-  const aboutMeIconsHeight = aboutMeIcons.clientHeight;
 
+  const aboutMeElements = [aboutMeH1, aboutMeH2, aboutMeP, aboutMePhoto, aboutMeIcons];
 
-  if (scrollValue > aboutMeH1FromTop + aboutMeH1Height - windowHeight) {
-    aboutMeH1.classList.add("active");
-  }
-  if (scrollValue > aboutMeH2FromTop + aboutMeH2Height - windowHeight) {
-    aboutMeH2.classList.add("active");
-  }
-  if (scrollValue > aboutMePFromTop + aboutMePHeight - windowHeight) {
-    aboutMeP.classList.add("active");
-  }
-  if (scrollValue > aboutMePhotoFromTop + aboutMePhotoHeight - 1.2 * windowHeight) {
-    aboutMePhoto.classList.add("active");
-  }
-  if (scrollValue > aboutMeIconsFromTop + aboutMeIconsHeight - windowHeight) {
-    aboutMeIcons.classList.add("active");
+  for (let i=0; i< aboutMeElements.length; i++) {
+    aboutMeElement = aboutMeElements[i];
+    if ( scrollValue > aboutMeElement.offsetTop + aboutMeElement.clientHeight - windowHeight) {
+      aboutMeElement.classList.add("active");
+    }
   }
 }
 
@@ -195,17 +155,18 @@ const showPortfolioSection =() => {
 
 //Animacja technology
 const showTechnologyStackSection =() => {
-  // const scrollValue = window.scrollY;
-  // const windowHeight = window.innerHeight;
+  const scrollValue = window.scrollY;
+  const windowHeight = window.innerHeight;
 
-  // //firstGrid
-  // const portfolioFirst = document.querySelector(".projects .first-grid");
-  // const portfolioFirstFromTop = portfolioFirst.offsetTop;
-  // const portfolioFirstHeight = portfolioFirst.clientHeight;
+  const technologyStackElements = [...document.querySelectorAll("#technologyStack div")];
 
-  // if (scrollValue > portfolioFourthFromTop + portfolioFourthHeight - 1.2 * windowHeight) {
-  //   portfolioFourth.classList.add("active");
-  // }
+  for (let i =0; i< technologyStackElements.length; i++) {
+    let technologyStackElement = technologyStackElements[i];
+    console.log(technologyStackElement);
+    if ( scrollValue > technologyStackElement.offsetTop + technologyStackElement.clientHeight - windowHeight) {
+      technologyStackElement.classList.add('active');
+    }
+  }
 }
 
 //Animacja footer
@@ -213,40 +174,18 @@ const showFooterSection = () => {
   const scrollValue = window.scrollY;
   const windowHeight = window.innerHeight;
 
-  //h1
   const footerH1 = document.querySelector("footer h1");
-  const footerH1FromTop = footerH1.offsetTop;
-  const footerH1Height = footerH1.clientHeight;
-
-  //h2
   const footerH2 = document.querySelector("footer h2");
-  const footerH2FromTop = footerH2.offsetTop;
-  const footerH2Height = footerH2.clientHeight;
-
-  //FooterIcons
   const footerIcons = document.querySelector("footer .footerIcons");
-  const footerIconsFromTop = footerIcons.offsetTop;
-  const footerIconsHeight = footerIcons.clientHeight;
-
-  //FooterForm
   const footerForm = document.querySelector("footer form");
-  const footerFormFromTop = footerForm.offsetTop;
-  const footerFormHeight = footerForm.clientHeight;
 
-  if (scrollValue > footerH1FromTop + footerH1Height - windowHeight) {
-    footerH1.classList.add("active");
-  }
+  const footerElements = [footerH1, footerH2, footerIcons, footerForm];
 
-  if (scrollValue > footerH2FromTop + footerH2Height - windowHeight) {
-    footerH2.classList.add("active");
-  }
-
-  if (scrollValue > footerIconsFromTop + footerIconsHeight - windowHeight) {
-    footerIcons.classList.add("active");
-  }
-
-  if (scrollValue > footerFormFromTop + footerFormHeight - 1.2 * windowHeight) {
-    footerForm.classList.add("active");
+  for (let i=0; i<footerElements.length; i++) {
+    let footerElement = footerElements[i];
+    if (scrollValue > footerElement.offsetTop + footerElement.clientHeight - windowHeight) {
+      footerElement.classList.add('active');
+    }
   }
 }
 
