@@ -253,7 +253,7 @@ main {
   }
 }
 
-main .mainPage {
+main #mainPage {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -277,7 +277,7 @@ main .mainPage {
           clip-path: polygon(0 0, 100% 0, 100% 100%, 100% calc(100% - 5vw), 0 100%);
 }
 
-main .mainPage .wrapper {
+main #mainPage .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -294,30 +294,30 @@ main .mainPage .wrapper {
 }
 
 @media (max-width: 1100px) {
-  main .mainPage .wrapper {
+  main #mainPage .wrapper {
     width: 65%;
   }
 }
 
 @media (max-width: 900px) {
-  main .mainPage .wrapper {
+  main #mainPage .wrapper {
     width: 100%;
   }
 }
 
 @media (max-width: 350px) {
-  main .mainPage .wrapper {
+  main #mainPage .wrapper {
     height: 25%;
   }
 }
 
 @media (max-height: 600px) {
-  main .mainPage .wrapper {
+  main #mainPage .wrapper {
     height: 40%;
   }
 }
 
-main .mainPage .wrapper section {
+main #mainPage .wrapper section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -341,37 +341,37 @@ main .mainPage .wrapper section {
   transition: transform 1s ease-in-out, opacity 0.5s linear, -webkit-transform 1s ease-in-out;
 }
 
-main .mainPage .wrapper section.active {
+main #mainPage .wrapper section.active {
   -webkit-transform: translateY(0);
           transform: translateY(0);
   opacity: 1;
 }
 
-main .mainPage .wrapper section h1 {
+main #mainPage .wrapper section h1 {
   font-size: 70px;
   color: #01a093;
   font-weight: 300;
 }
 
 @media (max-width: 1500px) {
-  main .mainPage .wrapper section h1 {
+  main #mainPage .wrapper section h1 {
     font-size: 60px;
   }
 }
 
 @media (max-width: 1300px) {
-  main .mainPage .wrapper section h1 {
+  main #mainPage .wrapper section h1 {
     font-size: 50px;
   }
 }
 
 @media (max-width: 350px) {
-  main .mainPage .wrapper section h1 {
+  main #mainPage .wrapper section h1 {
     font-size: 45px;
   }
 }
 
-main .mainPage .wrapper section h2 {
+main #mainPage .wrapper section h2 {
   font-size: 25px;
   letter-spacing: 9px;
   text-transform: uppercase;
@@ -380,24 +380,24 @@ main .mainPage .wrapper section h2 {
 }
 
 @media (max-width: 1500px) {
-  main .mainPage .wrapper section h2 {
+  main #mainPage .wrapper section h2 {
     font-size: 18px;
   }
 }
 
 @media (max-width: 1300px) {
-  main .mainPage .wrapper section h2 {
+  main #mainPage .wrapper section h2 {
     font-size: 16px;
   }
 }
 
 @media (max-width: 350px) {
-  main .mainPage .wrapper section h2 {
+  main #mainPage .wrapper section h2 {
     font-size: 14px;
   }
 }
 
-main .mainPage .wrapper section a {
+main #mainPage .wrapper section a {
   text-decoration: none;
   font-size: 20px;
   text-transform: uppercase;
@@ -406,12 +406,12 @@ main .mainPage .wrapper section a {
 }
 
 @media (max-width: 1300px) {
-  main .mainPage .wrapper section a {
+  main #mainPage .wrapper section a {
     font-size: 14px;
   }
 }
 
-main .mainPage .wrapper section a div {
+main #mainPage .wrapper section a div {
   padding: 25px 50px;
   -webkit-clip-path: ellipse(50% 45% at 50% 50%);
           clip-path: ellipse(50% 45% at 50% 50%);
@@ -420,12 +420,12 @@ main .mainPage .wrapper section a div {
 }
 
 @media (max-width: 1500px) {
-  main .mainPage .wrapper section a div {
+  main #mainPage .wrapper section a div {
     padding: 20px 40px;
   }
 }
 
-main .mainPage .wrapper section a div .button1 {
+main #mainPage .wrapper section a div .button1 {
   position: absolute;
   top: 0;
   left: 90%;
@@ -435,7 +435,7 @@ main .mainPage .wrapper section a div .button1 {
   z-index: 2;
 }
 
-main .mainPage .wrapper section a div .button2 {
+main #mainPage .wrapper section a div .button2 {
   position: absolute;
   left: 82%;
   top: 0;
@@ -445,7 +445,7 @@ main .mainPage .wrapper section a div .button2 {
   z-index: 1;
 }
 
-main .aboutMe {
+main #aboutMe {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[2];
@@ -459,13 +459,13 @@ main .aboutMe {
 }
 
 @media (max-width: 1300px) {
-  main .aboutMe {
+  main #aboutMe {
     padding: 50px;
   }
 }
 
 @media (max-width: 1050px) {
-  main .aboutMe {
+  main #aboutMe {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -477,18 +477,18 @@ main .aboutMe {
 }
 
 @media (max-width: 600px) {
-  main .aboutMe {
+  main #aboutMe {
     padding: 50px 20px;
   }
 }
 
 @media (max-width: 510px) {
-  main .aboutMe {
+  main #aboutMe {
     padding: 30px 20px;
   }
 }
 
-main .aboutMe .introduction {
+main #aboutMe .introduction {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -501,30 +501,30 @@ main .aboutMe .introduction {
 }
 
 @media (max-width: 1050px) {
-  main .aboutMe .introduction {
+  main #aboutMe .introduction {
     margin-bottom: 50px;
   }
 }
 
 @media (max-width: 900px) {
-  main .aboutMe .introduction {
+  main #aboutMe .introduction {
     margin-bottom: 30px;
   }
 }
 
 @media (max-width: 800px) {
-  main .aboutMe .introduction {
+  main #aboutMe .introduction {
     margin-bottom: 50px;
   }
 }
 
 @media (max-width: 600px) {
-  main .aboutMe .introduction {
+  main #aboutMe .introduction {
     margin-bottom: 30px;
   }
 }
 
-main .aboutMe .introduction h1 {
+main #aboutMe .introduction h1 {
   font-size: 50px;
   color: #E5FFFE;
   font-weight: 300;
@@ -538,60 +538,60 @@ main .aboutMe .introduction h1 {
   transition: transform 0.8s ease-in-out, opacity 0.5s linear, -webkit-transform 0.8s ease-in-out;
 }
 
-main .aboutMe .introduction h1.active {
+main #aboutMe .introduction h1.active {
   -webkit-transform: translateY(0);
           transform: translateY(0);
   opacity: 1;
 }
 
 @media (max-width: 1500px) {
-  main .aboutMe .introduction h1 {
+  main #aboutMe .introduction h1 {
     font-size: 40px;
   }
 }
 
 @media (max-width: 1300px) {
-  main .aboutMe .introduction h1 {
+  main #aboutMe .introduction h1 {
     font-size: 35px;
     margin-bottom: 10px;
   }
 }
 
 @media (max-width: 1050px) {
-  main .aboutMe .introduction h1 {
+  main #aboutMe .introduction h1 {
     font-size: 40px;
     margin-bottom: 15px;
   }
 }
 
 @media (max-width: 900px) {
-  main .aboutMe .introduction h1 {
+  main #aboutMe .introduction h1 {
     font-size: 35px;
     margin-bottom: 10px;
   }
 }
 
 @media (max-width: 800px) {
-  main .aboutMe .introduction h1 {
+  main #aboutMe .introduction h1 {
     font-size: 40px;
     margin-bottom: 15px;
   }
 }
 
 @media (max-width: 600px) {
-  main .aboutMe .introduction h1 {
+  main #aboutMe .introduction h1 {
     font-size: 35px;
     margin-bottom: 10px;
   }
 }
 
 @media (max-width: 510px) {
-  main .aboutMe .introduction h1 {
+  main #aboutMe .introduction h1 {
     font-size: 30px;
   }
 }
 
-main .aboutMe .introduction h2 {
+main #aboutMe .introduction h2 {
   font-size: 25px;
   letter-spacing: 9px;
   text-transform: uppercase;
@@ -606,55 +606,55 @@ main .aboutMe .introduction h2 {
   transition: transform 0.8s ease-in-out, opacity 0.5s linear, -webkit-transform 0.8s ease-in-out;
 }
 
-main .aboutMe .introduction h2.active {
+main #aboutMe .introduction h2.active {
   -webkit-transform: translateY(0);
           transform: translateY(0);
   opacity: 1;
 }
 
 @media (max-width: 1500px) {
-  main .aboutMe .introduction h2 {
+  main #aboutMe .introduction h2 {
     font-size: 20px;
   }
 }
 
 @media (max-width: 1300px) {
-  main .aboutMe .introduction h2 {
+  main #aboutMe .introduction h2 {
     font-size: 16px;
   }
 }
 
 @media (max-width: 1050px) {
-  main .aboutMe .introduction h2 {
+  main #aboutMe .introduction h2 {
     font-size: 20px;
   }
 }
 
 @media (max-width: 900px) {
-  main .aboutMe .introduction h2 {
+  main #aboutMe .introduction h2 {
     font-size: 16px;
   }
 }
 
 @media (max-width: 800px) {
-  main .aboutMe .introduction h2 {
+  main #aboutMe .introduction h2 {
     font-size: 20px;
   }
 }
 
 @media (max-width: 600px) {
-  main .aboutMe .introduction h2 {
+  main #aboutMe .introduction h2 {
     font-size: 16px;
   }
 }
 
 @media (max-width: 510px) {
-  main .aboutMe .introduction h2 {
+  main #aboutMe .introduction h2 {
     font-size: 14px;
   }
 }
 
-main .aboutMe .introduction p {
+main #aboutMe .introduction p {
   font-size: 18px;
   letter-spacing: 2px;
   line-height: 150%;
@@ -668,49 +668,49 @@ main .aboutMe .introduction p {
   transition: transform 0.8s ease-in-out, opacity 0.5s linear, -webkit-transform 0.8s ease-in-out;
 }
 
-main .aboutMe .introduction p.active {
+main #aboutMe .introduction p.active {
   -webkit-transform: translateY(0);
           transform: translateY(0);
   opacity: 1;
 }
 
 @media (max-width: 1500px) {
-  main .aboutMe .introduction p {
+  main #aboutMe .introduction p {
     font-size: 16px;
   }
 }
 
 @media (max-width: 1300px) {
-  main .aboutMe .introduction p {
+  main #aboutMe .introduction p {
     font-size: 14px;
   }
 }
 
 @media (max-width: 1050px) {
-  main .aboutMe .introduction p {
+  main #aboutMe .introduction p {
     font-size: 16px;
   }
 }
 
 @media (max-width: 900px) {
-  main .aboutMe .introduction p {
+  main #aboutMe .introduction p {
     font-size: 14px;
   }
 }
 
 @media (max-width: 800px) {
-  main .aboutMe .introduction p {
+  main #aboutMe .introduction p {
     font-size: 16px;
   }
 }
 
 @media (max-width: 600px) {
-  main .aboutMe .introduction p {
+  main #aboutMe .introduction p {
     font-size: 14px;
   }
 }
 
-main .aboutMe .myPhoto {
+main #aboutMe .myPhoto {
   grid-area: span 4 / span 1;
   -webkit-transform: translateY(40px);
           transform: translateY(40px);
@@ -721,20 +721,20 @@ main .aboutMe .myPhoto {
   transition: transform 0.8s ease-in-out, opacity 0.5s linear, -webkit-transform 0.8s ease-in-out;
 }
 
-main .aboutMe .myPhoto.active {
+main #aboutMe .myPhoto.active {
   -webkit-transform: translateY(0);
           transform: translateY(0);
   opacity: 1;
 }
 
 @media (max-width: 1300px) {
-  main .aboutMe .myPhoto {
+  main #aboutMe .myPhoto {
     grid-area: span 3 / span 1;
   }
 }
 
 @media (max-width: 1050px) {
-  main .aboutMe .myPhoto {
+  main #aboutMe .myPhoto {
     width: 60%;
     -ms-flex-preferred-size: 400px;
         flex-basis: 400px;
@@ -745,25 +745,25 @@ main .aboutMe .myPhoto.active {
 }
 
 @media (max-width: 600px) {
-  main .aboutMe .myPhoto {
+  main #aboutMe .myPhoto {
     -ms-flex-preferred-size: 300px;
         flex-basis: 300px;
   }
 }
 
 @media (max-width: 450px) {
-  main .aboutMe .myPhoto {
+  main #aboutMe .myPhoto {
     width: 80%;
   }
 }
 
 @media (max-width: 400px) {
-  main .aboutMe .myPhoto {
+  main #aboutMe .myPhoto {
     width: 100%;
   }
 }
 
-main .aboutMe .myPhoto div {
+main #aboutMe .myPhoto div {
   background: url("../Rysunki/me.jpg");
   background-size: contain;
   background-repeat: no-repeat;
@@ -774,18 +774,18 @@ main .aboutMe .myPhoto div {
   transition: 0.3s linear;
 }
 
-main .aboutMe .myPhoto div:hover {
+main #aboutMe .myPhoto div:hover {
   -webkit-filter: grayscale(1) contrast(1.2);
           filter: grayscale(1) contrast(1.2);
 }
 
 @media (max-width: 1500px) {
-  main .aboutMe .myPhoto div {
+  main #aboutMe .myPhoto div {
     background-size: cover;
   }
 }
 
-main .aboutMe .icons {
+main #aboutMe .icons {
   grid-area: span 1 / span 1;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -805,44 +805,44 @@ main .aboutMe .icons {
   transition: transform 0.8s ease-in-out, opacity 0.5s linear, -webkit-transform 0.8s ease-in-out;
 }
 
-main .aboutMe .icons.active {
+main #aboutMe .icons.active {
   -webkit-transform: translateY(0);
           transform: translateY(0);
   opacity: 1;
 }
 
 @media (max-width: 1300px) {
-  main .aboutMe .icons {
+  main #aboutMe .icons {
     grid-area: span 1 / span 2;
     margin-top: 20px;
   }
 }
 
 @media (max-width: 1050px) {
-  main .aboutMe .icons {
+  main #aboutMe .icons {
     margin-top: 50px;
   }
 }
 
 @media (max-width: 900px) {
-  main .aboutMe .icons {
+  main #aboutMe .icons {
     margin-top: 30px;
   }
 }
 
 @media (max-width: 800px) {
-  main .aboutMe .icons {
+  main #aboutMe .icons {
     margin-top: 50px;
   }
 }
 
 @media (max-width: 600px) {
-  main .aboutMe .icons {
+  main #aboutMe .icons {
     margin-top: 30px;
   }
 }
 
-main .aboutMe .icons a {
+main #aboutMe .icons a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -865,20 +865,20 @@ main .aboutMe .icons a {
   transition: 0.2s linear;
 }
 
-main .aboutMe .icons a:hover {
+main #aboutMe .icons a:hover {
   -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
 }
 
 @media (max-width: 400px) {
-  main .aboutMe .icons a {
+  main #aboutMe .icons a {
     width: 60px;
     height: 60px;
     font-size: 40px;
   }
 }
 
-main .hobby {
+main #hobby {
   min-height: 20vh;
   background-color: #E5FFFE;
   -webkit-clip-path: polygon(100% 0%, 0% 5vw, 0% 100%, 100% 100%);
@@ -888,32 +888,32 @@ main .hobby {
 }
 
 @media (max-width: 1500px) {
-  main .hobby {
+  main #hobby {
     padding: 140px 50px;
   }
 }
 
 @media (max-width: 1300px) {
-  main .hobby {
+  main #hobby {
     padding: 120px 50px 160px 50px;
   }
 }
 
 @media (max-width: 600px) {
-  main .hobby {
+  main #hobby {
     padding: 80px 20px 100px 20px;
     margin-bottom: -50px;
   }
 }
 
 @media (max-width: 510px) {
-  main .hobby {
+  main #hobby {
     padding: 50px 0 80px 0;
     margin-bottom: -40px;
   }
 }
 
-main .hobby h1 {
+main #hobby h1 {
   font-size: 50px;
   color: #016d64;
   font-weight: 300;
@@ -924,57 +924,57 @@ main .hobby h1 {
   transition: 1s ease-in-out;
 }
 
-main .hobby h1.active {
+main #hobby h1.active {
   -webkit-transform: translateX(0);
           transform: translateX(0);
 }
 
 @media (max-width: 1500px) {
-  main .hobby h1 {
+  main #hobby h1 {
     font-size: 40px;
   }
 }
 
 @media (max-width: 1300px) {
-  main .hobby h1 {
+  main #hobby h1 {
     font-size: 35px;
     padding-bottom: 15px;
   }
 }
 
 @media (max-width: 1050px) {
-  main .hobby h1 {
+  main #hobby h1 {
     font-size: 40px;
   }
 }
 
 @media (max-width: 900px) {
-  main .hobby h1 {
+  main #hobby h1 {
     font-size: 35px;
   }
 }
 
 @media (max-width: 800px) {
-  main .hobby h1 {
+  main #hobby h1 {
     font-size: 40px;
   }
 }
 
 @media (max-width: 600px) {
-  main .hobby h1 {
+  main #hobby h1 {
     font-size: 35px;
     padding-bottom: 10px;
   }
 }
 
 @media (max-width: 510px) {
-  main .hobby h1 {
+  main #hobby h1 {
     font-size: 30px;
     margin: 0 20px;
   }
 }
 
-main .hobby section {
+main #hobby section {
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: (1fr)[7];
@@ -988,13 +988,13 @@ main .hobby section {
 }
 
 @media (max-width: 1300px) {
-  main .hobby section {
+  main #hobby section {
     padding-top: 40px;
   }
 }
 
 @media (max-width: 1100px) {
-  main .hobby section {
+  main #hobby section {
     -ms-grid-rows: (1fr)[8];
         grid-template-rows: repeat(8, 1fr);
     -ms-grid-columns: (1fr)[5];
@@ -1004,7 +1004,7 @@ main .hobby section {
 }
 
 @media (max-width: 700px) {
-  main .hobby section {
+  main #hobby section {
     -ms-grid-rows: (1fr)[12];
         grid-template-rows: repeat(12, 1fr);
     -ms-grid-columns: 1fr;
@@ -1015,31 +1015,31 @@ main .hobby section {
 }
 
 @media (max-width: 600px) {
-  main .hobby section {
+  main #hobby section {
     padding-top: 30px;
   }
 }
 
-main .hobby section div {
+main #hobby section div {
   background-color: black;
   overflow: hidden;
   min-height: 300px;
 }
 
-main .hobby section .hobbyImage {
+main #hobby section .hobbyImage {
   height: 100%;
   width: 100%;
   -webkit-transition: 0.4s ease-in-out;
   transition: 0.4s ease-in-out;
 }
 
-main .hobby section .hobbyImage:hover {
+main #hobby section .hobbyImage:hover {
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
   opacity: 0.5;
 }
 
-main .hobby section .first-image-hobby {
+main #hobby section .first-image-hobby {
   grid-area: span 4 / span 3;
   -webkit-transform: translateY(40px);
           transform: translateY(40px);
@@ -1050,31 +1050,31 @@ main .hobby section .first-image-hobby {
   transition: transform 0.8s ease-in-out, opacity 0.5s linear, -webkit-transform 0.8s ease-in-out;
 }
 
-main .hobby section .first-image-hobby.active {
+main #hobby section .first-image-hobby.active {
   -webkit-transform: translateY(0);
           transform: translateY(0);
   opacity: 1;
 }
 
 @media (max-width: 1100px) {
-  main .hobby section .first-image-hobby {
+  main #hobby section .first-image-hobby {
     grid-area: span 4 / span 2;
   }
 }
 
 @media (max-width: 700px) {
-  main .hobby section .first-image-hobby {
+  main #hobby section .first-image-hobby {
     grid-area: span 2 / span 1;
   }
 }
 
-main .hobby section .first-image-hobby div {
+main #hobby section .first-image-hobby div {
   background: url("../Rysunki/salsaDance.jpg");
   background-size: cover;
   background-position: center;
 }
 
-main .hobby section .second-image-hobby {
+main #hobby section .second-image-hobby {
   grid-area: span 2 / span 4;
   -webkit-transform: translateY(40px);
           transform: translateY(40px);
@@ -1085,31 +1085,31 @@ main .hobby section .second-image-hobby {
   transition: transform 0.8s ease-in-out, opacity 0.5s linear, -webkit-transform 0.8s ease-in-out;
 }
 
-main .hobby section .second-image-hobby.active {
+main #hobby section .second-image-hobby.active {
   -webkit-transform: translateY(0);
           transform: translateY(0);
   opacity: 1;
 }
 
 @media (max-width: 1100px) {
-  main .hobby section .second-image-hobby {
+  main #hobby section .second-image-hobby {
     grid-area: span 2 / span 3;
   }
 }
 
 @media (max-width: 700px) {
-  main .hobby section .second-image-hobby {
+  main #hobby section .second-image-hobby {
     grid-area: span 2 / span 1;
   }
 }
 
-main .hobby section .second-image-hobby div {
+main #hobby section .second-image-hobby div {
   background: url("../Rysunki/programming.jpg");
   background-size: cover;
   background-position: center;
 }
 
-main .hobby section .third-image-hobby {
+main #hobby section .third-image-hobby {
   grid-area: span 2 / span 2;
   -webkit-transform: translateY(40px);
           transform: translateY(40px);
@@ -1120,31 +1120,31 @@ main .hobby section .third-image-hobby {
   transition: transform 0.8s ease-in-out, opacity 0.5s linear, -webkit-transform 0.8s ease-in-out;
 }
 
-main .hobby section .third-image-hobby.active {
+main #hobby section .third-image-hobby.active {
   -webkit-transform: translateY(0);
           transform: translateY(0);
   opacity: 1;
 }
 
 @media (max-width: 1100px) {
-  main .hobby section .third-image-hobby {
+  main #hobby section .third-image-hobby {
     grid-area: span 2 / span 3;
   }
 }
 
 @media (max-width: 700px) {
-  main .hobby section .third-image-hobby {
+  main #hobby section .third-image-hobby {
     grid-area: span 2 / span 1;
   }
 }
 
-main .hobby section .third-image-hobby div {
+main #hobby section .third-image-hobby div {
   background: url("../Rysunki/pokojowyPatrol.jpg");
   background-size: cover;
   background-position: center;
 }
 
-main .hobby section .fourth-image-hobby {
+main #hobby section .fourth-image-hobby {
   grid-area: span 2 / span 2;
   -webkit-transform: translateY(40px);
           transform: translateY(40px);
@@ -1155,31 +1155,31 @@ main .hobby section .fourth-image-hobby {
   transition: transform 0.8s ease-in-out, opacity 0.5s linear, -webkit-transform 0.8s ease-in-out;
 }
 
-main .hobby section .fourth-image-hobby.active {
+main #hobby section .fourth-image-hobby.active {
   -webkit-transform: translateY(0);
           transform: translateY(0);
   opacity: 1;
 }
 
 @media (max-width: 1100px) {
-  main .hobby section .fourth-image-hobby {
+  main #hobby section .fourth-image-hobby {
     grid-area: span 2 / span 3;
   }
 }
 
 @media (max-width: 700px) {
-  main .hobby section .fourth-image-hobby {
+  main #hobby section .fourth-image-hobby {
     grid-area: span 2 / span 1;
   }
 }
 
-main .hobby section .fourth-image-hobby div {
+main #hobby section .fourth-image-hobby div {
   background: url("../Rysunki/winterSports.jpg");
   background-size: cover;
   background-position: center;
 }
 
-main .hobby section .fifth-image-hobby {
+main #hobby section .fifth-image-hobby {
   grid-area: span 3 / span 4;
   -webkit-transform: translateY(40px);
           transform: translateY(40px);
@@ -1190,31 +1190,31 @@ main .hobby section .fifth-image-hobby {
   transition: transform 0.8s ease-in-out, opacity 0.5s linear, -webkit-transform 0.8s ease-in-out;
 }
 
-main .hobby section .fifth-image-hobby.active {
+main #hobby section .fifth-image-hobby.active {
   -webkit-transform: translateY(0);
           transform: translateY(0);
   opacity: 1;
 }
 
 @media (max-width: 1100px) {
-  main .hobby section .fifth-image-hobby {
+  main #hobby section .fifth-image-hobby {
     grid-area: span 4 / span 2;
   }
 }
 
 @media (max-width: 700px) {
-  main .hobby section .fifth-image-hobby {
+  main #hobby section .fifth-image-hobby {
     grid-area: span 2 / span 1;
   }
 }
 
-main .hobby section .fifth-image-hobby div {
+main #hobby section .fifth-image-hobby div {
   background: url("../Rysunki/guitar.jpg");
   background-size: cover;
   background-position: center;
 }
 
-main .hobby section .sixth-image-hobby {
+main #hobby section .sixth-image-hobby {
   grid-area: span 3 / span 3;
   -webkit-transform: translateY(40px);
           transform: translateY(40px);
@@ -1225,31 +1225,31 @@ main .hobby section .sixth-image-hobby {
   transition: transform 0.8s ease-in-out, opacity 0.5s linear, -webkit-transform 0.8s ease-in-out;
 }
 
-main .hobby section .sixth-image-hobby.active {
+main #hobby section .sixth-image-hobby.active {
   -webkit-transform: translateY(0);
           transform: translateY(0);
   opacity: 1;
 }
 
 @media (max-width: 1100px) {
-  main .hobby section .sixth-image-hobby {
+  main #hobby section .sixth-image-hobby {
     grid-area: span 2 / span 3;
   }
 }
 
 @media (max-width: 700px) {
-  main .hobby section .sixth-image-hobby {
+  main #hobby section .sixth-image-hobby {
     grid-area: span 2 / span 1;
   }
 }
 
-main .hobby section .sixth-image-hobby div {
+main #hobby section .sixth-image-hobby div {
   background: url("../Rysunki/movie.jpg");
   background-size: cover;
   background-position: center;
 }
 
-main .projects {
+main #projects {
   padding: 150px 50px;
   margin-bottom: -100px;
   background-color: #013a36;
@@ -1258,25 +1258,25 @@ main .projects {
 }
 
 @media (max-width: 1050px) {
-  main .projects {
+  main #projects {
     padding: 130px 50px;
   }
 }
 
 @media (max-width: 600px) {
-  main .projects {
+  main #projects {
     padding: 80px 20px 120px;
   }
 }
 
 @media (max-width: 510px) {
-  main .projects {
+  main #projects {
     padding: 50px 0 120px;
     margin-bottom: -60px;
   }
 }
 
-main .projects h1 {
+main #projects h1 {
   font-size: 50px;
   color: #E5FFFE;
   font-weight: 300;
@@ -1287,57 +1287,57 @@ main .projects h1 {
   transition: 1s ease-in-out;
 }
 
-main .projects h1.active {
+main #projects h1.active {
   -webkit-transform: translateX(0);
           transform: translateX(0);
 }
 
 @media (max-width: 1500px) {
-  main .projects h1 {
+  main #projects h1 {
     font-size: 40px;
   }
 }
 
 @media (max-width: 1300px) {
-  main .projects h1 {
+  main #projects h1 {
     font-size: 35px;
     padding-bottom: 15px;
   }
 }
 
 @media (max-width: 1050px) {
-  main .projects h1 {
+  main #projects h1 {
     font-size: 40px;
   }
 }
 
 @media (max-width: 900px) {
-  main .projects h1 {
+  main #projects h1 {
     font-size: 35px;
   }
 }
 
 @media (max-width: 800px) {
-  main .projects h1 {
+  main #projects h1 {
     font-size: 40px;
   }
 }
 
 @media (max-width: 600px) {
-  main .projects h1 {
+  main #projects h1 {
     font-size: 35px;
     padding-bottom: 10px;
   }
 }
 
 @media (max-width: 510px) {
-  main .projects h1 {
+  main #projects h1 {
     font-size: 30px;
     margin: 0 20px;
   }
 }
 
-main .projects section {
+main #projects section {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[2];
@@ -1352,13 +1352,13 @@ main .projects section {
 }
 
 @media (max-width: 1300px) {
-  main .projects section {
+  main #projects section {
     padding-top: 40px;
   }
 }
 
 @media (max-width: 1050px) {
-  main .projects section {
+  main #projects section {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1370,12 +1370,12 @@ main .projects section {
 }
 
 @media (max-width: 600px) {
-  main .projects section {
+  main #projects section {
     padding-top: 30px;
   }
 }
 
-main .projects section .about-project {
+main #projects section .about-project {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1391,7 +1391,7 @@ main .projects section .about-project {
           align-items: center;
 }
 
-main .projects section .about-project h2 {
+main #projects section .about-project h2 {
   color: #01a093;
   font-size: 50px;
   margin-bottom: 10px;
@@ -1399,98 +1399,98 @@ main .projects section .about-project h2 {
 }
 
 @media (max-width: 1500px) {
-  main .projects section .about-project h2 {
+  main #projects section .about-project h2 {
     font-size: 40px;
   }
 }
 
 @media (max-width: 1300px) {
-  main .projects section .about-project h2 {
+  main #projects section .about-project h2 {
     font-size: 35px;
   }
 }
 
 @media (max-width: 1050px) {
-  main .projects section .about-project h2 {
+  main #projects section .about-project h2 {
     font-size: 40px;
     margin-bottom: 5px;
   }
 }
 
 @media (max-width: 900px) {
-  main .projects section .about-project h2 {
+  main #projects section .about-project h2 {
     font-size: 35px;
   }
 }
 
 @media (max-width: 800px) {
-  main .projects section .about-project h2 {
+  main #projects section .about-project h2 {
     font-size: 40px;
   }
 }
 
 @media (max-width: 600px) {
-  main .projects section .about-project h2 {
+  main #projects section .about-project h2 {
     font-size: 35px;
   }
 }
 
 @media (max-width: 510px) {
-  main .projects section .about-project h2 {
+  main #projects section .about-project h2 {
     font-size: 30px;
   }
 }
 
-main .projects section .about-project h3 {
+main #projects section .about-project h3 {
   color: #999;
   font-size: 25px;
   margin-bottom: 30px;
 }
 
 @media (max-width: 1500px) {
-  main .projects section .about-project h3 {
+  main #projects section .about-project h3 {
     font-size: 20px;
   }
 }
 
 @media (max-width: 1300px) {
-  main .projects section .about-project h3 {
+  main #projects section .about-project h3 {
     font-size: 16px;
   }
 }
 
 @media (max-width: 1050px) {
-  main .projects section .about-project h3 {
+  main #projects section .about-project h3 {
     font-size: 20px;
     margin-bottom: 20px;
   }
 }
 
 @media (max-width: 900px) {
-  main .projects section .about-project h3 {
+  main #projects section .about-project h3 {
     font-size: 16px;
   }
 }
 
 @media (max-width: 800px) {
-  main .projects section .about-project h3 {
+  main #projects section .about-project h3 {
     font-size: 20px;
   }
 }
 
 @media (max-width: 600px) {
-  main .projects section .about-project h3 {
+  main #projects section .about-project h3 {
     font-size: 16px;
   }
 }
 
 @media (max-width: 510px) {
-  main .projects section .about-project h3 {
+  main #projects section .about-project h3 {
     font-size: 14px;
   }
 }
 
-main .projects section .about-project a {
+main #projects section .about-project a {
   text-decoration: none;
   font-size: 20px;
   text-transform: uppercase;
@@ -1503,24 +1503,24 @@ main .projects section .about-project a {
   transition: 0.3s linear;
 }
 
-main .projects section .about-project a:hover {
+main #projects section .about-project a:hover {
   background-color: #E5FFFE;
   color: #013a36;
 }
 
 @media (max-width: 1300px) {
-  main .projects section .about-project a {
+  main #projects section .about-project a {
     font-size: 14px;
     padding: 15px 40px;
   }
 }
 
-main .projects section .image-project {
+main #projects section .image-project {
   background-color: black;
 }
 
 @media (max-width: 1050px) {
-  main .projects section .image-project {
+  main #projects section .image-project {
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
@@ -1530,7 +1530,7 @@ main .projects section .image-project {
   }
 }
 
-main .projects section .first-grid {
+main #projects section .first-grid {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: firstGrid;
@@ -1543,14 +1543,14 @@ main .projects section .first-grid {
   transition: transform 0.8s ease-in-out, opacity 0.5s linear, -webkit-transform 0.8s ease-in-out;
 }
 
-main .projects section .first-grid.active {
+main #projects section .first-grid.active {
   -webkit-transform: translateY(0);
           transform: translateY(0);
   opacity: 1;
 }
 
 @media (max-width: 1050px) {
-  main .projects section .first-grid {
+  main #projects section .first-grid {
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
@@ -1558,7 +1558,7 @@ main .projects section .first-grid.active {
   }
 }
 
-main .projects section .second-grid {
+main #projects section .second-grid {
   -ms-grid-row: 1;
   -ms-grid-column: 2;
   grid-area: secondGrid;
@@ -1574,14 +1574,14 @@ main .projects section .second-grid {
   transition: transform 0.8s ease-in-out, opacity 0.5s linear, -webkit-transform 0.8s ease-in-out;
 }
 
-main .projects section .second-grid.active {
+main #projects section .second-grid.active {
   -webkit-transform: translateY(0);
           transform: translateY(0);
   opacity: 1;
 }
 
 @media (max-width: 1050px) {
-  main .projects section .second-grid {
+  main #projects section .second-grid {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
@@ -1589,18 +1589,18 @@ main .projects section .second-grid.active {
 }
 
 @media (max-width: 510px) {
-  main .projects section .second-grid {
+  main #projects section .second-grid {
     background-position: 65% 50%;
   }
 }
 
 @media (max-width: 450px) {
-  main .projects section .second-grid {
+  main #projects section .second-grid {
     background-position: 60% 50%;
   }
 }
 
-main .projects section .third-grid {
+main #projects section .third-grid {
   -ms-grid-row: 2;
   -ms-grid-column: 2;
   grid-area: thirdGrid;
@@ -1613,21 +1613,21 @@ main .projects section .third-grid {
   transition: transform 0.8s ease-in-out, opacity 0.5s linear, -webkit-transform 0.8s ease-in-out;
 }
 
-main .projects section .third-grid.active {
+main #projects section .third-grid.active {
   -webkit-transform: translateY(0);
           transform: translateY(0);
   opacity: 1;
 }
 
 @media (max-width: 1050px) {
-  main .projects section .third-grid {
+  main #projects section .third-grid {
     -webkit-box-ordinal-group: 5;
         -ms-flex-order: 4;
             order: 4;
   }
 }
 
-main .projects section .fourth-grid {
+main #projects section .fourth-grid {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: fourthGrid;
@@ -1643,14 +1643,14 @@ main .projects section .fourth-grid {
   transition: transform 0.8s ease-in-out, opacity 0.5s linear, -webkit-transform 0.8s ease-in-out;
 }
 
-main .projects section .fourth-grid.active {
+main #projects section .fourth-grid.active {
   -webkit-transform: translateY(0);
           transform: translateY(0);
   opacity: 1;
 }
 
 @media (max-width: 1050px) {
-  main .projects section .fourth-grid {
+  main #projects section .fourth-grid {
     -webkit-box-ordinal-group: 4;
         -ms-flex-order: 3;
             order: 3;
@@ -1658,7 +1658,7 @@ main .projects section .fourth-grid.active {
   }
 }
 
-main .technologyStack {
+main #technologyStack {
   min-height: 30vh;
   padding: 150px 50px 0 50px;
   background-color: #E5FFFE;
@@ -1667,24 +1667,24 @@ main .technologyStack {
 }
 
 @media (max-width: 1050px) {
-  main .technologyStack {
+  main #technologyStack {
     padding: 100px 50px 0 50px;
   }
 }
 
 @media (max-width: 600px) {
-  main .technologyStack {
+  main #technologyStack {
     padding: 100px 20px 0 20px;
   }
 }
 
 @media (max-width: 510px) {
-  main .technologyStack {
+  main #technologyStack {
     padding: 80px 20px 0 20px;
   }
 }
 
-main .technologyStack h1 {
+main #technologyStack h1 {
   font-size: 50px;
   color: #01a093;
   font-weight: 300;
@@ -1696,53 +1696,53 @@ main .technologyStack h1 {
 }
 
 @media (max-width: 1500px) {
-  main .technologyStack h1 {
+  main #technologyStack h1 {
     font-size: 40px;
   }
 }
 
 @media (max-width: 1300px) {
-  main .technologyStack h1 {
+  main #technologyStack h1 {
     font-size: 35px;
   }
 }
 
 @media (max-width: 1050px) {
-  main .technologyStack h1 {
+  main #technologyStack h1 {
     font-size: 40px;
   }
 }
 
 @media (max-width: 900px) {
-  main .technologyStack h1 {
+  main #technologyStack h1 {
     font-size: 35px;
   }
 }
 
 @media (max-width: 800px) {
-  main .technologyStack h1 {
+  main #technologyStack h1 {
     font-size: 40px;
   }
 }
 
 @media (max-width: 600px) {
-  main .technologyStack h1 {
+  main #technologyStack h1 {
     font-size: 35px;
   }
 }
 
 @media (max-width: 510px) {
-  main .technologyStack h1 {
+  main #technologyStack h1 {
     font-size: 30px;
   }
 }
 
-main .technologyStack h1.active {
+main #technologyStack h1.active {
   -webkit-transform: translateX(0);
           transform: translateX(0);
 }
 
-main .technologyStack section {
+main #technologyStack section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1759,37 +1759,37 @@ main .technologyStack section {
 }
 
 @media (max-width: 1400px) {
-  main .technologyStack section {
+  main #technologyStack section {
     padding: 50px 5vw;
   }
 }
 
 @media (max-width: 1300px) {
-  main .technologyStack section {
+  main #technologyStack section {
     padding: 40px 0;
   }
 }
 
 @media (max-width: 950px) {
-  main .technologyStack section {
+  main #technologyStack section {
     -ms-flex-pack: distribute;
         justify-content: space-around;
   }
 }
 
 @media (max-width: 700px) {
-  main .technologyStack section {
+  main #technologyStack section {
     padding: 30px 5vw;
   }
 }
 
 @media (max-width: 400px) {
-  main .technologyStack section {
+  main #technologyStack section {
     padding: 30px 0;
   }
 }
 
-main .technologyStack section div {
+main #technologyStack section div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1810,13 +1810,13 @@ main .technologyStack section div {
 }
 
 @media (max-width: 1750px) {
-  main .technologyStack section div {
+  main #technologyStack section div {
     margin: 5px;
   }
 }
 
 @media (max-width: 1600px) {
-  main .technologyStack section div {
+  main #technologyStack section div {
     -ms-flex-preferred-size: 180px;
         flex-basis: 180px;
     height: 180px;
@@ -1824,7 +1824,7 @@ main .technologyStack section div {
 }
 
 @media (max-width: 1120px) {
-  main .technologyStack section div {
+  main #technologyStack section div {
     -ms-flex-preferred-size: 150px;
         flex-basis: 150px;
     height: 150px;
@@ -1832,7 +1832,7 @@ main .technologyStack section div {
 }
 
 @media (max-width: 1000px) {
-  main .technologyStack section div {
+  main #technologyStack section div {
     -ms-flex-preferred-size: 140px;
         flex-basis: 140px;
     height: 140px;
@@ -1840,7 +1840,7 @@ main .technologyStack section div {
 }
 
 @media (max-width: 950px) {
-  main .technologyStack section div {
+  main #technologyStack section div {
     -ms-flex-preferred-size: 120px;
         flex-basis: 120px;
     height: 120px;
@@ -1848,7 +1848,7 @@ main .technologyStack section div {
 }
 
 @media (max-width: 900px) {
-  main .technologyStack section div {
+  main #technologyStack section div {
     -ms-flex-preferred-size: 150px;
         flex-basis: 150px;
     height: 150px;
@@ -1856,7 +1856,7 @@ main .technologyStack section div {
 }
 
 @media (max-width: 800px) {
-  main .technologyStack section div {
+  main #technologyStack section div {
     -ms-flex-preferred-size: 140px;
         flex-basis: 140px;
     height: 140px;
@@ -1864,7 +1864,7 @@ main .technologyStack section div {
 }
 
 @media (max-width: 700px) {
-  main .technologyStack section div {
+  main #technologyStack section div {
     -ms-flex-preferred-size: 160px;
         flex-basis: 160px;
     height: 160px;
@@ -1872,7 +1872,7 @@ main .technologyStack section div {
 }
 
 @media (max-width: 450px) {
-  main .technologyStack section div {
+  main #technologyStack section div {
     -ms-flex-preferred-size: 150px;
         flex-basis: 150px;
     height: 150px;
@@ -1880,24 +1880,24 @@ main .technologyStack section div {
 }
 
 @media (max-width: 400px) {
-  main .technologyStack section div {
+  main #technologyStack section div {
     -ms-flex-preferred-size: 120px;
         flex-basis: 120px;
     height: 120px;
   }
 }
 
-main .technologyStack section div .fab, main .technologyStack section div .fas {
+main #technologyStack section div .fab, main #technologyStack section div .fas {
   font-size: 90px;
 }
 
 @media (max-width: 400px) {
-  main .technologyStack section div .fab, main .technologyStack section div .fas {
+  main #technologyStack section div .fab, main #technologyStack section div .fas {
     font-size: 70px;
   }
 }
 
-main .technologyStack section div p {
+main #technologyStack section div p {
   font-size: 25px;
   margin-top: 5px;
   font-weight: 700;
@@ -1905,18 +1905,18 @@ main .technologyStack section div p {
 }
 
 @media (max-width: 1300px) {
-  main .technologyStack section div p {
+  main #technologyStack section div p {
     font-size: 14px;
   }
 }
 
 @media (max-width: 510px) {
-  main .technologyStack section div p {
+  main #technologyStack section div p {
     font-size: 12px;
   }
 }
 
-main .technologyStack section div img {
+main #technologyStack section div img {
   height: 42%;
 }
 

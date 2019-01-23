@@ -15,7 +15,7 @@ const windowWidth = $(window).width();
 $(".navHome").on("click", function (event) {
   event.preventDefault();
   $("body, html").animate({
-    scrollTop: $(".mainPage").offset().top - 70
+    scrollTop: $("#mainPage").offset().top - 70
   }, 1000);
 });
 
@@ -23,11 +23,11 @@ $(".navAboutMe").on("click", function (event) {
   event.preventDefault();
   if (windowWidth >= 900) {
     $("body, html").animate({
-      scrollTop: $(".aboutMe").offset().top
+      scrollTop: $("#aboutMe").offset().top
     }, 1000);
   } else {
     $("body, html").animate({
-      scrollTop: $(".aboutMe").offset().top - 70
+      scrollTop: $("#aboutMe").offset().top - 70
     }, 1000);
   }
 });
@@ -36,11 +36,11 @@ $(".navPortfolio").on("click", function (event) {
   event.preventDefault();
   if (windowWidth >= 900) {
     $("body, html").animate({
-      scrollTop: $(".projects").offset().top + 100
+      scrollTop: $("#projects").offset().top + 100
     }, 1000);
   } else {
     $("body, html").animate({
-      scrollTop: $(".projects").offset().top - 30
+      scrollTop: $("#projects").offset().top - 30
     }, 1000);
   }
 });
@@ -58,15 +58,15 @@ $(".navContact").on("click", function (event) {
   }
 });
 
-$(".mainPage .wrapper div").on("click", function (event) {
+$("#mainPage .wrapper div").on("click", function (event) {
   event.preventDefault();
   if (windowWidth >= 900) {
     $("body, html").animate({
-      scrollTop: $(".projects").offset().top + 100
+      scrollTop: $("#projects").offset().top + 100
     }, 1000);
   } else {
     $("body, html").animate({
-      scrollTop: $(".projects").offset().top - 30
+      scrollTop: $("#projects").offset().top - 30
     }, 1000);
   }
 });
@@ -77,17 +77,17 @@ const showH1 =() => {
   const windowHeight = window.innerHeight;
 
   //Hobby h1
-  const hobbyH1 = document.querySelector(".hobby h1");
+  const hobbyH1 = document.querySelector("#hobby h1");
   const hobbyH1FromTop = hobbyH1.offsetTop;
   const hobbyH1Height = hobbyH1.clientHeight;
 
   //Projects h1 
-  const projectsH1 = document.querySelector(".projects h1");
+  const projectsH1 = document.querySelector("#projects h1");
   const projectsH1FromTop = projectsH1.offsetTop + 100;
   const projectsH1Height = projectsH1.clientHeight;
 
   //Technologystack h1 
-  const technologyH1 = document.querySelector(".technologyStack h1");
+  const technologyH1 = document.querySelector("#technologyStack h1");
   const technologyH1FromTop = technologyH1.offsetTop;
   const technologyH1Height = technologyH1.clientHeight;
 
@@ -109,22 +109,22 @@ const showABoutMeSection = () => {
   const windowHeight = window.innerHeight;
   
   //h1
-  const aboutMeH1 = document.querySelector(".aboutMe h1");
+  const aboutMeH1 = document.querySelector("#aboutMe h1");
   const aboutMeH1FromTop = aboutMeH1.offsetTop;
   const aboutMeH1Height = aboutMeH1.clientHeight;
 
   //h2
-  const aboutMeH2 = document.querySelector(".aboutMe h2");
+  const aboutMeH2 = document.querySelector("#aboutMe h2");
   const aboutMeH2FromTop = aboutMeH2.offsetTop;
   const aboutMeH2Height = aboutMeH2.clientHeight;
 
   //p
-  const aboutMeP = document.querySelector(".aboutMe p");
+  const aboutMeP = document.querySelector("#aboutMe p");
   const aboutMePFromTop = aboutMeP.offsetTop;
   const aboutMePHeight = aboutMeP.clientHeight;
 
   //photo 
-  const aboutMePhoto = document.querySelector(".aboutMe .myPhoto");
+  const aboutMePhoto = document.querySelector("#aboutMe .myPhoto");
   const aboutMePhotoFromTop = aboutMePhoto.offsetTop;
   const aboutMePhotoHeight = aboutMePhoto.clientHeight;
 
@@ -156,58 +156,20 @@ const showHobbySection =() => {
   const scrollValue = window.scrollY;
   const windowHeight = window.innerHeight;
   
-  //1
-  const hobbyImageOne = document.querySelector(".hobby .first-image-hobby");
-  const hobbyImageOneFromTop = hobbyImageOne.offsetTop;
-  const hobbyImageOneHeight = hobbyImageOne.clientHeight;
+  const hobbyImageOne = document.querySelector("#hobby .first-image-hobby");
+  const hobbyImageTwo = document.querySelector("#hobby .second-image-hobby");
+  const hobbyImageThree = document.querySelector("#hobby .third-image-hobby");
+  const hobbyImageFour = document.querySelector("#hobby .fourth-image-hobby");
+  const hobbyImageFive = document.querySelector("#hobby .fifth-image-hobby");
+  const hobbyImageSix = document.querySelector("#hobby .sixth-image-hobby");
 
-  //2 
-  const hobbyImageTwo = document.querySelector(".hobby .second-image-hobby");
-  const hobbyImageTwoFromTop = hobbyImageTwo.offsetTop;
-  const hobbyImageTwoHeight = hobbyImageTwo.clientHeight;
+  const hobbyImages = [hobbyImageOne, hobbyImageTwo, hobbyImageThree, hobbyImageFour, hobbyImageFive, hobbyImageSix];
 
-  //3 
-  const hobbyImageThree = document.querySelector(".hobby .third-image-hobby");
-  const hobbyImageThreeFromTop = hobbyImageThree.offsetTop;
-  const hobbyImageThreeHeight = hobbyImageThree.clientHeight;
-
-  //4 
-  const hobbyImageFour = document.querySelector(".hobby .fourth-image-hobby");
-  const hobbyImageFourFromTop = hobbyImageFour.offsetTop;
-  const hobbyImageFourHeight = hobbyImageFour.clientHeight;
-
-  //5 
-  const hobbyImageFive = document.querySelector(".hobby .fifth-image-hobby");
-  const hobbyImageFiveFromTop = hobbyImageFive.offsetTop;
-  const hobbyImageFiveHeight = hobbyImageFive.clientHeight;
-
-  //6 
-  const hobbyImageSix = document.querySelector(".hobby .sixth-image-hobby");
-  const hobbyImageSixFromTop = hobbyImageSix.offsetTop;
-  const hobbyImageSixHeight = hobbyImageSix.clientHeight;
-
-  if (scrollValue > hobbyImageOneFromTop + hobbyImageOneHeight - 1.54* windowHeight) {
-    hobbyImageOne.classList.add("active");
-  }
-
-  if (scrollValue > hobbyImageTwoFromTop + hobbyImageTwoHeight - 1.2* windowHeight) {
-    hobbyImageTwo.classList.add("active");
-  }
-
-  if (scrollValue > hobbyImageThreeFromTop + hobbyImageThreeHeight - 1.2* windowHeight) {
-    hobbyImageThree.classList.add("active");
-  }
-
-  if (scrollValue > hobbyImageFourFromTop + hobbyImageFourHeight - 1.2* windowHeight) {
-    hobbyImageFour.classList.add("active");
-  }
-
-  if (scrollValue > hobbyImageFiveFromTop + hobbyImageFiveHeight - 1.2* windowHeight) {
-    hobbyImageFive.classList.add("active");
-  }
-
-  if (scrollValue > hobbyImageSixFromTop + hobbyImageSixHeight - 1.2* windowHeight) {
-    hobbyImageSix.classList.add("active");
+  for (let i=0; i<hobbyImages.length; i++) {
+    let hobbyImage = hobbyImages[i];
+    if (scrollValue > hobbyImage.offsetTop + hobbyImage.clientHeight - 1.2 * windowHeight) {
+      hobbyImage.classList.add('active');
+    }
   }
 }
 
@@ -216,43 +178,22 @@ const showPortfolioSection =() => {
   const scrollValue = window.scrollY;
   const windowHeight = window.innerHeight;
 
-  //firstGrid
-  const portfolioFirst = document.querySelector(".projects .first-grid");
-  const portfolioFirstFromTop = portfolioFirst.offsetTop;
-  const portfolioFirstHeight = portfolioFirst.clientHeight;
+  const portfolioFirst = document.querySelector("#projects .first-grid");
+  const portfolioSecond = document.querySelector("#projects .second-grid");
+  const portfolioThird = document.querySelector("#projects .third-grid");
+  const portfolioFourth = document.querySelector("#projects .fourth-grid");
 
-  //secondGrid
-  const portfolioSecond = document.querySelector(".projects .second-grid");
-  const portfolioSecondFromTop = portfolioSecond.offsetTop;
-  const portfolioSecondHeight = portfolioSecond.clientHeight;
+  const grids = [portfolioFirst, portfolioSecond, portfolioThird, portfolioFourth];
 
-  //thirdGrid
-  const portfolioThird = document.querySelector(".projects .third-grid");
-  const portfolioThirdFromTop = portfolioThird.offsetTop;
-  const portfolioThirdHeight = portfolioThird.clientHeight;
-
-  //fourthGrid
-  const portfolioFourth = document.querySelector(".projects .fourth-grid");
-  const portfolioFourthFromTop = portfolioFourth.offsetTop;
-  const portfolioFourthHeight = portfolioFourth.clientHeight;
-
-  if (scrollValue > portfolioFirstFromTop + portfolioFirstHeight - 1.2 * windowHeight) {
-    portfolioFirst.classList.add("active");
-  }
-
-  if (scrollValue > portfolioSecondFromTop + portfolioSecondHeight - 1.2 * windowHeight) {
-    portfolioSecond.classList.add("active");
-  }
-
-  if (scrollValue > portfolioThirdFromTop + portfolioThirdHeight - 1.2 * windowHeight) {
-    portfolioThird.classList.add("active");
-  }
-
-  if (scrollValue > portfolioFourthFromTop + portfolioFourthHeight - 1.2 * windowHeight) {
-    portfolioFourth.classList.add("active");
+  for (let i = 0; i<grids.length; i++) {
+    let grid = grids[i];
+    if (scrollValue > grid.offsetTop + grid.clientHeight - 1.2 * windowHeight) {
+      grid.classList.add('active');
+    }
   }
 }
 
+//Animacja technology
 const showTechnologyStackSection =() => {
   // const scrollValue = window.scrollY;
   // const windowHeight = window.innerHeight;
@@ -267,6 +208,7 @@ const showTechnologyStackSection =() => {
   // }
 }
 
+//Animacja footer
 const showFooterSection = () => {
   const scrollValue = window.scrollY;
   const windowHeight = window.innerHeight;
@@ -308,6 +250,56 @@ const showFooterSection = () => {
   }
 }
 
+//Zmiana klasy w navie po scrollu
+const changeNavLiClass = () => {
+  const scrollValue = window.scrollY;
+  const windowHeight = window.innerHeight;
+
+  const liItems = [...document.querySelectorAll("header a")];
+
+  const navHome = document.querySelector(".navHome");
+  const navAboutMe = document.querySelector(".navAboutMe");
+  const navPortfolio = document.querySelector(".navPortfolio");
+  const navContact = document.querySelector(".navContact");
+
+  //navHome
+  const mainPage = document.querySelector("#mainPage");
+  const mainPageFromTop = mainPage.offsetTop;
+  const mainPageHeight = mainPage.clientHeight;
+
+  //navAboutMe
+  const aboutMe = document.querySelector("#aboutMe");
+  const aboutMeFromTop = aboutMe.offsetTop;
+  const aboutMeHeight = aboutMe.clientHeight;
+
+  //navPortfolio
+  const projects = document.querySelector("#projects");
+  const projectsFromTop = projects.offsetTop;
+  const projectsHeight = projects.clientHeight;
+
+  //navContact
+  const footer = document.querySelector("footer");
+  const footerFromTop = footer.offsetTop;
+  const footerHeight = footer.clientHeight;
+
+  if (scrollValue > mainPageFromTop + mainPageHeight - windowHeight) {
+
+    navHome.classList.add("hover");
+  }
+
+  if (scrollValue > aboutMeFromTop + aboutMeHeight - windowHeight) {
+    navAboutMe.classList.add("hover");
+  }
+
+  if (scrollValue > projectsFromTop + projectsHeight - windowHeight) {
+    navPortfolio.classList.add("hover");
+  }
+
+  if (scrollValue > footerFromTop + footerHeight - windowHeight) {
+    navContact.classList.add("hover");
+  }
+}
+
 
 const showContent = () => {
   showH1();
@@ -316,14 +308,17 @@ const showContent = () => {
   showPortfolioSection();
   showTechnologyStackSection();
   showFooterSection();
+  changeNavLiClass();
 }
   
 window.addEventListener("scroll", showContent);
 
 //Animacja homePage
 const showHomeSection = () => {
-  const divHomeSection = document.querySelector(".mainPage section");
+  const divHomeSection = document.querySelector("#mainPage section");
   divHomeSection.classList.add("active");
 }
 
 window.addEventListener("load", showHomeSection);
+
+
