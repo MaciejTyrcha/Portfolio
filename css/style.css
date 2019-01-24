@@ -2401,9 +2401,20 @@ footer .wrapper button {
   background-color: #01a093;
   border-radius: 40px;
   border: none;
-  -webkit-transition: 0.3s linear;
-  transition: 0.3s linear;
   cursor: pointer;
+  -webkit-transform: translateY(40px);
+          transform: translateY(40px);
+  opacity: 0;
+  -webkit-transition: opacity 0.5s linear, background-color 0.3s linear, color 0.3s linear, -webkit-transform 0.8s ease-in-out;
+  transition: opacity 0.5s linear, background-color 0.3s linear, color 0.3s linear, -webkit-transform 0.8s ease-in-out;
+  transition: transform 0.8s ease-in-out, opacity 0.5s linear, background-color 0.3s linear, color 0.3s linear;
+  transition: transform 0.8s ease-in-out, opacity 0.5s linear, background-color 0.3s linear, color 0.3s linear, -webkit-transform 0.8s ease-in-out;
+}
+
+footer .wrapper button.active {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
 }
 
 footer .wrapper button:hover {

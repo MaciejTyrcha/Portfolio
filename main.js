@@ -1,11 +1,13 @@
-//Nav otwieranie menu
 const hamburgerMenu = document.querySelector(".hamburger");
+
+//Nav otwieranie menu
+const openCloseNav = () => {
 const navSection = document.querySelector("nav");
 const spanHamburger = document.querySelectorAll(".hamburger span");
 
-const openCloseNav = () => {
-  navSection.classList.toggle("active");
-  spanHamburger.forEach((span) => span.classList.toggle("openHamburger"));
+navSection.classList.toggle("active");
+spanHamburger.forEach((span) => span.classList.toggle("openHamburger"));
+
 }
 hamburgerMenu.addEventListener("click", openCloseNav);
 
@@ -162,7 +164,6 @@ const showTechnologyStackSection =() => {
 
   for (let i =0; i< technologyStackElements.length; i++) {
     let technologyStackElement = technologyStackElements[i];
-    console.log(technologyStackElement);
     if ( scrollValue > technologyStackElement.offsetTop + technologyStackElement.clientHeight - windowHeight) {
       technologyStackElement.classList.add('active');
     }
@@ -201,7 +202,7 @@ const showFooterSection = () => {
 //Zmiana klasy w navie po scrollu
 const changeNavLiClass = () => {
   const scrollValue = window.scrollY;
-  const windowHeight = window.innerHeight;
+  const fullPageHeight = document.documentElement.scrollHeight;
 
   const liItems = [...document.querySelectorAll("header a")];
 
@@ -217,34 +218,37 @@ const changeNavLiClass = () => {
 
   //navAboutMe
   const aboutMe = document.querySelector("#aboutMe");
-  const aboutMeFromTop = aboutMe.offsetTop;
-  const aboutMeHeight = aboutMe.clientHeight;
 
   //navPortfolio
   const projects = document.querySelector("#projects");
   const projectsFromTop = projects.offsetTop;
-  const projectsHeight = projects.clientHeight;
+
 
   //navContact
   const footer = document.querySelector("footer");
-  const footerFromTop = footer.offsetTop;
   const footerHeight = footer.clientHeight;
 
-  if (scrollValue > mainPageFromTop + mainPageHeight - windowHeight) {
-
-    navHome.classList.add("hover");
+  if (scrollValue < mainPageFromTop + mainPageHeight) {
+    console.log("jestem w home");
+    liItems.forEach((li)=> li.classList.remove('hover'));
+    navHome.classList.add('hover');
   }
 
-  if (scrollValue > aboutMeFromTop + aboutMeHeight - windowHeight) {
-    navAboutMe.classList.add("hover");
+  if (scrollValue > mainPageFromTop + mainPageHeight - 10 && scrollValue < projectsFromTop + 70)  {
+    console.log("jestem w o mnie")
+    liItems.forEach((li)=> li.classList.remove('hover'));
+    navAboutMe.classList.add('hover');
   }
 
-  if (scrollValue > projectsFromTop + projectsHeight - windowHeight) {
-    navPortfolio.classList.add("hover");
+  if (scrollValue > projectsFromTop + 70 && scrollValue < fullPageHeight - footerHeight - 150) {
+    console.log("jestem w portfolio");
+    liItems.forEach((li)=> li.classList.remove('hover'));
+    navPortfolio.classList.add('hover');
   }
-
-  if (scrollValue > footerFromTop + footerHeight - windowHeight) {
-    navContact.classList.add("hover");
+  if (scrollValue > fullPageHeight - footerHeight - 150){
+    console.log("jestem w footerze");
+    liItems.forEach((li)=> li.classList.remove('hover'));
+    navContact.classList.add('hover');
   }
 }
 
@@ -264,7 +268,9 @@ window.addEventListener("scroll", showContent);
 //Animacja homePage
 const showHomeSection = () => {
   const divHomeSection = document.querySelector("#mainPage section");
+  const navHome = document.querySelector(".navHome");
   divHomeSection.classList.add("active");
+  navHome.classList.add('hover');
 }
 
 window.addEventListener("load", showHomeSection);

@@ -207,8 +207,13 @@ footer
       background-color: $color-main-theme
       border-radius: 40px
       border: none
-      transition: 0.3s linear
       cursor: pointer
+      transform: translateY(40px)
+      opacity: 0
+      transition: transform 0.8s ease-in-out, opacity 0.5s linear, background-color 0.3s linear, color 0.3s linear
+      &.active
+        transform: translateY(0)
+        opacity: 1
       &:hover 
         background-color: $color-main-theme-lighter
         color: $color-main-theme-darker
