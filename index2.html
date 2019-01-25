@@ -26,8 +26,21 @@
     align-items: center;
   }
 
-  div:nth-of-type(1) {
-    background-color: red;
+  #firstDiv {
+    background-color: black;
+  }
+
+  .photo {
+    background: url('https://i.ytimg.com/vi/sY5MmhLQBng/maxresdefault.jpg');
+    background-repeat: no-repeat;
+    height: 80%;
+    color: white;
+  }
+
+  .textInside {
+    width: 100%;
+    height: 200px;
+    background-color: rgba(0, 0, 0, 0.5);
   }
 
   div:nth-of-type(2) {
@@ -40,10 +53,13 @@
 </style>
 
 <body>
-  <div>
-    <h1>Tutaj wklejasz swoje tło</h1>
-    <h2>Moje imię i nazwisko</h2>
-    <img src="https://i.ytimg.com/vi/sY5MmhLQBng/maxresdefault.jpg" alt="">
+  <div id="firstDiv">
+    <div class="photo">
+      <div class="textInside">
+        <h1>Tutaj wklejasz swoje tło</h1>
+        <h2>Moje imię i nazwisko</h2>
+      </div>
+    </div>
   </div>
   <div>
     <h2>Cześć!</h2>
@@ -56,6 +72,9 @@
       exercitationem vitae earum facilis non sed voluptate beatae modi similique atque nesciunt!</p>
 
   </div>
+
+  <script>
+  </script>
 </body>
 
 </html>

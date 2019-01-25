@@ -107,7 +107,8 @@ const showABoutMeSection = () => {
 
   for (let i=0; i< aboutMeElements.length; i++) {
     aboutMeElement = aboutMeElements[i];
-    if ( scrollValue > aboutMeElement.offsetTop + aboutMeElement.clientHeight - windowHeight) {
+
+    if (scrollValue > aboutMeElement.offsetTop + aboutMeElement.clientHeight - windowHeight) {
       aboutMeElement.classList.add("active");
     }
   }
@@ -125,14 +126,41 @@ const showHobbySection =() => {
   const hobbyImageFive = document.querySelector("#hobby .fifth-image-hobby");
   const hobbyImageSix = document.querySelector("#hobby .sixth-image-hobby");
 
-  const hobbyImages = [hobbyImageOne, hobbyImageTwo, hobbyImageThree, hobbyImageFour, hobbyImageFive, hobbyImageSix];
+  const hobbyImages = [hobbyImageOne, hobbyImageTwo, hobbyImageThree, hobbyImageFour, hobbyImageSix, hobbyImageFive];
 
-  for (let i=0; i<hobbyImages.length; i++) {
-    let hobbyImage = hobbyImages[i];
-    if (scrollValue > hobbyImage.offsetTop + hobbyImage.clientHeight - 1.2 * windowHeight) {
-      hobbyImage.classList.add('active');
+  if ( windowWidth > 1100){
+    for (let i=1; i<hobbyImages.length; i++) {
+      let hobbyImage = hobbyImages[i];
+      if (scrollValue > hobbyImage.offsetTop + hobbyImage.clientHeight - 1.2 * windowHeight) {
+        hobbyImage.classList.add('active');
+      }
     }
-  }
+    if (scrollValue > hobbyImageTwo.offsetTop + hobbyImageTwo.clientHeight - 1.2 * windowHeight) {
+      hobbyImageOne.classList.add('active');
+    }
+   }
+   else if ( windowWidth > 700 && windowWidth <= 1100) {
+    for (let i=1; i<hobbyImages.length-1; i++) {
+      let hobbyImage = hobbyImages[i];
+      if (scrollValue > hobbyImage.offsetTop + hobbyImage.clientHeight - 1.2 * windowHeight) {
+        hobbyImage.classList.add('active');
+      }
+    }
+    if (scrollValue > hobbyImageTwo.offsetTop + hobbyImageTwo.clientHeight - 1.2 * windowHeight) {
+      hobbyImageOne.classList.add('active');
+    }
+
+    if (scrollValue > hobbyImageFour.offsetTop + hobbyImageFour.clientHeight - 1.2 * windowHeight) {
+      hobbyImageFive.classList.add('active');
+    }
+   }
+
+   else {
+    for (let i=0; i<hobbyImages.length; i++) {
+      let hobbyImage = hobbyImages[i];
+      hobbyImage.classList.add('active');
+      }
+   }
 }
 
 //Animacja portfolio
@@ -232,24 +260,20 @@ const changeNavLiClass = () => {
   //duze ekrany
   if (windowWidth >= 900) {
     if (scrollValue < mainPageFromTop + mainPageHeight) {
-      console.log("jestem w home");
       liItems.forEach((li)=> li.classList.remove('hover'));
       navHome.classList.add('hover');
     }
   
     if (scrollValue > mainPageFromTop + mainPageHeight - 10 && scrollValue < projectsFromTop + 70)  {
-      console.log("jestem w o mnie")
       liItems.forEach((li)=> li.classList.remove('hover'));
       navAboutMe.classList.add('hover');
     }
   
     if (scrollValue > projectsFromTop + 70 && scrollValue < fullPageHeight - footerHeight - windowHeight / 2) {
-      console.log("jestem w portfolio");
       liItems.forEach((li)=> li.classList.remove('hover'));
       navPortfolio.classList.add('hover');
     }
     if (scrollValue > fullPageHeight - footerHeight - windowHeight / 2){
-      console.log("jestem w footerze");
       liItems.forEach((li)=> li.classList.remove('hover'));
       navContact.classList.add('hover');
     }
@@ -257,28 +281,23 @@ const changeNavLiClass = () => {
   //male ekrany
   else {
     if (scrollValue < mainPageFromTop + mainPageHeight - 70) {
-      console.log("jestem w home malym");
       liItems.forEach((li)=> li.classList.remove('hover'));
       navHome.classList.add('hover');
     }
   
     if (scrollValue > mainPageFromTop + mainPageHeight - 80 && scrollValue < projectsFromTop - 10)  {
-      console.log("jestem w o mnie malym")
       liItems.forEach((li)=> li.classList.remove('hover'));
       navAboutMe.classList.add('hover');
     }
   
     if (scrollValue > projectsFromTop -10 && scrollValue < fullPageHeight - footerHeight - windowHeight / 2) {
-      console.log("jestem w portfolio malym");
       liItems.forEach((li)=> li.classList.remove('hover'));
       navPortfolio.classList.add('hover');
     }
     if (scrollValue > fullPageHeight - footerHeight - windowHeight / 2){
-      console.log("jestem w footerze malym");
       liItems.forEach((li)=> li.classList.remove('hover'));
       navContact.classList.add('hover');
     }
-
   }
 }
 
