@@ -203,6 +203,7 @@ const showFooterSection = () => {
 const changeNavLiClass = () => {
   const scrollValue = window.scrollY;
   const fullPageHeight = document.documentElement.scrollHeight;
+  const windowHeight = window.innerHeight
 
   const liItems = [...document.querySelectorAll("header a")];
 
@@ -242,12 +243,12 @@ const changeNavLiClass = () => {
       navAboutMe.classList.add('hover');
     }
   
-    if (scrollValue > projectsFromTop + 70 && scrollValue < fullPageHeight - footerHeight - 150) {
+    if (scrollValue > projectsFromTop + 70 && scrollValue < fullPageHeight - footerHeight - windowHeight / 2) {
       console.log("jestem w portfolio");
       liItems.forEach((li)=> li.classList.remove('hover'));
       navPortfolio.classList.add('hover');
     }
-    if (scrollValue > fullPageHeight - footerHeight - 150){
+    if (scrollValue > fullPageHeight - footerHeight - windowHeight / 2){
       console.log("jestem w footerze");
       liItems.forEach((li)=> li.classList.remove('hover'));
       navContact.classList.add('hover');
@@ -267,12 +268,12 @@ const changeNavLiClass = () => {
       navAboutMe.classList.add('hover');
     }
   
-    if (scrollValue > projectsFromTop -10 && scrollValue < fullPageHeight - footerHeight - 220) {
+    if (scrollValue > projectsFromTop -10 && scrollValue < fullPageHeight - footerHeight - windowHeight / 2) {
       console.log("jestem w portfolio malym");
       liItems.forEach((li)=> li.classList.remove('hover'));
       navPortfolio.classList.add('hover');
     }
-    if (scrollValue > fullPageHeight - footerHeight - 220){
+    if (scrollValue > fullPageHeight - footerHeight - windowHeight / 2){
       console.log("jestem w footerze malym");
       liItems.forEach((li)=> li.classList.remove('hover'));
       navContact.classList.add('hover');
