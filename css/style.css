@@ -1930,7 +1930,13 @@ main #technologyStack section div p {
 }
 
 main #technologyStack section div img {
-  height: 42%;
+  height: 90px;
+}
+
+@media (max-width: 400px) {
+  main #technologyStack section div img {
+    height: 70px;
+  }
 }
 
 footer {

@@ -42,7 +42,7 @@ $(".navPortfolio").on("click", function (event) {
     }, 1000);
   } else {
     $("body, html").animate({
-      scrollTop: $("#projects").offset().top - 30
+      scrollTop: $("#projects").offset().top
     }, 1000);
   }
 });
@@ -228,27 +228,56 @@ const changeNavLiClass = () => {
   const footer = document.querySelector("footer");
   const footerHeight = footer.clientHeight;
 
-  if (scrollValue < mainPageFromTop + mainPageHeight) {
-    console.log("jestem w home");
-    liItems.forEach((li)=> li.classList.remove('hover'));
-    navHome.classList.add('hover');
+  //duze ekrany
+  if (windowWidth >= 900) {
+    if (scrollValue < mainPageFromTop + mainPageHeight) {
+      console.log("jestem w home");
+      liItems.forEach((li)=> li.classList.remove('hover'));
+      navHome.classList.add('hover');
+    }
+  
+    if (scrollValue > mainPageFromTop + mainPageHeight - 10 && scrollValue < projectsFromTop + 70)  {
+      console.log("jestem w o mnie")
+      liItems.forEach((li)=> li.classList.remove('hover'));
+      navAboutMe.classList.add('hover');
+    }
+  
+    if (scrollValue > projectsFromTop + 70 && scrollValue < fullPageHeight - footerHeight - 150) {
+      console.log("jestem w portfolio");
+      liItems.forEach((li)=> li.classList.remove('hover'));
+      navPortfolio.classList.add('hover');
+    }
+    if (scrollValue > fullPageHeight - footerHeight - 150){
+      console.log("jestem w footerze");
+      liItems.forEach((li)=> li.classList.remove('hover'));
+      navContact.classList.add('hover');
+    }
   }
+  //male ekrany
+  else {
+    if (scrollValue < mainPageFromTop + mainPageHeight - 70) {
+      console.log("jestem w home malym");
+      liItems.forEach((li)=> li.classList.remove('hover'));
+      navHome.classList.add('hover');
+    }
+  
+    if (scrollValue > mainPageFromTop + mainPageHeight - 80 && scrollValue < projectsFromTop - 10)  {
+      console.log("jestem w o mnie malym")
+      liItems.forEach((li)=> li.classList.remove('hover'));
+      navAboutMe.classList.add('hover');
+    }
+  
+    if (scrollValue > projectsFromTop -10 && scrollValue < fullPageHeight - footerHeight - 220) {
+      console.log("jestem w portfolio malym");
+      liItems.forEach((li)=> li.classList.remove('hover'));
+      navPortfolio.classList.add('hover');
+    }
+    if (scrollValue > fullPageHeight - footerHeight - 220){
+      console.log("jestem w footerze malym");
+      liItems.forEach((li)=> li.classList.remove('hover'));
+      navContact.classList.add('hover');
+    }
 
-  if (scrollValue > mainPageFromTop + mainPageHeight - 10 && scrollValue < projectsFromTop + 70)  {
-    console.log("jestem w o mnie")
-    liItems.forEach((li)=> li.classList.remove('hover'));
-    navAboutMe.classList.add('hover');
-  }
-
-  if (scrollValue > projectsFromTop + 70 && scrollValue < fullPageHeight - footerHeight - 150) {
-    console.log("jestem w portfolio");
-    liItems.forEach((li)=> li.classList.remove('hover'));
-    navPortfolio.classList.add('hover');
-  }
-  if (scrollValue > fullPageHeight - footerHeight - 150){
-    console.log("jestem w footerze");
-    liItems.forEach((li)=> li.classList.remove('hover'));
-    navContact.classList.add('hover');
   }
 }
 
