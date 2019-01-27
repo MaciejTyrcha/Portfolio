@@ -221,19 +221,23 @@ header nav ul li a:hover {
   }
 }
 
-header nav ul li .hover::after {
+header nav ul .hover {
+  border-bottom: 4px solid #013a36;
+}
+
+header nav ul .hover::after {
   content: '';
   position: absolute;
   display: block;
   bottom: -4px;
   width: 0;
   height: 4px;
-  background-color: #013a36;
+  background-color: #016d64;
   -webkit-transition: 0.2s linear;
   transition: 0.2s linear;
 }
 
-header nav ul li .hover:hover::after {
+header nav ul .hover:hover::after {
   width: 100%;
   -webkit-transition: 0.2s linear;
   transition: 0.2s linear;
@@ -1021,12 +1025,20 @@ main #hobby section {
 }
 
 main #hobby section div {
-  background-color: black;
   overflow: hidden;
   min-height: 300px;
 }
 
 main #hobby section .hobbyImage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 100%;
   width: 100%;
   -webkit-transition: 0.4s ease-in-out;
@@ -1036,7 +1048,46 @@ main #hobby section .hobbyImage {
 main #hobby section .hobbyImage:hover {
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
-  opacity: 0.5;
+}
+
+main #hobby section .hobbyImage div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  min-height: 70px;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+main #hobby section .hobbyImage div p {
+  font-size: 25px;
+  color: #fff;
+  letter-spacing: 3px;
+  padding: 0 10px;
+}
+
+@media (max-width: 1500px) {
+  main #hobby section .hobbyImage div p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 1300px) {
+  main #hobby section .hobbyImage div p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 1100px) {
+  main #hobby section .hobbyImage div p {
+    font-size: 16px;
+  }
 }
 
 main #hobby section .first-image-hobby {
@@ -1068,7 +1119,7 @@ main #hobby section .first-image-hobby.active {
   }
 }
 
-main #hobby section .first-image-hobby div {
+main #hobby section .first-image-hobby > div {
   background: url("../Rysunki/salsaDance.jpg");
   background-size: cover;
   background-position: center;
@@ -1103,7 +1154,7 @@ main #hobby section .second-image-hobby.active {
   }
 }
 
-main #hobby section .second-image-hobby div {
+main #hobby section .second-image-hobby > div {
   background: url("../Rysunki/programming.jpg");
   background-size: cover;
   background-position: center;
@@ -1138,7 +1189,7 @@ main #hobby section .third-image-hobby.active {
   }
 }
 
-main #hobby section .third-image-hobby div {
+main #hobby section .third-image-hobby > div {
   background: url("../Rysunki/pokojowyPatrol.jpg");
   background-size: cover;
   background-position: center;
@@ -1173,7 +1224,7 @@ main #hobby section .fourth-image-hobby.active {
   }
 }
 
-main #hobby section .fourth-image-hobby div {
+main #hobby section .fourth-image-hobby > div {
   background: url("../Rysunki/winterSports.jpg");
   background-size: cover;
   background-position: center;
@@ -1208,7 +1259,7 @@ main #hobby section .fifth-image-hobby.active {
   }
 }
 
-main #hobby section .fifth-image-hobby div {
+main #hobby section .fifth-image-hobby > div {
   background: url("../Rysunki/guitar.jpg");
   background-size: cover;
   background-position: center;
@@ -1243,7 +1294,7 @@ main #hobby section .sixth-image-hobby.active {
   }
 }
 
-main #hobby section .sixth-image-hobby div {
+main #hobby section .sixth-image-hobby > div {
   background: url("../Rysunki/movie.jpg");
   background-size: cover;
   background-position: center;

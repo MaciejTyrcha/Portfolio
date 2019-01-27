@@ -154,7 +154,6 @@ const showHobbySection =() => {
       hobbyImageFive.classList.add('active');
     }
    }
-
    else {
     for (let i=0; i<hobbyImages.length; i++) {
       let hobbyImage = hobbyImages[i];
@@ -233,7 +232,7 @@ const changeNavLiClass = () => {
   const fullPageHeight = document.documentElement.scrollHeight;
   const windowHeight = window.innerHeight
 
-  const liItems = [...document.querySelectorAll("header a")];
+  const liItems = [...document.querySelectorAll("header li")];
 
   const navHome = document.querySelector(".navHome");
   const navAboutMe = document.querySelector(".navAboutMe");

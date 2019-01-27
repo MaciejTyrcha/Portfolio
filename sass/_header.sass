@@ -115,16 +115,18 @@ header
             color: $color-white
           @media (max-height: 450px)
             font-size: $size-nav-font-450
-        .hover::after
+      .hover 
+        border-bottom: 4px solid $color-main-theme-darker
+        &::after
           content: ''
           position: absolute
           display: block 
           bottom: -4px
-          width: 0 
+          width: 0
           height: 4px 
-          background-color: $color-main-theme-darker
+          background-color: $color-main-theme-dark
           transition: 0.2s linear
-        .hover:hover::after 
+        &:hover::after 
           width: 100% 
           transition: 0.2s linear
       

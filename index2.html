@@ -13,68 +13,48 @@
     padding: 0;
   }
 
-  body {
+  section {
     display: flex;
+    /* flex-direction: column; */
+    height: 100vh;
+    background-color: pink;
   }
 
   div {
     height: 100vh;
-    width: 50vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    flex-basis: 10%;
   }
 
-  #firstDiv {
+  .first {
+    background-color: blue;
+  }
+
+  .second {
+    background-color: red;
+  }
+
+  .third {
+    background-color: green;
+  }
+
+  .fourth {
+    background-color: purple;
+  }
+
+  .fifth {
     background-color: black;
-  }
-
-  .photo {
-    background: url('https://i.ytimg.com/vi/sY5MmhLQBng/maxresdefault.jpg');
-    background-repeat: no-repeat;
-    height: 80%;
-    color: white;
-  }
-
-  .textInside {
-    width: 100%;
-    height: 200px;
-    background-color: rgba(0, 0, 0, 0.5);
-  }
-
-  div:nth-of-type(2) {
-    background-color: yellow;
-  }
-
-  div:nth-of-type(2) h2 {
-    align-self: flex-start;
+    /* flex-grow: 1; */
   }
 </style>
 
 <body>
-  <div id="firstDiv">
-    <div class="photo">
-      <div class="textInside">
-        <h1>Tutaj wklejasz swoje tło</h1>
-        <h2>Moje imię i nazwisko</h2>
-      </div>
-    </div>
-  </div>
-  <div>
-    <h2>Cześć!</h2>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima commodi minus, ea dignissimos nisi quos,
-      itaque, suscipit odit deserunt sapiente aspernatur quibusdam! Dicta explicabo quasi delectus? Doloremque sunt ut
-      eligendi iure sit architecto suscipit repudiandae, earum cum possimus accusantium quas eveniet aliquam dicta
-      explicabo labore at enim! Animi sit atque officiis, odit eligendi inventore! Distinctio ipsam nulla obcaecati
-      ullam placeat doloribus eveniet praesentium laborum non nihil enim quidem ipsa quia consequuntur explicabo esse,
-      tenetur aspernatur animi labore aperiam. Corrupti aut quae ab cumque temporibus impedit amet, asperiores eveniet
-      exercitationem vitae earum facilis non sed voluptate beatae modi similique atque nesciunt!</p>
-
-  </div>
-
-  <script>
-  </script>
+  <section>
+    <div class="first"></div>
+    <div class="second"></div>
+    <div class="third"></div>
+    <div class="fourth"></div>
+    <div class="fifth"></div>
+  </section>
 </body>
 
 </html>
