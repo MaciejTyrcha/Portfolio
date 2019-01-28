@@ -43,9 +43,15 @@ $(".navPortfolio").on("click", function (event) {
     $("body, html").animate({
       scrollTop: $("#projects").offset().top + 100
     }, 1000);
-  } else {
+  } 
+  else if (windowWidth > 600 && windowWidth < 900) {
     $("body, html").animate({
-      scrollTop: $("#projects").offset().top - 50
+      scrollTop: $("#projects").offset().top - 10
+    }, 1000);
+  } 
+  else {
+    $("body, html").animate({
+      scrollTop: $("#projects").offset().top - 40
     }, 1000);
   }
 });
@@ -289,12 +295,12 @@ const changeNavLiClass = () => {
       navHome.classList.add('hover');
     }
   
-    if (scrollValue > mainPageFromTop + mainPageHeight - 80 && scrollValue < projectsFromTop - 10)  {
+    if (scrollValue > mainPageFromTop + mainPageHeight - 80 && scrollValue < projectsFromTop - 50)  {
       liItems.forEach((li)=> li.classList.remove('hover'));
       navAboutMe.classList.add('hover');
     }
   
-    if (scrollValue > projectsFromTop -10 && scrollValue < fullPageHeight - footerHeight - windowHeight / 2) {
+    if (scrollValue > projectsFromTop -50 && scrollValue < fullPageHeight - footerHeight - windowHeight / 2) {
       liItems.forEach((li)=> li.classList.remove('hover'));
       navPortfolio.classList.add('hover');
     }
