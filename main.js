@@ -15,6 +15,7 @@ hamburgerMenu.addEventListener("click", openCloseNav);
 const windowWidth = $(window).width();
 
 $(".navHome").on("click", function (event) {
+  openCloseNav();
   event.preventDefault();
   $("body, html").animate({
     scrollTop: $("#mainPage").offset().top - 70
@@ -22,6 +23,7 @@ $(".navHome").on("click", function (event) {
 });
 
 $(".navAboutMe").on("click", function (event) {
+  openCloseNav();
   event.preventDefault();
   if (windowWidth >= 900) {
     $("body, html").animate({
@@ -35,6 +37,7 @@ $(".navAboutMe").on("click", function (event) {
 });
 
 $(".navPortfolio").on("click", function (event) {
+  openCloseNav();
   event.preventDefault();
   if (windowWidth >= 900) {
     $("body, html").animate({
@@ -42,12 +45,13 @@ $(".navPortfolio").on("click", function (event) {
     }, 1000);
   } else {
     $("body, html").animate({
-      scrollTop: $("#projects").offset().top
+      scrollTop: $("#projects").offset().top - 50
     }, 1000);
   }
 });
 
 $(".navContact").on("click", function (event) {
+  openCloseNav();
   event.preventDefault();
   if (windowWidth >= 900) {
     $("body, html").animate({
@@ -61,6 +65,7 @@ $(".navContact").on("click", function (event) {
 });
 
 $("#mainPage .wrapper div").on("click", function (event) {
+  openCloseNav();
   event.preventDefault();
   if (windowWidth >= 900) {
     $("body, html").animate({
