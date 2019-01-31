@@ -740,8 +740,7 @@ main #aboutMe .myPhoto.active {
 @media (max-width: 1050px) {
   main #aboutMe .myPhoto {
     width: 60%;
-    -ms-flex-preferred-size: 400px;
-        flex-basis: 400px;
+    height: 400px;
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
@@ -750,8 +749,7 @@ main #aboutMe .myPhoto.active {
 
 @media (max-width: 600px) {
   main #aboutMe .myPhoto {
-    -ms-flex-preferred-size: 300px;
-        flex-basis: 300px;
+    height: 300px;
   }
 }
 

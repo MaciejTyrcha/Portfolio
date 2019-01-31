@@ -71,7 +71,6 @@ $(".navContact").on("click", function (event) {
 });
 
 $("#mainPage .wrapper div").on("click", function (event) {
-  openCloseNav();
   event.preventDefault();
   if (windowWidth >= 900) {
     $("body, html").animate({
